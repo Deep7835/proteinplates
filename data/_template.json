@@ -1,0 +1,26 @@
+{
+  "chain": "",
+  "slug": "",
+  "country": ["US"],
+  "category": "burgers",
+  "official_nutrition_url": "https://",
+  "data_checked_date": "YYYY-MM-DD",
+  "intro_notes": "",
+  "glp1_menu_name": null,
+  "reviewed_by": null,
+  "items": [
+    {
+      "name": "",
+      "category": "",
+      "calories": null,
+      "protein_g": null,
+      "carbs_g": null,
+      "fat_g": null,
+      "fiber_g": null,
+      "sugar_g": null,
+      "sodium_mg": null,
+      "price": null,
+      "custom_order_tip": ""
+    }
+  ]
+}

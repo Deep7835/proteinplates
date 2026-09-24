@@ -1,0 +1,149 @@
+{
+  "chain": "Choolaah Indian BBQ",
+  "slug": "choolaah",
+  "country": [
+    "US"
+  ],
+  "category": "indian",
+  "official_nutrition_url": "https://choolaah.com/wp-content/uploads/2023/04/CH_NutritionalInfo_042723.pdf",
+  "data_checked_date": "2026-09-24",
+  "intro_notes": "These numbers come from Choolaah's nutrition chart updated April 21, 2023, so some items may have changed. The Chicken Wrap has the most protein here at 31 g. Bowls are build-your-own and listed by part, and the chicken portion alone has 36 g of protein for 240 calories.",
+  "glp1_menu_name": null,
+  "reviewed_by": null,
+  "source_type": "official",
+  "source_name": null,
+  "items": [
+    {
+      "name": "Chicken Wrap",
+      "category": "wrap",
+      "calories": 490,
+      "protein_g": 31,
+      "carbs_g": 50,
+      "fat_g": 18,
+      "fiber_g": 2,
+      "sugar_g": 7,
+      "sodium_mg": 920,
+      "custom_order_tip": ""
+    },
+    {
+      "name": "Lamb Meatball Wrap",
+      "category": "wrap",
+      "calories": 570,
+      "protein_g": 30,
+      "carbs_g": 54,
+      "fat_g": 27,
+      "fiber_g": 3,
+      "sugar_g": 8,
+      "sodium_mg": 890,
+      "custom_order_tip": ""
+    },
+    {
+      "name": "Paneer Wrap",
+      "category": "wrap",
+      "calories": 630,
+      "protein_g": 29,
+      "carbs_g": 56,
+      "fat_g": 32,
+      "fiber_g": 3,
+      "sugar_g": 8,
+      "sodium_mg": 810,
+      "custom_order_tip": "The Chicken Wrap has 31 g protein for 490 calories."
+    },
+    {
+      "name": "Cauliflower & Chickpea Wrap",
+      "category": "wrap",
+      "calories": 540,
+      "protein_g": 18,
+      "carbs_g": 74,
+      "fat_g": 22,
+      "fiber_g": 7,
+      "sugar_g": 10,
+      "sodium_mg": 940,
+      "custom_order_tip": ""
+    },
+    {
+      "name": "Chicken Naan Pizza (Little Meals)",
+      "category": "kids",
+      "calories": 500,
+      "protein_g": 28,
+      "carbs_g": 49,
+      "fat_g": 21,
+      "fiber_g": 4,
+      "sugar_g": 5,
+      "sodium_mg": 960,
+      "custom_order_tip": ""
+    },
+    {
+      "name": "Cheesy Naan Pizza (Little Meals)",
+      "category": "kids",
+      "calories": 450,
+      "protein_g": 21,
+      "carbs_g": 49,
+      "fat_g": 19,
+      "fiber_g": 4,
+      "sugar_g": 5,
+      "sodium_mg": 870,
+      "custom_order_tip": ""
+    },
+    {
+      "name": "Chicken & Rice (Little Meals)",
+      "category": "kids",
+      "calories": 310,
+      "protein_g": 24,
+      "carbs_g": 32,
+      "fat_g": 9,
+      "fiber_g": 0,
+      "sugar_g": 0,
+      "sodium_mg": 590,
+      "custom_order_tip": ""
+    },
+    {
+      "name": "Paneer & Rice (Little Meals)",
+      "category": "kids",
+      "calories": 450,
+      "protein_g": 22,
+      "carbs_g": 37,
+      "fat_g": 23,
+      "fiber_g": 2,
+      "sugar_g": 1,
+      "sodium_mg": 490,
+      "custom_order_tip": ""
+    },
+    {
+      "name": "Samosa Chaat",
+      "category": "snack",
+      "calories": 640,
+      "protein_g": 15,
+      "carbs_g": 80,
+      "fat_g": 28,
+      "fiber_g": 6,
+      "sugar_g": 25,
+      "sodium_mg": 1150,
+      "custom_order_tip": ""
+    },
+    {
+      "name": "Pav Bhaji",
+      "category": "snack",
+      "calories": 520,
+      "protein_g": 13,
+      "carbs_g": 75,
+      "fat_g": 20,
+      "fiber_g": 6,
+      "sugar_g": 11,
+      "sodium_mg": 1330,
+      "custom_order_tip": ""
+    },
+    {
+      "name": "Samosa",
+      "category": "snack",
+      "calories": 320,
+      "protein_g": 6,
+      "carbs_g": 36,
+      "fat_g": 16,
+      "fiber_g": 3,
+      "sugar_g": 4,
+      "sodium_mg": 450,
+      "custom_order_tip": ""
+    }
+  ]
+}

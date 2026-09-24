@@ -1,0 +1,149 @@
+{
+  "chain": "In-N-Out Burger",
+  "slug": "in-n-out",
+  "country": [
+    "US"
+  ],
+  "category": "burgers",
+  "official_nutrition_url": "https://www.in-n-out.com/menu/nutrition-info",
+  "data_checked_date": "2026-09-24",
+  "intro_notes": "In-N-Out has a short menu, so the Double-Double is the top protein pick at 34 g. Ordering any burger Protein Style swaps the bun for lettuce and cuts most of the carbs. Swapping the spread for mustard and ketchup saves 50 to 60 calories with the same protein.",
+  "glp1_menu_name": null,
+  "reviewed_by": null,
+  "source_type": "official",
+  "source_name": null,
+  "items": [
+    {
+      "name": "Double-Double",
+      "category": "burger",
+      "calories": 610,
+      "protein_g": 34,
+      "carbs_g": 42,
+      "fat_g": 34,
+      "fiber_g": 2,
+      "sugar_g": 9,
+      "sodium_mg": 1670,
+      "custom_order_tip": "Order it Protein Style (lettuce instead of a bun): 30 g protein for 460 calories."
+    },
+    {
+      "name": "Double-Double Protein Style",
+      "category": "burger",
+      "calories": 460,
+      "protein_g": 30,
+      "carbs_g": 12,
+      "fat_g": 32,
+      "fiber_g": 2,
+      "sugar_g": 7,
+      "sodium_mg": 1390,
+      "custom_order_tip": "The bun is swapped for lettuce, which cuts carbs from 42 g to 12 g."
+    },
+    {
+      "name": "Double-Double with Mustard & Ketchup (no spread)",
+      "category": "burger",
+      "calories": 550,
+      "protein_g": 34,
+      "carbs_g": 41,
+      "fat_g": 27,
+      "fiber_g": 2,
+      "sugar_g": 10,
+      "sodium_mg": 1600,
+      "custom_order_tip": ""
+    },
+    {
+      "name": "Cheeseburger",
+      "category": "burger",
+      "calories": 430,
+      "protein_g": 20,
+      "carbs_g": 40,
+      "fat_g": 21,
+      "fiber_g": 2,
+      "sugar_g": 9,
+      "sodium_mg": 1080,
+      "custom_order_tip": "Go Protein Style: 16 g protein for 280 calories."
+    },
+    {
+      "name": "Cheeseburger Protein Style",
+      "category": "burger",
+      "calories": 280,
+      "protein_g": 16,
+      "carbs_g": 11,
+      "fat_g": 19,
+      "fiber_g": 2,
+      "sugar_g": 7,
+      "sodium_mg": 800,
+      "custom_order_tip": ""
+    },
+    {
+      "name": "Cheeseburger with Mustard & Ketchup (no spread)",
+      "category": "burger",
+      "calories": 380,
+      "protein_g": 20,
+      "carbs_g": 39,
+      "fat_g": 15,
+      "fiber_g": 2,
+      "sugar_g": 9,
+      "sodium_mg": 1020,
+      "custom_order_tip": ""
+    },
+    {
+      "name": "Hamburger",
+      "category": "burger",
+      "calories": 360,
+      "protein_g": 16,
+      "carbs_g": 38,
+      "fat_g": 16,
+      "fiber_g": 2,
+      "sugar_g": 8,
+      "sodium_mg": 670,
+      "custom_order_tip": "Go Protein Style: 12 g protein for 210 calories."
+    },
+    {
+      "name": "Hamburger Protein Style",
+      "category": "burger",
+      "calories": 210,
+      "protein_g": 12,
+      "carbs_g": 9,
+      "fat_g": 14,
+      "fiber_g": 2,
+      "sugar_g": 6,
+      "sodium_mg": 390,
+      "custom_order_tip": ""
+    },
+    {
+      "name": "Hamburger with Mustard & Ketchup (no spread)",
+      "category": "burger",
+      "calories": 300,
+      "protein_g": 16,
+      "carbs_g": 38,
+      "fat_g": 10,
+      "fiber_g": 2,
+      "sugar_g": 9,
+      "sodium_mg": 610,
+      "custom_order_tip": ""
+    },
+    {
+      "name": "French Fries",
+      "category": "side",
+      "calories": 360,
+      "protein_g": 6,
+      "carbs_g": 49,
+      "fat_g": 15,
+      "fiber_g": 6,
+      "sugar_g": 0,
+      "sodium_mg": 150,
+      "custom_order_tip": ""
+    },
+    {
+      "name": "Chocolate Shake (15 oz)",
+      "category": "drink",
+      "calories": 610,
+      "protein_g": 16,
+      "carbs_g": 74,
+      "fat_g": 30,
+      "fiber_g": 0,
+      "sugar_g": 61,
+      "sodium_mg": 370,
+      "custom_order_tip": ""
+    }
+  ]
+}

@@ -1,0 +1,147 @@
+{
+  "chain": "Chipotle",
+  "slug": "chipotle",
+  "country": [
+    "US"
+  ],
+  "category": "mexican",
+  "official_nutrition_url": "https://www.chipotle.com/nutrition-calculator",
+  "data_checked_date": "2026-09-24",
+  "intro_notes": "At Chipotle you build your own meal, so protein depends on what you add. Its High Protein Menu lists ready-made orders from 15 g to 81 g of protein, and Chipotle labels two of them, the High Protein - Low Calorie Bowl and the High Protein-High Fiber Bowl, as “GLP-1 Friendly.” Chicken is the highest-protein filling, with 32 g in a 4 oz serving.",
+  "glp1_menu_name": "High Protein Menu",
+  "reviewed_by": null,
+  "items": [
+    {
+      "name": "Double High Protein Bowl",
+      "category": "bowl",
+      "calories": 760,
+      "protein_g": 81,
+      "carbs_g": 54,
+      "fat_g": 26,
+      "fiber_g": 12,
+      "sugar_g": 5,
+      "sodium_mg": 1895,
+      "custom_order_tip": "Order it as listed: double adobo chicken, light white rice, black beans, fajita veggies, tomato salsa, cheese, and extra romaine."
+    },
+    {
+      "name": "Double High Protein Burrito",
+      "category": "burrito",
+      "calories": 840,
+      "protein_g": 79,
+      "carbs_g": 61,
+      "fat_g": 31,
+      "fiber_g": 6,
+      "sugar_g": 3,
+      "sodium_mg": 2110,
+      "custom_order_tip": "Want fewer calories? The Double High Protein Bowl has 2 g more protein and 80 fewer calories."
+    },
+    {
+      "name": "High Protein-High Fiber Bowl",
+      "category": "bowl",
+      "calories": 545,
+      "protein_g": 46,
+      "carbs_g": 66,
+      "fat_g": 13,
+      "fiber_g": 14,
+      "sugar_g": 9,
+      "sodium_mg": 1645,
+      "custom_order_tip": "Order it as listed: adobo chicken, light brown rice, black beans, fajita veggies, corn salsa, tomato salsa, and lettuce."
+    },
+    {
+      "name": "High Protein - Low Calorie Bowl",
+      "category": "bowl",
+      "calories": 460,
+      "protein_g": 35,
+      "carbs_g": 18,
+      "fat_g": 29,
+      "fiber_g": 9,
+      "sugar_g": 4,
+      "sodium_mg": 1380,
+      "custom_order_tip": "Adobo chicken on a supergreens base with fajita veggies, salsa, and guacamole. Most of the fat comes from the guac."
+    },
+    {
+      "name": "High Protein Cup - Pollo Asado",
+      "category": "side",
+      "calories": 220,
+      "protein_g": 37,
+      "carbs_g": 4,
+      "fat_g": 8,
+      "fiber_g": 0,
+      "sugar_g": 2,
+      "sodium_mg": 440,
+      "custom_order_tip": "Add it to any bowl or salad for 37 g more protein."
+    },
+    {
+      "name": "High Protein Cup - Chicken (4 oz)",
+      "category": "side",
+      "calories": 180,
+      "protein_g": 32,
+      "carbs_g": 0,
+      "fat_g": 7,
+      "fiber_g": 0,
+      "sugar_g": 0,
+      "sodium_mg": 310,
+      "custom_order_tip": "This is the same 4 oz chicken that goes in a bowl. Ask for double chicken, or add a cup on the side, for 32 g more protein."
+    },
+    {
+      "name": "High Protein Cup - Steak (4 oz)",
+      "category": "side",
+      "calories": 150,
+      "protein_g": 21,
+      "carbs_g": 1,
+      "fat_g": 6,
+      "fiber_g": 1,
+      "sugar_g": 0,
+      "sodium_mg": 330,
+      "custom_order_tip": ""
+    },
+    {
+      "name": "High Protein Taco",
+      "category": "taco",
+      "calories": 197,
+      "protein_g": 15,
+      "carbs_g": 17,
+      "fat_g": 8,
+      "fiber_g": 2,
+      "sugar_g": 1,
+      "sodium_mg": 560,
+      "custom_order_tip": "Order three for 45 g of protein."
+    },
+    {
+      "name": "Beef Barbacoa (4 oz)",
+      "category": "protein",
+      "calories": 170,
+      "protein_g": 24,
+      "carbs_g": 2,
+      "fat_g": 7,
+      "fiber_g": 1,
+      "sugar_g": 0,
+      "sodium_mg": 530,
+      "custom_order_tip": "Add black beans (8 g protein per serving) to a barbacoa bowl for 32 g."
+    },
+    {
+      "name": "Carnitas (4 oz)",
+      "category": "protein",
+      "calories": 210,
+      "protein_g": 23,
+      "carbs_g": 0,
+      "fat_g": 12,
+      "fiber_g": 0,
+      "sugar_g": 0,
+      "sodium_mg": 450,
+      "custom_order_tip": ""
+    },
+    {
+      "name": "Sofritas (4 oz)",
+      "category": "protein",
+      "calories": 150,
+      "protein_g": 8,
+      "carbs_g": 9,
+      "fat_g": 10,
+      "fiber_g": 3,
+      "sugar_g": 5,
+      "sodium_mg": 560,
+      "custom_order_tip": "Plant-based. Add black beans (8 g) and cheese (6 g) to raise the protein."
+    }
+  ]
+}

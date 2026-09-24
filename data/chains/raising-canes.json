@@ -1,0 +1,137 @@
+{
+  "chain": "Raising Cane's",
+  "slug": "raising-canes",
+  "country": [
+    "US"
+  ],
+  "category": "chicken",
+  "official_nutrition_url": "https://raisingcanes.cdn.prismic.io/raisingcanes/IxTKraMRo_HyNWx2_Allergen%26NutritionalInformation_ALL_DIGITAL_8.26.pdf",
+  "data_checked_date": "2026-09-24",
+  "intro_notes": "Raising Cane's has a short menu built on chicken fingers. Each finger has 12 g protein for 130 calories, and the Caniac Combo tops the list at 87 g. Combos are big meals, so check the calories.",
+  "glp1_menu_name": null,
+  "reviewed_by": null,
+  "source_type": "official",
+  "source_name": null,
+  "items": [
+    {
+      "name": "Chicken Finger (1)",
+      "category": "chicken",
+      "calories": 130,
+      "protein_g": 12,
+      "carbs_g": 5,
+      "fat_g": 6,
+      "fiber_g": null,
+      "sugar_g": 0,
+      "sodium_mg": 230,
+      "custom_order_tip": "Each finger adds 12 g protein for 130 calories."
+    },
+    {
+      "name": "3 Finger Combo",
+      "category": "combo",
+      "calories": 1050,
+      "protein_g": 46,
+      "carbs_g": 84,
+      "fat_g": 58,
+      "fiber_g": 9,
+      "sugar_g": 8,
+      "sodium_mg": 1820,
+      "custom_order_tip": ""
+    },
+    {
+      "name": "Box Combo",
+      "category": "combo",
+      "calories": 1270,
+      "protein_g": 60,
+      "carbs_g": 99,
+      "fat_g": 70,
+      "fiber_g": 11,
+      "sugar_g": 16,
+      "sodium_mg": 2360,
+      "custom_order_tip": ""
+    },
+    {
+      "name": "Caniac Combo",
+      "category": "combo",
+      "calories": 1810,
+      "protein_g": 87,
+      "carbs_g": 126,
+      "fat_g": 106,
+      "fiber_g": 15,
+      "sugar_g": 20,
+      "sodium_mg": 3480,
+      "custom_order_tip": ""
+    },
+    {
+      "name": "Sandwich Combo",
+      "category": "combo",
+      "calories": 1130,
+      "protein_g": 50,
+      "carbs_g": 109,
+      "fat_g": 56,
+      "fiber_g": 9,
+      "sugar_g": 13,
+      "sodium_mg": 1890,
+      "custom_order_tip": ""
+    },
+    {
+      "name": "Chicken Sandwich",
+      "category": "sandwich",
+      "calories": 810,
+      "protein_g": 45,
+      "carbs_g": 68,
+      "fat_g": 40,
+      "fiber_g": 4,
+      "sugar_g": 13,
+      "sodium_mg": 1650,
+      "custom_order_tip": ""
+    },
+    {
+      "name": "Crinkle-Cut Fries",
+      "category": "side",
+      "calories": 420,
+      "protein_g": 5,
+      "carbs_g": 53,
+      "fat_g": 21,
+      "fiber_g": 6,
+      "sugar_g": 0,
+      "sodium_mg": 320,
+      "custom_order_tip": "Coleslaw is 90 calories."
+    },
+    {
+      "name": "Texas Toast",
+      "category": "side",
+      "calories": 150,
+      "protein_g": 4,
+      "carbs_g": 23,
+      "fat_g": 4.5,
+      "fiber_g": 2,
+      "sugar_g": 4,
+      "sodium_mg": 300,
+      "custom_order_tip": ""
+    },
+    {
+      "name": "Coleslaw",
+      "category": "side",
+      "calories": 90,
+      "protein_g": 1,
+      "carbs_g": 10,
+      "fat_g": 6,
+      "fiber_g": 2,
+      "sugar_g": 8,
+      "sodium_mg": 310,
+      "custom_order_tip": ""
+    },
+    {
+      "name": "Cane's Sauce",
+      "category": "sauce",
+      "calories": 190,
+      "protein_g": 0,
+      "carbs_g": 6,
+      "fat_g": 18,
+      "fiber_g": null,
+      "sugar_g": 4,
+      "sodium_mg": 570,
+      "custom_order_tip": "190 calories per 1.5 oz cup. Honey Mustard is 140."
+    }
+  ]
+}

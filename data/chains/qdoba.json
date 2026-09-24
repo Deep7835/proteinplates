@@ -1,0 +1,173 @@
+{
+  "chain": "Qdoba",
+  "slug": "qdoba",
+  "country": [
+    "US"
+  ],
+  "category": "mexican",
+  "official_nutrition_url": "https://assets.ctfassets.net/0tc4847zqy12/bQFJBCmsAk4ww4qzdfAOm/65d8b143afc183a155450c442408f2f3/Nutrition-Brochure-Published-on-02-26-2026-QDOBA-Mexican-Eats.pdf",
+  "data_checked_date": "2026-09-24",
+  "intro_notes": "Qdoba's Double Protein Bowl with chicken has 51 g protein for 700 calories. The Keto Bowl with chicken has 33 g protein and just 11 g carbs. Numbers are for Qdoba's standard Signature Eats recipes.",
+  "glp1_menu_name": null,
+  "reviewed_by": null,
+  "source_type": "official",
+  "source_name": null,
+  "items": [
+    {
+      "name": "Double Protein Bowl - Chicken",
+      "category": "bowl",
+      "calories": 700,
+      "protein_g": 51,
+      "carbs_g": 41,
+      "fat_g": 38,
+      "fiber_g": 20,
+      "sugar_g": 7,
+      "sodium_mg": 1900,
+      "custom_order_tip": "About the same protein as steak (52 g) for 340 fewer calories."
+    },
+    {
+      "name": "Double Protein Bowl - Steak",
+      "category": "bowl",
+      "calories": 1040,
+      "protein_g": 52,
+      "carbs_g": 47,
+      "fat_g": 72,
+      "fiber_g": 20,
+      "sugar_g": 9,
+      "sodium_mg": 2220,
+      "custom_order_tip": ""
+    },
+    {
+      "name": "Keto Bowl - Chicken",
+      "category": "bowl",
+      "calories": 400,
+      "protein_g": 33,
+      "carbs_g": 11,
+      "fat_g": 26,
+      "fiber_g": 7,
+      "sugar_g": 3,
+      "sodium_mg": 990,
+      "custom_order_tip": "Only 11 g carbs."
+    },
+    {
+      "name": "Keto Bowl - Steak",
+      "category": "bowl",
+      "calories": 490,
+      "protein_g": 25,
+      "carbs_g": 13,
+      "fat_g": 38,
+      "fiber_g": 7,
+      "sugar_g": 4,
+      "sodium_mg": 940,
+      "custom_order_tip": ""
+    },
+    {
+      "name": "Keto Bowl - Brisket Birria",
+      "category": "bowl",
+      "calories": 370,
+      "protein_g": 25,
+      "carbs_g": 13,
+      "fat_g": 25,
+      "fiber_g": 7,
+      "sugar_g": 4,
+      "sodium_mg": 1110,
+      "custom_order_tip": ""
+    },
+    {
+      "name": "Chicken Queso Bowl",
+      "category": "bowl",
+      "calories": 750,
+      "protein_g": 43,
+      "carbs_g": 74,
+      "fat_g": 33,
+      "fiber_g": 16,
+      "sugar_g": 4,
+      "sodium_mg": 1820,
+      "custom_order_tip": ""
+    },
+    {
+      "name": "Chicken Queso Burrito",
+      "category": "burrito",
+      "calories": 1050,
+      "protein_g": 51,
+      "carbs_g": 126,
+      "fat_g": 40,
+      "fiber_g": 19,
+      "sugar_g": 6,
+      "sodium_mg": 2580,
+      "custom_order_tip": "Get it as a bowl: 43 g protein for 300 fewer calories."
+    },
+    {
+      "name": "Cholula Hot & Sweet Chicken Bowl",
+      "category": "bowl",
+      "calories": 610,
+      "protein_g": 31,
+      "carbs_g": 77,
+      "fat_g": 20,
+      "fiber_g": 15,
+      "sugar_g": 10,
+      "sodium_mg": 1500,
+      "custom_order_tip": ""
+    },
+    {
+      "name": "Citrus Lime Chicken Salad",
+      "category": "salad",
+      "calories": 540,
+      "protein_g": 31,
+      "carbs_g": 49,
+      "fat_g": 26,
+      "fiber_g": 16,
+      "sugar_g": 11,
+      "sodium_mg": 1290,
+      "custom_order_tip": ""
+    },
+    {
+      "name": "Street Style Chicken Tacos (3, Flour)",
+      "category": "taco",
+      "calories": 550,
+      "protein_g": 29,
+      "carbs_g": 46,
+      "fat_g": 28,
+      "fiber_g": 8,
+      "sugar_g": 6,
+      "sodium_mg": 1690,
+      "custom_order_tip": ""
+    },
+    {
+      "name": "Street Style Pork Carnitas Tacos (3, Flour)",
+      "category": "taco",
+      "calories": 370,
+      "protein_g": 23,
+      "carbs_g": 38,
+      "fat_g": 13,
+      "fiber_g": 4,
+      "sugar_g": 3,
+      "sodium_mg": 1500,
+      "custom_order_tip": ""
+    },
+    {
+      "name": "Fajita Vegan Bowl",
+      "category": "bowl",
+      "calories": 530,
+      "protein_g": 17,
+      "carbs_g": 79,
+      "fat_g": 17,
+      "fiber_g": 22,
+      "sugar_g": 7,
+      "sodium_mg": 1350,
+      "custom_order_tip": ""
+    },
+    {
+      "name": "Southwest Steak Burrito",
+      "category": "burrito",
+      "calories": 1220,
+      "protein_g": 43,
+      "carbs_g": 134,
+      "fat_g": 58,
+      "fiber_g": 19,
+      "sugar_g": 6,
+      "sodium_mg": 2480,
+      "custom_order_tip": "The Double Protein Bowl - Chicken has 51 g protein for 520 fewer calories."
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "chain": "CAVA",
+  "slug": "cava",
+  "country": [
+    "US"
+  ],
+  "category": "healthy",
+  "official_nutrition_url": "https://assets.ctfassets.net/kugm9fp9ib18/7KrOGNUFZjBddOWezWLWwm/a20b10d71b9b0496f96b8e38bd8e0211/CAVA-REC-GID-0326-AllergReg.pdf",
+  "data_checked_date": "2026-09-24",
+  "intro_notes": "CAVA's chicken pitas have the most protein, with 48 g in both the Greek Chicken and Spicy Chicken + Avocado pitas. Among curated bowls, the Spicy Lamb + Avocado Bowl has 43 g. Numbers come from CAVA's March 2026 nutrition guide.",
+  "glp1_menu_name": null,
+  "reviewed_by": null,
+  "source_type": "official",
+  "source_name": null,
+  "items": [
+    {
+      "name": "Spicy Lamb + Avocado Bowl",
+      "category": "bowl",
+      "calories": 800,
+      "protein_g": 43,
+      "carbs_g": 49,
+      "fat_g": 52,
+      "fiber_g": 17,
+      "sugar_g": 11,
+      "sodium_mg": 1670,
+      "custom_order_tip": ""
+    },
+    {
+      "name": "Steak + Harissa Bowl",
+      "category": "bowl",
+      "calories": 620,
+      "protein_g": 37,
+      "carbs_g": 39,
+      "fat_g": 35,
+      "fiber_g": 7,
+      "sugar_g": 7,
+      "sodium_mg": 1830,
+      "custom_order_tip": ""
+    },
+    {
+      "name": "Harissa Avocado Bowl",
+      "category": "bowl",
+      "calories": 830,
+      "protein_g": 41,
+      "carbs_g": 62,
+      "fat_g": 49,
+      "fiber_g": 12,
+      "sugar_g": 12,
+      "sodium_mg": 2010,
+      "custom_order_tip": ""
+    },
+    {
+      "name": "Chicken + Rice Bowl",
+      "category": "bowl",
+      "calories": 700,
+      "protein_g": 40,
+      "carbs_g": 44,
+      "fat_g": 42,
+      "fiber_g": 7,
+      "sugar_g": 8,
+      "sodium_mg": 1810,
+      "custom_order_tip": ""
+    },
+    {
+      "name": "Greek Salad Bowl",
+      "category": "bowl",
+      "calories": 580,
+      "protein_g": 37,
+      "carbs_g": 19,
+      "fat_g": 40,
+      "fiber_g": 8,
+      "sugar_g": 5,
+      "sodium_mg": 1810,
+      "custom_order_tip": "Greek Salad Bowl has 37 g protein for 580 calories, the fewest calories among the curated bowls."
+    },
+    {
+      "name": "Falafel Crunch Bowl",
+      "category": "bowl",
+      "calories": 860,
+      "protein_g": 24,
+      "carbs_g": 88,
+      "fat_g": 56,
+      "fiber_g": 18,
+      "sugar_g": 13,
+      "sodium_mg": 2210,
+      "custom_order_tip": ""
+    },
+    {
+      "name": "Salmon + Yogurt Dill Bowl",
+      "category": "bowl",
+      "calories": 710,
+      "protein_g": 35,
+      "carbs_g": 49,
+      "fat_g": 43,
+      "fiber_g": 5,
+      "sugar_g": 10,
+      "sodium_mg": 1870,
+      "custom_order_tip": ""
+    },
+    {
+      "name": "Salmon + Strawberry Sesame Bowl",
+      "category": "bowl",
+      "calories": 700,
+      "protein_g": 36,
+      "carbs_g": 46,
+      "fat_g": 43,
+      "fiber_g": 7,
+      "sugar_g": 13,
+      "sodium_mg": 1860,
+      "custom_order_tip": ""
+    },
+    {
+      "name": "Spicy Chicken + Avocado Pita",
+      "category": "pita",
+      "calories": 930,
+      "protein_g": 48,
+      "carbs_g": 80,
+      "fat_g": 48,
+      "fiber_g": 13,
+      "sugar_g": 13,
+      "sodium_mg": 2290,
+      "custom_order_tip": ""
+    },
+    {
+      "name": "Steak + Feta Pita",
+      "category": "pita",
+      "calories": 820,
+      "protein_g": 44,
+      "carbs_g": 68,
+      "fat_g": 42,
+      "fiber_g": 9,
+      "sugar_g": 9,
+      "sodium_mg": 1800,
+      "custom_order_tip": ""
+    },
+    {
+      "name": "Greek Chicken Pita",
+      "category": "pita",
+      "calories": 720,
+      "protein_g": 48,
+      "carbs_g": 64,
+      "fat_g": 30,
+      "fiber_g": 8,
+      "sugar_g": 6,
+      "sodium_mg": 2230,
+      "custom_order_tip": "Greek Chicken has 48 g protein for 720 calories. The Spicy Chicken + Avocado pita has the same protein for 930 calories."
+    }
+  ]
+}

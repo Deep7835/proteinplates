@@ -1,0 +1,20 @@
+{
+  "chain": "Fixture Grill (TEST DATA)",
+  "slug": "fixture-grill",
+  "country": ["US"],
+  "category": "mexican",
+  "official_nutrition_url": "https://example.com/fixture-grill/nutrition",
+  "data_checked_date": "2026-09-01",
+  "intro_notes": "Fictional chain used only for tests and local previews. These numbers are not real.",
+  "glp1_menu_name": "Protein Plates",
+  "reviewed_by": null,
+  "items": [
+    { "name": "Double Chicken Bowl", "category": "bowl", "calories": 700, "protein_g": 62, "carbs_g": 60, "fat_g": 22, "fiber_g": 12, "sugar_g": 5, "sodium_mg": 1800, "price": 12.5, "custom_order_tip": "Ask for double chicken and half rice" },
+    { "name": "Chicken Salad", "category": "salad", "calories": 380, "protein_g": 40, "carbs_g": 18, "fat_g": 16, "fiber_g": 9, "sugar_g": 4, "sodium_mg": 1100, "price": 10.25, "custom_order_tip": "Swap dressing for salsa" },
+    { "name": "Steak Taco (1)", "category": "taco", "calories": 200, "protein_g": 14, "carbs_g": 15, "fat_g": 9, "fiber_g": 2, "sugar_g": 1, "sodium_mg": 400, "price": 3.5, "custom_order_tip": "" },
+    { "name": "Protein Cup", "category": "side", "calories": 180, "protein_g": 32, "carbs_g": 2, "fat_g": 4, "fiber_g": 0, "sugar_g": 0, "sodium_mg": 500, "price": 4, "custom_order_tip": "" },
+    { "name": "Sweet Tea", "category": "drink", "calories": 220, "protein_g": 0, "carbs_g": 55, "fat_g": 0, "fiber_g": 0, "sugar_g": 54, "sodium_mg": 10, "price": 2.5, "custom_order_tip": "" },
+    { "name": "Veggie Bowl", "category": "bowl", "calories": 520, "protein_g": 20, "carbs_g": 80, "fat_g": 14, "fiber_g": 18, "sugar_g": null, "sodium_mg": 1200, "price": 9, "custom_order_tip": "Add black beans for more protein" },
+    { "name": "Seasonal Burrito", "category": "burrito", "calories": null, "protein_g": 45, "carbs_g": null, "fat_g": null, "fiber_g": null, "sugar_g": null, "sodium_mg": null, "price": null, "custom_order_tip": "Ask for extra chicken" }
+  ]
+}

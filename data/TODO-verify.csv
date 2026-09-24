@@ -1,0 +1,59 @@
+chain,item,field,reason
+greggs,Tuna Mayonnaise & Cucumber Sandwich,calories,"Not added: greggs.com product data (333 kcal, 7.6 g fat, 4.2 g sugar) and nutrition PDF of 2026-09-10 (329 kcal, 7.2 g fat, 6.2 g sugar) disagree. Re-check before adding."
+chipotle,High Protein - Low Calorie Bowl,protein_g,Nutrition calculator says 35 g (used). Chipotle's GLP-1 support page (chipotle.com/glp-1-support) says 36 g. Recheck.
+raising-canes,Chicken Finger (1),fiber_g,"Official PDF lists ""< 1 g"" (not an exact value)"
+raising-canes,Cane's Sauce,fiber_g,"Official PDF lists ""< 1 g"" (not an exact value)"
+qdoba,Quesabirria Burrito,fat_g,Source conflict inside official PDF: 95 g fat vs 380 calories from fat; item left out
+qdoba,Quesabirria Quesadilla,fat_g,Source conflict inside official PDF: 127 g fat vs 670 calories from fat; item left out
+el-pollo-loco,Double Chicken Bowl,name,"Source conflict: Protein Menu page calls the 74 g bowl ""Double Chicken Avocado Bowl""; nutrition PDF calls it ""Double Chicken Bowl"" (used PDF name/values)"
+mcdonalds-india,(all items),fiber_g,North & East booklet does not list fiber
+mcdonalds-india,Chicken Nuggets (6 pc),carbs_g,Booklet nuggets page lists no carbohydrate
+mcdonalds-india,Chicken Nuggets (6 pc),sugar_g,Booklet nuggets page lists no sugar
+mcdonalds-india,Fries (Medium),carbs_g,Booklet fries page lists no carbohydrate
+mcdonalds-india,Fries (Medium),sugar_g,Booklet fries page lists no sugar
+mcdonalds-india,(all items),(source),"Two operators publish different booklets; used North & East (Dec 2025), not West & South (mcdonaldsindia.com PDF, Apr 2024). West & South menu and values may differ"
+dominos-india,(all items),fiber_g,Domino's India nutrition images do not list fiber
+kfc-india,(all items),fiber_g,KFC India booklet V6 does not list fiber
+kfc-india,Double Chicken Roll,sugar_g,"Booklet p10 lists 10 g, p21 lists 10.26 g; used p10 (10 g)"
+burger-king-india,(all items),fiber_g,Burger King India July 2026 sheet does not list fiber
+subway-india,(all items),fiber_g,Subway India August 2026 chart does not list fiber
+pizza-hut-india,Triple Chicken Feast Pan Pizza (Personal),sugar_g,Source says ND (not detected; LOQ 1 g/100 g)
+pizza-hut-india,Chicken Supreme Pan Pizza (Personal),sugar_g,Source says ND (not detected; LOQ 1 g/100 g)
+pizza-hut-india,Chicken Tikka Supreme Pan Pizza (Personal),sugar_g,Source says ND (not detected; LOQ 1 g/100 g)
+pizza-hut-india,Murg Malai Chicken Pan Pizza (Personal),sugar_g,Source says ND (not detected; LOQ 1 g/100 g)
+pizza-hut-india,Chicken Tikka Pan Pizza (Personal),sugar_g,Source says ND (not detected; LOQ 1 g/100 g)
+pizza-hut-india,Spiced Paneer Pan Pizza (Personal),sugar_g,Source says ND (not detected; LOQ 1 g/100 g)
+pizza-hut-india,Margherita Pan Pizza (Personal),sugar_g,Source says ND (not detected; LOQ 1 g/100 g)
+pizza-hut-india,Spicy Baked Chicken Wings (4 pc),sugar_g,Source says ND (not detected; LOQ 1 g/100 g)
+pizza-hut-india,Cheezy Cheese Chicken Melt,sugar_g,Source says ND (not detected; LOQ 1 g/100 g)
+pizza-hut-india,Double Chicken Delight Pan Pizza (Personal),(source),"Name appears twice (280 g/4 slices and 550 g/6 slices, likely a mislabeled Medium); used 280 g/4 slices"
+starbucks-india,Latte (Grande),fiber_g,Source lists fibre as NA
+starbucks-india,Cold Brew Black with Chocolate Protein Foam (Grande),(all),Guide p114: 188 kcal/21.6 g protein; p133: 188/21.56 with small differences; 'Lab test data' p142: 369 kcal/13.1 g protein. Used p114
+starbucks-india,Cold Coffee with Vanilla Protein Foam (Grande),(all),Guide p132: 367 kcal/23.11 g protein; 'Lab test data' p142: 639 kcal/32.3 g protein. Used p132
+starbucks-india,Java Chip Frappuccino with Chocolate Protein Foam (Grande),(all),Guide p133: 419 kcal/25.41 g protein; 'Lab test data' p142: 397.3 kcal/26.1 g protein. Used p133
+starbucks-india,Brown Sugar Iced Shaken Espresso with Vanilla Protein Foam (Grande),(all),Guide p132: 230 kcal/19.15 g protein; 'Lab test data' p141 has a different row (461 kcal/15 g). Used p132
+taco-bell-india,(all items),fiber_g,Taco Bell India April 2026 sheet does not list fiber
+taco-bell-india,Maxx Protein Rice Bowl (Non-Veg),sugar_g,Source says BLQ (below limit of quantification)
+taco-bell-india,Maxx Protein Rice Bowl (Veg),sugar_g,Source says BLQ (below limit of quantification)
+taco-bell-india,Banger Protein Salad (Chicken Steak),sugar_g,Source says BLQ (below limit of quantification)
+taco-bell-india,Banger Protein Salad (Non-Veg),sugar_g,Source says BLQ (below limit of quantification)
+taco-bell-india,Banger Protein Salad (Veg),sugar_g,Source says BLQ (below limit of quantification)
+barista,(whole chain),official_nutrition_url,"Not built (2026-09-24): barista.co.in shows no nutrition and /menu is 404; Zomato listing only has '24g Protein' in 2 drink names, no calories. Only user-entered databases exist, which our rules don't allow."
+chaayos,(whole chain),official_nutrition_url,"Not built (2026-09-24): chaayos.com has no cafe nutrition; cafes.chaayos.com is not found; Zomato listing names protein items (ProChai, Protein Power Paneer Chilla) but gives no numbers. Only user-entered databases exist, which our rules don't allow."
+wasabi,(all items),fiber_g,Wasabi nutrition guide has no fibre column
+costa-coffee,"High Protein Latte (Medium, semi-skimmed milk)",fiber_g,Costa drinks table has no fibre column
+costa-coffee,"High Protein Iced Latte (Medium, semi-skimmed milk)",fiber_g,Costa drinks table has no fibre column
+rola-wala,Keralan Chickpea Spice Bowl (Rice),protein_g,official chart value (30 g) looks inconsistent with Naan Roll (15 g); possible source error
+rola-wala,Keralan Chickpea Spice Bowl (Cauli),protein_g,official chart value (35 g) looks inconsistent with Naan Roll (15 g); possible source error
+tortilla,(all items),sodium_mg,"Tortilla lists salt rounded to whole grams, too coarse to convert to sodium (0 g salt would show 0 mg). Left null."
+nandos,(whole chain),official_nutrition_url,Not built (2026-09-24): nandos.co.uk blocks automated access (Imperva). Nando's publishes nutrition on its menu pages; fill in by hand from a browser.
+dutch-bros,"Cookie Butter Protein Latte (Iced, Medium)",fiber_g,"Official guide lists fiber as ""<1"" g; left null"
+firehouse-subs,Chicken 'n' Cheddar Rancher (Medium),sugar_g,Official firehousesubs.com menu data has no sugar value for this item
+dunkin,(whole chain),official_nutrition_url,Not built (2026-09-24): dunkindonuts.com and its nutrition PDF are only available in the US (blocked from this machine). Rebuild from a US connection.
+pizza-hut,(whole chain),official_nutrition_url,Not built (2026-09-24): pizzahut.com timed out or redirected to India from this machine. Rebuild from a US connection.
+culvers,"Chicken Tenders, Original - 4 Piece",sugar_g,"source lists ""<1"" (not an exact number)"
+burger-king,10 Pc. Chicken Nuggets,fiber_g,"Official data lists 11 g fiber, which looks like a source error for nuggets; left null. Please confirm."
+burger-king,(all items),(source),Used nutritionWithModifiers (full default build) from Nutrition Explorer data; page did not render from India to confirm on screen
+whataburger,(all items),(source),"Used the current ordering site (store #367, default builds). The site's 'Nutritional Information' link still points to a March 2021 PDF whose values differ slightly for many items."
+sonic,(whole chain),official_nutrition_url,Not built (2026-09-24): sonicdrivein.com is Cloudflare-blocked from this machine; old PDFs have an expired certificate. Rebuild from a US connection.
+five-guys,(whole chain),official_nutrition_url,"Not built (2026-09-24): official guide lists only components (patty, bun, toppings), not whole items; summing them would be an estimate."

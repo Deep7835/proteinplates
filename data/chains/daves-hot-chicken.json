@@ -1,0 +1,173 @@
+{
+  "chain": "Dave's Hot Chicken",
+  "slug": "daves-hot-chicken",
+  "country": [
+    "US"
+  ],
+  "category": "chicken",
+  "official_nutrition_url": "https://store.daveshotchicken.com/wp-content/uploads/2026/06/DHC-Nutrition-Chart_FOODS.pdf",
+  "data_checked_date": "2026-09-24",
+  "intro_notes": "Dave's Hot Chicken lists each item by spice level. Hotter levels (Mild to Reaper) add calories and sodium, with about the same protein. Dave's Bites (10 pc) have 41 g protein for 650 calories, and the Dave's #2 combo has 68 g.",
+  "glp1_menu_name": null,
+  "reviewed_by": null,
+  "source_type": "official",
+  "source_name": null,
+  "items": [
+    {
+      "name": "Dave's #2, Not Hot & Lite Mild Spice",
+      "category": "combo",
+      "calories": 1500,
+      "protein_g": 68,
+      "carbs_g": 143,
+      "fat_g": 75,
+      "fiber_g": 3,
+      "sugar_g": 17,
+      "sodium_mg": 3340,
+      "custom_order_tip": ""
+    },
+    {
+      "name": "Dave's #3, Not Hot & Lite Mild Spice",
+      "category": "combo",
+      "calories": 1370,
+      "protein_g": 62,
+      "carbs_g": 128,
+      "fat_g": 67,
+      "fiber_g": 3,
+      "sugar_g": 9,
+      "sodium_mg": 3400,
+      "custom_order_tip": ""
+    },
+    {
+      "name": "Dave's #1, Not Hot & Lite Mild Spice",
+      "category": "combo",
+      "calories": 1230,
+      "protein_g": 56,
+      "carbs_g": 119,
+      "fat_g": 58,
+      "fiber_g": 3,
+      "sugar_g": 8,
+      "sodium_mg": 3080,
+      "custom_order_tip": ""
+    },
+    {
+      "name": "Dave's #4, Not Hot & Lite Mild Spice",
+      "category": "combo",
+      "calories": 1060,
+      "protein_g": 37,
+      "carbs_g": 103,
+      "fat_g": 56,
+      "fiber_g": 3,
+      "sugar_g": 11,
+      "sodium_mg": 2350,
+      "custom_order_tip": ""
+    },
+    {
+      "name": "Dave's #5, Not Hot & Lite Mild Spice",
+      "category": "combo",
+      "calories": 930,
+      "protein_g": 31,
+      "carbs_g": 92,
+      "fat_g": 48,
+      "fiber_g": 3,
+      "sugar_g": 7,
+      "sodium_mg": 2410,
+      "custom_order_tip": ""
+    },
+    {
+      "name": "Dave's Bites 10 pc, Not Hot & Lite Mild Spice",
+      "category": "chicken",
+      "calories": 650,
+      "protein_g": 41,
+      "carbs_g": 39,
+      "fat_g": 35,
+      "fiber_g": 0,
+      "sugar_g": 3,
+      "sodium_mg": 1570,
+      "custom_order_tip": "41 g protein for 650 calories."
+    },
+    {
+      "name": "Dave's Bites 10 pc w/ Fries, Not Hot & Lite Mild Spice",
+      "category": "combo",
+      "calories": 1090,
+      "protein_g": 47,
+      "carbs_g": 98,
+      "fat_g": 55,
+      "fiber_g": 3,
+      "sugar_g": 3,
+      "sodium_mg": 2770,
+      "custom_order_tip": ""
+    },
+    {
+      "name": "10 Saucy Bites w/ Buffalo Sauce",
+      "category": "chicken",
+      "calories": 670,
+      "protein_g": 37,
+      "carbs_g": 27,
+      "fat_g": 44,
+      "fiber_g": 0,
+      "sugar_g": 3,
+      "sodium_mg": 3170,
+      "custom_order_tip": "Buffalo is the lightest sauce. The Mike's Hot Honey version is 920 calories."
+    },
+    {
+      "name": "Single Tender (no sides), Not Hot & Lite Mild Spice",
+      "category": "chicken",
+      "calories": 490,
+      "protein_g": 25,
+      "carbs_g": 30,
+      "fat_g": 29,
+      "fiber_g": 0,
+      "sugar_g": 3,
+      "sodium_mg": 1210,
+      "custom_order_tip": "Mild to Reaper spice adds 60 calories (550 total) with the same 25 g protein."
+    },
+    {
+      "name": "Single Slider (no sides), Not Hot & Lite Mild Spice",
+      "category": "sandwich",
+      "calories": 620,
+      "protein_g": 31,
+      "carbs_g": 41,
+      "fat_g": 37,
+      "fiber_g": 0,
+      "sugar_g": 7,
+      "sodium_mg": 1150,
+      "custom_order_tip": ""
+    },
+    {
+      "name": "Mac & Cheese",
+      "category": "side",
+      "calories": 290,
+      "protein_g": 14,
+      "carbs_g": 25,
+      "fat_g": 16,
+      "fiber_g": 1,
+      "sugar_g": 5,
+      "sodium_mg": 1090,
+      "custom_order_tip": "14 g protein for 290 calories."
+    },
+    {
+      "name": "Kale Slaw",
+      "category": "side",
+      "calories": 270,
+      "protein_g": 2,
+      "carbs_g": 8,
+      "fat_g": 26,
+      "fiber_g": 3,
+      "sugar_g": 4,
+      "sodium_mg": 170,
+      "custom_order_tip": ""
+    },
+    {
+      "name": "French Fries",
+      "category": "side",
+      "calories": 440,
+      "protein_g": 6,
+      "carbs_g": 58,
+      "fat_g": 20,
+      "fiber_g": 3,
+      "sugar_g": 0,
+      "sodium_mg": 1200,
+      "custom_order_tip": "Mac & Cheese has 14 g protein for 150 fewer calories."
+    }
+  ]
+}

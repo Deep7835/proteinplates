@@ -1,0 +1,61 @@
+chain,slug,country,category,official_nutrition_url,priority
+Chipotle,chipotle,US,mexican,https://www.chipotle.com/nutrition-calculator,1
+Subway,subway,US,sandwiches,https://media.subway.com/dam/urn:aaid:aem:2278372c-147b-42f2-8edc-7d8d94d1f07e/original/as/us-nutrition-en.pdf,1
+Starbucks,starbucks,US,coffee,https://www.starbucks.com/menu,1
+McDonald's,mcdonalds,US,burgers,https://www.mcdonalds.com/us/en-us/about-our-food/nutrition-calculator.html,1
+Chick-fil-A,chick-fil-a,US,chicken,https://www.chick-fil-a.com/nutrition-allergens,1
+Taco Bell,taco-bell,US,mexican,https://www.nutritionix.com/taco-bell/menu/premium,1
+Wendy's,wendys,US,burgers,https://order.wendys.com/us/en/national/menu,1
+Shake Shack,shake-shack,US,burgers,https://shakeshack.com/nutritionandallergeninfo,2
+Smoothie King,smoothie-king,US,smoothies,https://www.smoothieking.com/nutrition/,1
+Jack in the Box,jack-in-the-box,US,burgers,https://api.jackintheboxdigital.com/digital-account/menu-experience-api/v1/pdf/nutrition,2
+Panera Bread,panera-bread,US,sandwiches,https://www.panerabread.com/en-us/menu/nutritious-eating/allergen-and-nutrition-information.html,1
+Wingstop,wingstop,US,chicken,https://s3.amazonaws.com/wingstop.com/assets/static/WSR18-0009-Corporate-NutritionalGuide-JumboWings-HR_OFFICAL.pdf,2
+Burger King,burger-king,US,burgers,https://www.bk.com/nutrition-explorer,1
+Popeyes,popeyes,US,chicken,https://plk-use1-prod.sites.rbictg.com/nutrition/PLK_Nutrition.pdf,2
+KFC,kfc,US,chicken,https://www.nutritionix.com/kfc/menu/premium,2
+Sweetgreen,sweetgreen,US,healthy,https://www.sweetgreen.com/nutrition,1
+CAVA,cava,US,healthy,https://assets.ctfassets.net/kugm9fp9ib18/7KrOGNUFZjBddOWezWLWwm/a20b10d71b9b0496f96b8e38bd8e0211/CAVA-REC-GID-0326-AllergReg.pdf,1
+Panda Express,panda-express,US,asian,https://www.pandaexpress.com/nutritioninformation,2
+Dunkin',dunkin,US,coffee,https://www.dunkindonuts.com/nutrition/,2
+Domino's,dominos,US,pizza,https://cache.dominos.com/olo/6_168_0/assets/build/market/US/_en/pdf/DominosNutritionGuide.pdf,2
+Pizza Hut,pizza-hut,US,pizza,https://www.pizzahut.com/c/content/nutrition,3
+Arby's,arbys,US,sandwiches,https://www.arbys.com/nutrition/,2
+Sonic Drive-In,sonic,US,burgers,https://www.sonicdrivein.com/nutrition-allergen/,3
+Qdoba,qdoba,US,mexican,https://assets.ctfassets.net/0tc4847zqy12/bQFJBCmsAk4ww4qzdfAOm/65d8b143afc183a155450c442408f2f3/Nutrition-Brochure-Published-on-02-26-2026-QDOBA-Mexican-Eats.pdf,2
+Jersey Mike's,jersey-mikes,US,sandwiches,https://www.jerseymikes.com/menu/nutrition,2
+Jimmy John's,jimmy-johns,US,sandwiches,https://resources.jimmyjohns.com/downloadable-files/NutritionGuide.pdf,3
+Firehouse Subs,firehouse-subs,US,sandwiches,https://www.firehousesubs.com/menu,3
+Raising Cane's,raising-canes,US,chicken,https://raisingcanes.cdn.prismic.io/raisingcanes/IxTKraMRo_HyNWx2_Allergen%26NutritionalInformation_ALL_DIGITAL_8.26.pdf,2
+Culver's,culvers,US,burgers,https://cdn.culvers.com/menu/docs/guide-nutrition-allergen.pdf,3
+Whataburger,whataburger,US,burgers,https://whataburger.com/menu,2
+In-N-Out Burger,in-n-out,US,burgers,https://www.in-n-out.com/menu/nutrition-info,2
+Five Guys,five-guys,US,burgers,https://www.fiveguys.com/nutritional-allergy-information/,3
+Tropical Smoothie Cafe,tropical-smoothie-cafe,US,smoothies,https://www.tropicalsmoothiecafe.com/nutrition/nutrition-guide.pdf,2
+El Pollo Loco,el-pollo-loco,US,chicken,https://www.elpolloloco.com/content/pdfs/epl_web_nutrition_guide_mod_4_2026_hr.pdf,3
+Just Salad,just-salad,US,healthy,https://www.justsalad.com/allergens,3
+Dutch Bros,dutch-bros,US,coffee,https://www.dutchbros.com/website/menu/nutritional-guide.pdf,3
+Choolaah Indian BBQ,choolaah,US,indian,https://choolaah.com/wp-content/uploads/2023/04/CH_NutritionalInfo_042723.pdf,3
+Dave's Hot Chicken,daves-hot-chicken,US,chicken,https://store.daveshotchicken.com/wp-content/uploads/2026/06/DHC-Nutrition-Chart_FOODS.pdf,3
+Greggs,greggs,UK,bakery,https://www.greggs.com/nutrition,1
+Pret A Manger,pret-a-manger,UK,sandwiches,https://www.pret.co.uk/en-GB/our-menu,1
+Nando's,nandos,UK,chicken,https://www.nandos.co.uk/food/menu/,1
+Leon,leon,UK,healthy,https://leon.co/menu/,1
+itsu,itsu,UK,asian,https://www.itsu.com/menu/,1
+Wasabi,wasabi,UK,asian,https://www.wasabi.uk.com/menus/,2
+Costa Coffee,costa-coffee,UK,coffee,https://www.costa.co.uk/sustainability/nutrition,1
+McDonald's UK,mcdonalds-uk,UK,burgers,https://www.mcdonalds.com/gb/en-gb/menu.html,1
+Wagamama,wagamama,UK,asian,https://www.wagamama.com/menu,2
+Tortilla,tortilla,UK,mexican,https://www.tortilla.co.uk/menu/nutrition-and-allergens,2
+Rola Wala,rola-wala,UK,indian,https://rolawala.com/our-food/,3
+Subway UK,subway-uk,UK,sandwiches,https://media.subway.com/dam/urn:aaid:aem:3ef80e30-d135-4098-a60c-c54891c4dfce/original/as/UKI_IngredientsNutritionalInformationJune2026.pdf,2
+McDonald's India,mcdonalds-india,IN,burgers,https://mcdindia.com/nutritional-information/,1
+Domino's India,dominos-india,IN,pizza,https://m.dominos.co.in/jfl-discovery-ui/en/pwa/nutritional-info,1
+KFC India,kfc-india,IN,chicken,https://about.kfc.co.in/assets/files/nutrition-booklet.pdf,1
+Burger King India,burger-king-india,IN,burgers,https://www.burgerking.in/,1
+Subway India,subway-india,IN,sandwiches,https://subway.in/,2
+Pizza Hut India,pizza-hut-india,IN,pizza,https://www.pizzahut.co.in/nutrition,2
+Starbucks India (Tata Starbucks),starbucks-india,IN,coffee,https://www.starbucks.in/nutrition,2
+Chaayos,chaayos,IN,coffee,,2
+Taco Bell India,taco-bell-india,IN,mexican,https://www.tacobell.co.in/nutritional-info,2
+Barista,barista,IN,coffee,,2
