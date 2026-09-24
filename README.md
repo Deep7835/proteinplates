@@ -1,4 +1,4 @@
-# ProteinPlate
+# ProteinPlates
 
 **Hit your protein target, even when eating out.**
 
@@ -26,7 +26,7 @@ npm run dev                   # http://localhost:3000
 
 | Variable | What it does |
 |---|---|
-| `NEXT_PUBLIC_SITE_URL` | Your live domain, with no trailing slash (e.g. `https://proteinplate.com`). Used for canonical URLs, the sitemap, share images, and JSON-LD. |
+| `NEXT_PUBLIC_SITE_URL` | Your live domain, with no trailing slash (e.g. `https://proteinplates.com`). Used for canonical URLs, the sitemap, share images, and JSON-LD. |
 | `NEXT_PUBLIC_ADS_ENABLED` | Set to `true` to show the reserved ad slots. Leave it unset or `false` to hide them. |
 
 The site name, tagline, contact email, and navigation are all set in [`lib/config/site.ts`](lib/config/site.ts).
@@ -130,7 +130,14 @@ Prices use local currency: GBP for UK-only chains, INR for India-only chains, an
      - label: "..."
        url: "https://pubmed.ncbi.nlm.nih.gov/..."
    relatedChains: ["chipotle", "subway"]
+   image:                      # required cover photo
+     src: "/images/guides/<slug>.jpg"               # file in public/images/guides
+     alt: "Describe what the photo actually shows"
+     credit: "Photographer name"
+     creditUrl: "https://unsplash.com/@username"
+     sourceUrl: "https://unsplash.com/photos/<photo-id>"
    ```
+   **Cover photos:** pick a free photo on [unsplash.com](https://unsplash.com) (not an "Unsplash+" one). Avoid recognizable faces and visible brand logos. Download it at 1600×900 and save it as `public/images/guides/<slug>.jpg`. One way: copy the photo's `images.unsplash.com/photo-...` address and add `?w=1600&h=900&fit=crop&q=80&fm=jpg` to the end. Next.js serves it resized as AVIF/WebP, and it doubles as the guide's social share image. Write your own alt text; Unsplash's descriptions are often wrong. The build fails if the file is missing. Every build also runs `npm run images`, which makes the small blurred preview shown while the photo loads (saved in `lib/images/placeholders.json`).
 2. Write the body in Markdown. Use `##` and `###` headings, which build the table of contents automatically. You can use GFM tables and `<Callout title="...">...</Callout>`.
 3. The guide shows up automatically on `/guides`, the matching `/for/<audience>` hub, the home page, and the sitemap.
 
@@ -168,6 +175,7 @@ lib/chains/           Chain loading, validation, ranking, FAQs
 lib/guides/           Guide loading and table of contents
 lib/schema/           Zod schemas for chain JSON and guide frontmatter
 lib/search/           Site search: index builder (served at /search-index.json) and matcher
+public/images/        Photos (home hero, guide covers), all free Unsplash license, credited on the page
 data/chains/          One JSON file per chain
 data/chain-list.csv   Master list of chains to cover
 data/TODO-verify.csv  Values still to verify

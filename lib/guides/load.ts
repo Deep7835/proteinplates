@@ -1,4 +1,4 @@
-import { readdirSync, readFileSync } from "node:fs";
+import { existsSync, readdirSync, readFileSync } from "node:fs";
 import path from "node:path";
 import matter from "gray-matter";
 import { ArticleSchema, type Guide } from "@/lib/schema/article";
@@ -6,6 +6,11 @@ import { ArticleSchema, type Guide } from "@/lib/schema/article";
 // Server-only: reads /content/articles/*.mdx. Invalid frontmatter throws, which fails the build.
 
 const DIR = path.join(process.cwd(), "content", "articles");
+
+/** Rough reading time at about 230 words a minute, rounded up. */
+export function readingMinutes(body: string): number {
+  return Math.max(1, Math.ceil(body.split(/\s+/).filter(Boolean).length / 230));
+}
 
 function load(): Guide[] {
   return readdirSync(DIR)
@@ -17,7 +22,10 @@ function load(): Guide[] {
         const issues = parsed.error.issues.map((i) => `${i.path.join(".")}: ${i.message}`).join("\n  - ");
         throw new Error(`Invalid frontmatter in content/articles/${file}:\n  - ${issues}`);
       }
-      return { ...parsed.data, slug: file.replace(/\.mdx$/, ""), body: content };
+      if (!existsSync(path.join(process.cwd(), "public", parsed.data.image.src))) {
+        throw new Error(`content/articles/${file}: cover photo not found at public${parsed.data.image.src}`);
+      }
+      return { ...parsed.data, slug: file.replace(/\.mdx$/, ""), body: content, readingMinutes: readingMinutes(content) };
     })
     .sort((a, b) => b.date.localeCompare(a.date));
 }

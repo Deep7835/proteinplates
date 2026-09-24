@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
+import { cardLinkClass } from "@/components/ui/Card";
+import { blurFor } from "@/lib/images/placeholder";
 import { notFound } from "next/navigation";
 import { ProteinCalculator } from "@/components/calculators/ProteinCalculator";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
@@ -80,9 +83,14 @@ export default async function AudienceHubPage({ params }: PageProps<"/for/[audie
               <ul className="mt-4 space-y-3">
                 {guides.map((g) => (
                   <li key={g.slug}>
-                    <Link href={`/guides/${g.slug}`} className="block rounded-card border border-line p-4 text-ink no-underline hover:border-brand-600">
-                      <span className="font-semibold">{g.title}</span>
-                      <span className="mt-1 block text-sm text-muted">{g.description}</span>
+                    <Link href={`/guides/${g.slug}`} className={`${cardLinkClass} flex-row! items-center gap-4 p-3`}>
+                      <span className="relative aspect-video w-28 shrink-0 overflow-hidden rounded-xl bg-surface sm:w-36">
+                        <Image src={g.image.src} alt="" fill placeholder={blurFor(g.image.src) ? "blur" : "empty"} blurDataURL={blurFor(g.image.src)} sizes="144px" className="object-cover" />
+                      </span>
+                      <span className="min-w-0">
+                        <span className="block font-semibold leading-snug group-hover:text-brand-700">{g.title}</span>
+                        <span className="mt-1 line-clamp-2 text-sm text-muted">{g.description}</span>
+                      </span>
                     </Link>
                   </li>
                 ))}

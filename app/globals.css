@@ -13,6 +13,8 @@
 /* Design tokens (light theme). All text colors pass WCAG AA on white. Dark values are below. */
 @theme {
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  /* Headings: a warm, soft serif for a food-magazine feel. Body and UI stay in Inter. */
+  --font-display: var(--font-fraunces), ui-serif, Georgia, serif;
 
   /* Brand: deep green (protein / fresh food) */
   --color-brand-50: #eef8f4;
@@ -34,8 +36,8 @@
   /* Neutrals */
   --color-ink: #16201d;
   --color-muted: #4f5b57;
-  --color-line: #dfe5e2;
-  --color-surface: #f6f8f7;
+  --color-line: #e3e3dc;
+  --color-surface: #f7f6f1;
   --color-page: #ffffff;
 
   /* Status */
@@ -43,8 +45,18 @@
   --color-warn-800: #6b4a00;
   --color-danger-700: #b42318;
 
-  --radius-card: 0.875rem;
-  --shadow-card: 0 1px 2px rgb(16 24 20 / 0.06), 0 1px 3px rgb(16 24 20 / 0.08);
+  --radius-card: 1.125rem;
+  --shadow-card: 0 1px 2px rgb(16 24 20 / 0.05), 0 2px 6px rgb(16 24 20 / 0.05);
+  /* Raised state for hovered cards and the hero photo. */
+  --shadow-lift: 0 4px 10px rgb(16 24 20 / 0.06), 0 12px 28px rgb(16 24 20 / 0.1);
+
+  --animate-fade-up: fade-up 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+  }
 }
 
 /* Dark theme: same token names, darker values. All text pairs keep WCAG AA contrast.
@@ -73,6 +85,7 @@
   --color-warn-800: #f3d68d;
   --color-danger-700: #ff8f85;
   --shadow-card: 0 1px 2px rgb(0 0 0 / 0.4), 0 1px 3px rgb(0 0 0 / 0.5);
+  --shadow-lift: 0 6px 16px rgb(0 0 0 / 0.45), 0 16px 32px rgb(0 0 0 / 0.35);
   color-scheme: dark;
 }
 }
@@ -101,6 +114,7 @@
   --color-warn-800: #f3d68d;
   --color-danger-700: #ff8f85;
   --shadow-card: 0 1px 2px rgb(0 0 0 / 0.4), 0 1px 3px rgb(0 0 0 / 0.5);
+  --shadow-lift: 0 6px 16px rgb(0 0 0 / 0.45), 0 16px 32px rgb(0 0 0 / 0.35);
   color-scheme: dark;
   }
 }
@@ -142,12 +156,18 @@
   h3 {
     @apply text-ink font-bold tracking-tight text-balance;
   }
+  /* Serif for page and section headings only; headings inside cards (calculator panels, results) stay in Inter. */
+  h1,
+  h2:not(:where(.rounded-card *)) {
+    @apply font-display font-semibold;
+    letter-spacing: -0.015em;
+  }
   a {
     @apply text-brand-700 underline-offset-2;
   }
   /* Links inside running text are underlined, so they don't rely on color alone (WCAG 1.4.1).
      :where() keeps specificity at 0, so a "no-underline" class still wins. */
-  :where(p, li, dd) a {
+  :where(p, li, dd, figcaption) a {
     text-decoration-line: underline;
   }
   :focus-visible {

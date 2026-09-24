@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo } from "react";
+import { chipClass } from "@/components/ui/Button";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Card } from "@/components/ui/Card";
@@ -181,7 +182,7 @@ export function ProteinCalculator({ initialGoal, syncUrl = false, chainLinks = [
           <ul className="mt-3 flex flex-wrap gap-2">
             {chainLinks.map((c) => (
               <li key={c.href}>
-                <Link href={c.href} className="inline-flex min-h-10 items-center rounded-full border border-line px-3 text-sm no-underline hover:border-brand-600">
+                <Link href={c.href} className={chipClass}>
                   {c.label}
                 </Link>
               </li>

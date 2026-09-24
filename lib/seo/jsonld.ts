@@ -82,7 +82,7 @@ export function articleLd(input: {
       : { "@type": "Organization", name: site.name, url: site.url },
     ...(input.reviewedBy ? { reviewedBy: { "@type": "Person", name: input.reviewedBy } } : {}),
     publisher: { "@id": `${site.url}/#organization` },
-    ...(input.image ? { image: absoluteUrl(input.image) } : {}),
+    ...(input.image ? { image: /^https?:\/\//.test(input.image) ? input.image : absoluteUrl(input.image) } : {}),
   };
 }
 

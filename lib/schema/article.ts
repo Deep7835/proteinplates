@@ -21,6 +21,17 @@ export const ArticleSchema = z
     faqs: z.array(z.object({ question: z.string(), answer: z.string() })).min(2),
     sources: z.array(z.object({ label: z.string(), url: z.url() })).min(1),
     relatedChains: z.array(z.string()).default([]),
+    // Cover photo, saved in /public/images/guides (free Unsplash license). Alt text describes what the photo shows;
+    // credit names the photographer; sourceUrl is the photo's Unsplash page, so we can always trace where it came from.
+    image: z
+      .object({
+        src: z.string().regex(/^\/images\/guides\/[a-z0-9-]+\.(jpg|webp|png)$/, "Use /images/guides/<file>.jpg (the file lives in public/)"),
+        alt: z.string().min(15),
+        credit: z.string().min(1),
+        creditUrl: z.url(),
+        sourceUrl: z.url(),
+      })
+      .strict(),
     // SEO extras (optional). metaTitle overrides <title>; the rest document how the article was written.
     metaTitle: z.string().min(10).max(70).optional(),
     primaryKeyword: z.string().optional(),
@@ -32,4 +43,4 @@ export const ArticleSchema = z
   .strict();
 
 export type ArticleFrontmatter = z.infer<typeof ArticleSchema>;
-export type Guide = ArticleFrontmatter & { slug: string; body: string };
+export type Guide = ArticleFrontmatter & { slug: string; body: string; readingMinutes: number };
