@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { chipClass } from "@/components/ui/Button";
 import { compileMDX } from "next-mdx-remote/rsc";
 import rehypeSlug from "rehype-slug";
 import remarkGfm from "remark-gfm";
@@ -56,14 +57,14 @@ export async function CalculatorTemplate({ page, variants, chainLinks }: Props) 
             <ul className="mt-3 flex flex-wrap gap-2">
               {page.variant && main && (
                 <li>
-                  <Link href={`/${page.slug}`} className="inline-flex min-h-10 items-center rounded-full border border-line px-3 text-sm no-underline hover:border-brand-600">
+                  <Link href={`/${page.slug}`} className={chipClass}>
                     {main.name}
                   </Link>
                 </li>
               )}
               {siblings.map((v) => (
                 <li key={v.variant}>
-                  <Link href={`/${v.slug}/${v.variant}`} className="inline-flex min-h-10 items-center rounded-full border border-line px-3 text-sm no-underline hover:border-brand-600">
+                  <Link href={`/${v.slug}/${v.variant}`} className={chipClass}>
                     {v.name}
                   </Link>
                 </li>
@@ -74,7 +75,7 @@ export async function CalculatorTemplate({ page, variants, chainLinks }: Props) 
 
         <AdSlot position="mid-content" />
 
-        <article className="prose prose-slate dark:prose-invert mt-12 max-w-3xl prose-headings:scroll-mt-24 prose-headings:tracking-tight prose-a:text-brand-700">
+        <article className="prose prose-slate dark:prose-invert prose-h1:font-semibold prose-h2:font-semibold mt-12 max-w-3xl prose-headings:scroll-mt-24 prose-headings:tracking-tight prose-a:text-brand-700">
           {content}
         </article>
 

@@ -19,7 +19,7 @@ export function ThemeToggle() {
     <button
       type="button"
       onClick={toggle}
-      className="flex size-11 items-center justify-center rounded-lg text-ink hover:bg-surface"
+      className="flex size-11 items-center justify-center cursor-pointer rounded-full text-ink transition-colors hover:bg-surface"
       aria-label="Toggle dark mode"
       title="Toggle dark mode"
     >

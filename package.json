@@ -1,5 +1,5 @@
 {
-  "name": "protein-plate",
+  "name": "proteinplates",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -10,9 +10,10 @@
     "test": "vitest run",
     "validate-data": "tsx scripts/validate-data.ts",
     "new-chain": "tsx scripts/new-chain.ts",
-    "prebuild": "npm run validate-data && npm run check-content",
+    "prebuild": "npm run images && npm run validate-data && npm run check-content",
     "typecheck": "tsc --noEmit",
-    "check-content": "tsx scripts/check-content.mts"
+    "check-content": "tsx scripts/check-content.mts",
+    "images": "tsx scripts/image-placeholders.mts"
   },
   "dependencies": {
     "github-slugger": "^2.0.0",
@@ -35,6 +36,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.3.6",
+    "sharp": "^0.35.4",
     "tailwindcss": "^4",
     "tsx": "^4.23.15",
     "typescript": "^5",

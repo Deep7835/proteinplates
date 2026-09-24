@@ -1,7 +1,7 @@
 // Site-wide settings. Change the name and URL here (URL comes from NEXT_PUBLIC_SITE_URL).
 
 export const site = {
-  name: "ProteinPlate",
+  name: "ProteinPlates",
   tagline: "Hit your protein target, even when eating out.",
   description:
     "Free protein calculator and high-protein picks at popular US, UK, and Indian restaurant chains. Simple, sourced nutrition info for gym-goers, GLP-1 users, and adults 50+.",

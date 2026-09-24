@@ -15,7 +15,7 @@ export function ProsePage({ title, path, updated, children }: { title: string; p
     <Container className="py-8 sm:py-10">
       <JsonLd data={breadcrumbLd(crumbs)} />
       <Breadcrumbs crumbs={crumbs} />
-      <article className="prose prose-slate dark:prose-invert mt-4 max-w-3xl prose-headings:tracking-tight prose-a:text-brand-700">
+      <article className="prose prose-slate dark:prose-invert prose-h1:font-semibold prose-h2:font-semibold mt-4 max-w-3xl prose-headings:tracking-tight prose-a:text-brand-700">
         <h1>{title}</h1>
         {updated && <p className="text-sm text-muted">Last updated {longDate(updated)}</p>}
         {children}

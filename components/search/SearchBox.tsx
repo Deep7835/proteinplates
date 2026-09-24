@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { chipClass } from "@/components/ui/Button";
 import Link from "next/link";
 import { Search } from "lucide-react";
 import type { SearchDoc } from "@/lib/search/index";
@@ -68,7 +69,7 @@ export function SearchBox() {
                 <button
                   type="button"
                   onClick={() => setQ(s)}
-                  className="inline-flex min-h-10 items-center rounded-full border border-line px-3 text-sm hover:border-brand-600"
+                  className={chipClass}
                 >
                   {s}
                 </button>

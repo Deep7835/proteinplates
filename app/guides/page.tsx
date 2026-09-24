@@ -1,18 +1,15 @@
-import Link from "next/link";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { Container } from "@/components/layout/Container";
+import { GuideCard } from "@/components/guides/GuideCard";
 import { JsonLd } from "@/components/seo/JsonLd";
-import { Badge } from "@/components/ui/Badge";
-import { longDate } from "@/lib/chains/format";
-import { audiences } from "@/lib/config/site";
 import { getAllGuides } from "@/lib/guides/load";
 import { breadcrumbLd } from "@/lib/seo/jsonld";
 import { buildMetadata } from "@/lib/seo/metadata";
 
 export const metadata = buildMetadata({
-  title: "Protein Guides: Simple, Sourced Advice for Real Life",
+  title: "Nutrition Guides: Simple, Sourced Advice for Real Life",
   description:
-    "Easy-to-read protein guides for GLP-1 users, gym-goers, and adults 50+. How much protein you need and how to get it from real food, at home or eating out.",
+    "Easy-to-read guides on protein, calories, carbs, fiber, water, and body measurements. Sourced advice for GLP-1 users, gym-goers, women, men, and adults 50+.",
   path: "/guides",
 });
 
@@ -26,26 +23,14 @@ export default function GuidesPage() {
     <Container className="py-8 sm:py-10">
       <JsonLd data={breadcrumbLd(crumbs)} />
       <Breadcrumbs crumbs={crumbs} />
-      <h1 className="mt-4 text-3xl sm:text-4xl">Protein guides</h1>
+      <h1 className="mt-4 text-4xl sm:text-5xl">Nutrition guides</h1>
       <p className="mt-3 max-w-2xl text-lg text-muted">
-        Short, sourced guides on how much protein you need and how to get it from real food.
+        Short, sourced guides on protein, calories, and nutrients, and how to hit your targets with real food, at home or eating out.
       </p>
-      <ul className="mt-8 grid gap-4 md:grid-cols-2">
-        {guides.map((g) => (
+      <ul className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {guides.map((g, i) => (
           <li key={g.slug}>
-            <Link
-              href={`/guides/${g.slug}`}
-              className="flex h-full flex-col rounded-card border border-line p-5 text-ink no-underline shadow-card hover:border-brand-600"
-            >
-              <span className="flex flex-wrap gap-1.5">
-                {g.audience.map((a) => (
-                  <Badge key={a} tone="brand">{audiences.find((x) => x.slug === a)?.short}</Badge>
-                ))}
-              </span>
-              <span className="mt-3 text-lg font-bold">{g.title}</span>
-              <span className="mt-2 text-sm text-muted">{g.description}</span>
-              <span className="mt-3 text-xs text-muted">Updated {longDate(g.updated)}</span>
-            </Link>
+            <GuideCard guide={g} headingLevel="h2" eager={i === 0} />
           </li>
         ))}
       </ul>
