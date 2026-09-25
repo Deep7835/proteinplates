@@ -28,6 +28,9 @@ npm run dev                   # http://localhost:3000
 |---|---|
 | `NEXT_PUBLIC_SITE_URL` | Your live domain, with no trailing slash (e.g. `https://proteinplates.com`). Used for canonical URLs, the sitemap, share images, and JSON-LD. |
 | `NEXT_PUBLIC_ADS_ENABLED` | Set to `true` to show the reserved ad slots. Leave it unset or `false` to hide them. |
+| `NEXT_PUBLIC_CF_BEACON_TOKEN` | Optional. Cloudflare Web Analytics token (cookie-free). Skip it if you turn on Cloudflare's automatic setup. |
+| `NEXT_PUBLIC_UMAMI_WEBSITE_ID` | Optional. Your Umami Cloud website ID. Turns on Umami analytics (cookie-free, with UTM/campaign reports). |
+| `NEXT_PUBLIC_UMAMI_SCRIPT_URL` | Optional. Only if you self-host Umami; defaults to `https://cloud.umami.is/script.js`. |
 
 The site name, tagline, contact email, and navigation are all set in [`lib/config/site.ts`](lib/config/site.ts).
 
@@ -45,15 +48,23 @@ The site name, tagline, contact email, and navigation are all set in [`lib/confi
 
 ---
 
-## 2. Deploy to Vercel (free tier)
+## 2. Deploy to Cloudflare (free tier)
 
-1. Push this folder to a GitHub repo.
-2. In Vercel, click **Add New → Project** and import the repo. Vercel detects Next.js automatically.
-3. Under **Environment Variables**, add `NEXT_PUBLIC_SITE_URL` (your real domain).
-4. Click **Deploy**.
-5. Add your domain under **Settings → Domains**.
+The site is a **static export**: `npm run build` writes plain HTML, CSS, JS, and images to `out/`. There is no server code, so there's nothing to crash at request time. `wrangler.jsonc` tells Cloudflare to serve `out/` as static files, and `public/_headers` adds security headers and caching.
+
+**Cloudflare Workers (recommended), connected to GitHub:**
+1. In the Cloudflare dashboard: **Workers & Pages → Create → Import a repository**, and pick this repo.
+2. Set **Build command** `npm run build` and **Deploy command** `npx wrangler deploy`. The Worker name must match `"name"` in `wrangler.jsonc` (`proteinplates`); change one of them if they differ.
+3. Under **Settings → Variables and secrets (build)**, add `NEXT_PUBLIC_SITE_URL` (your real domain, no trailing slash).
+4. Deploy, then add your domain under **Settings → Domains & Routes**.
+
+**Cloudflare Pages instead:** Framework preset **None**, build command `npm run build`, output directory `out`, and the same `NEXT_PUBLIC_SITE_URL` variable.
+
+Don't use the "Next.js" preset or the OpenNext/next-on-pages adapters: they run pages on a server, and our pages read their data files at build time only.
 
 From then on, every push to `main` deploys automatically. If a data file is broken, the build fails and the live site stays on the last good version.
+
+Test the real Cloudflare setup locally: `npm run build && npm start` (runs `wrangler dev` on the `out/` folder).
 
 After the first deploy, submit `https://your-domain/sitemap.xml` in Google Search Console.
 
@@ -76,7 +87,7 @@ After the first deploy, submit `https://your-domain/sitemap.xml` in Google Searc
    ```
    Fix every error. For each field you left `null`, add a row to [`data/TODO-verify.csv`](data/TODO-verify.csv) (`chain,item,field,reason`).
 5. **Preview** with `npm run dev` at `/chains/xyz`. Restart `npm run dev` after adding a **new** chain file, since the list of chain pages is read at start-up. Edits to existing files show up right away.
-6. **Commit and push.** Vercel builds and deploys.
+6. **Commit and push.** Cloudflare builds and deploys.
 
 ### Chain JSON fields
 
@@ -188,6 +199,12 @@ scripts/              validate-data.ts, new-chain.ts
 - **Search** (`/search`): the index is built at build time from calculator pages, guides, chains (including item names), and hubs, and served as a static `/search-index.json`. Matching runs in the browser. Every word must match; titles weigh most. The page is `noindex`. New content shows up automatically on the next build.
 - **Dark mode**: the header button switches themes and saves the choice in `localStorage`. With no saved choice, the site follows the device setting. Colors are the same token names in `app/globals.css`, with dark values under `[data-theme="dark"]`. Use the `dark:` variant only when a token can't do the job.
 - **Print**: printouts are always light and hide the footer, ads, share buttons, back-to-top, and related links (`print:hidden`). FAQs open before printing.
+
+### Analytics, security headers, and legal pages
+
+- **Analytics (no cookies, so no cookie banner):** Cloudflare Web Analytics is free. If your domain is on Cloudflare, turn on its automatic setup (Analytics & Logs → Web Analytics); otherwise set `NEXT_PUBLIC_CF_BEACON_TOKEN`. For free UTM/campaign reports, create a site on [Umami Cloud](https://umami.is) and set `NEXT_PUBLIC_UMAMI_WEBSITE_ID`. Links copied with a calculator's "Copy link" button carry `utm_source=share&utm_medium=copied-link`. Tag your own campaign links the same way, e.g. `?utm_source=instagram&utm_medium=social&utm_campaign=launch`.
+- **Security headers** (HSTS, no framing, nosniff, referrer and permissions policies) and cache rules are in `public/_headers`, which Cloudflare reads.
+- **Legal pages:** `/privacy` and `/terms` are templates. Have them reviewed before launch, and update them before you add ads, accounts, payments, or anything that uses cookies (that is also when you'd need a cookie banner).
 
 ### Monetization placeholders
 

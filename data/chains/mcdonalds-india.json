@@ -252,6 +252,294 @@
       "sugar_g": null,
       "sodium_mg": 217,
       "custom_order_tip": ""
+    },
+    {
+      "name": "McSpicy Chicken Burger",
+      "category": "burger",
+      "calories": 450,
+      "protein_g": 21.46,
+      "carbs_g": 46.08,
+      "fat_g": 19.36,
+      "fiber_g": null,
+      "sugar_g": null,
+      "sodium_mg": null,
+      "serving_g": 186,
+      "custom_order_tip": "",
+      "source": {
+        "name": "FatSecret India",
+        "url": "https://www.fatsecret.co.in/calories-nutrition/mcdonalds",
+        "checked": "2026-09-25"
+      }
+    },
+    {
+      "name": "McSpicy Chicken Wrap",
+      "category": "wrap",
+      "calories": 567,
+      "protein_g": 23.74,
+      "carbs_g": 57.06,
+      "fat_g": 26.89,
+      "fiber_g": null,
+      "sugar_g": null,
+      "sodium_mg": null,
+      "serving_g": 257,
+      "custom_order_tip": "",
+      "source": {
+        "name": "FatSecret India",
+        "url": "https://www.fatsecret.co.in/calories-nutrition/mcdonalds",
+        "checked": "2026-09-25"
+      }
+    },
+    {
+      "name": "Chicken Maharaja Mac",
+      "category": "burger",
+      "calories": 689,
+      "protein_g": 34,
+      "carbs_g": 55.39,
+      "fat_g": 36.69,
+      "fiber_g": null,
+      "sugar_g": null,
+      "sodium_mg": null,
+      "serving_g": 296,
+      "custom_order_tip": "",
+      "source": {
+        "name": "FatSecret India",
+        "url": "https://www.fatsecret.co.in/calories-nutrition/mcdonalds",
+        "checked": "2026-09-25"
+      }
+    },
+    {
+      "name": "Chicken Nuggets (4 pc)",
+      "category": "chicken",
+      "calories": 169,
+      "protein_g": 10.03,
+      "carbs_g": 10.5,
+      "fat_g": 9.54,
+      "fiber_g": null,
+      "sugar_g": null,
+      "sodium_mg": null,
+      "serving_g": 64,
+      "custom_order_tip": "",
+      "source": {
+        "name": "FatSecret India",
+        "url": "https://www.fatsecret.co.in/calories-nutrition/mcdonalds",
+        "checked": "2026-09-25"
+      }
+    },
+    {
+      "name": "Chicken Nuggets (9 pc)",
+      "category": "chicken",
+      "calories": 378,
+      "protein_g": 22.56,
+      "carbs_g": 23.62,
+      "fat_g": 21.46,
+      "fiber_g": null,
+      "sugar_g": null,
+      "sodium_mg": null,
+      "serving_g": 144,
+      "custom_order_tip": "",
+      "source": {
+        "name": "FatSecret India",
+        "url": "https://www.fatsecret.co.in/calories-nutrition/mcdonalds",
+        "checked": "2026-09-25"
+      }
+    },
+    {
+      "name": "Chicken Nuggets (20 pc)",
+      "category": "chicken",
+      "calories": 812,
+      "protein_g": 47.6,
+      "carbs_g": 49.88,
+      "fat_g": 46.9,
+      "fiber_g": null,
+      "sugar_g": null,
+      "sodium_mg": null,
+      "serving_g": 320,
+      "custom_order_tip": "",
+      "source": {
+        "name": "FatSecret India",
+        "url": "https://www.fatsecret.co.in/calories-nutrition/mcdonalds",
+        "checked": "2026-09-25"
+      }
+    },
+    {
+      "name": "Chicken Surprise Burger",
+      "category": "burger",
+      "calories": 293,
+      "protein_g": 10.72,
+      "carbs_g": 34.42,
+      "fat_g": 12.49,
+      "fiber_g": null,
+      "sugar_g": null,
+      "sodium_mg": null,
+      "serving_g": 128,
+      "custom_order_tip": "",
+      "source": {
+        "name": "FatSecret India",
+        "url": "https://www.fatsecret.co.in/calories-nutrition/mcdonalds",
+        "checked": "2026-09-25"
+      }
+    },
+    {
+      "name": "Veg Surprise Burger",
+      "category": "burger",
+      "calories": 313,
+      "protein_g": 5.71,
+      "carbs_g": 39.84,
+      "fat_g": 14.95,
+      "fiber_g": null,
+      "sugar_g": null,
+      "sodium_mg": null,
+      "serving_g": 132,
+      "custom_order_tip": "",
+      "source": {
+        "name": "FatSecret India",
+        "url": "https://www.fatsecret.co.in/calories-nutrition/mcdonalds",
+        "checked": "2026-09-25"
+      }
+    },
+    {
+      "name": "Crispy Veggie Burger",
+      "category": "burger",
+      "calories": 482,
+      "protein_g": 9.9,
+      "carbs_g": 62.37,
+      "fat_g": 19.8,
+      "fiber_g": null,
+      "sugar_g": null,
+      "sodium_mg": null,
+      "serving_g": 212,
+      "custom_order_tip": "",
+      "source": {
+        "name": "FatSecret India",
+        "url": "https://www.fatsecret.co.in/calories-nutrition/mcdonalds",
+        "checked": "2026-09-25"
+      }
+    },
+    {
+      "name": "Pizza McPuff",
+      "category": "side",
+      "calories": 225,
+      "protein_g": 5.45,
+      "carbs_g": 24.79,
+      "fat_g": 11.44,
+      "fiber_g": null,
+      "sugar_g": null,
+      "sodium_mg": null,
+      "serving_g": 87,
+      "custom_order_tip": "",
+      "source": {
+        "name": "FatSecret India",
+        "url": "https://www.fatsecret.co.in/calories-nutrition/mcdonalds",
+        "checked": "2026-09-25"
+      }
+    },
+    {
+      "name": "Hash Brown",
+      "category": "breakfast",
+      "calories": 137,
+      "protein_g": 1.93,
+      "carbs_g": 15.63,
+      "fat_g": 7.32,
+      "fiber_g": null,
+      "sugar_g": null,
+      "sodium_mg": null,
+      "serving_g": 64,
+      "custom_order_tip": "",
+      "source": {
+        "name": "FatSecret India",
+        "url": "https://www.fatsecret.co.in/calories-nutrition/mcdonalds",
+        "checked": "2026-09-25"
+      }
+    },
+    {
+      "name": "Fries (Regular)",
+      "category": "side",
+      "calories": 216,
+      "protein_g": 3.38,
+      "carbs_g": 27.08,
+      "fat_g": 10.39,
+      "fiber_g": null,
+      "sugar_g": null,
+      "sodium_mg": null,
+      "serving_g": 77,
+      "custom_order_tip": "",
+      "source": {
+        "name": "FatSecret India",
+        "url": "https://www.fatsecret.co.in/calories-nutrition/mcdonalds",
+        "checked": "2026-09-25"
+      }
+    },
+    {
+      "name": "Fries (Large)",
+      "category": "side",
+      "calories": 431,
+      "protein_g": 6.76,
+      "carbs_g": 54.16,
+      "fat_g": 20.77,
+      "fiber_g": null,
+      "sugar_g": null,
+      "sodium_mg": null,
+      "serving_g": 154,
+      "custom_order_tip": "",
+      "source": {
+        "name": "FatSecret India",
+        "url": "https://www.fatsecret.co.in/calories-nutrition/mcdonalds",
+        "checked": "2026-09-25"
+      }
+    },
+    {
+      "name": "McFlurry Oreo (Regular)",
+      "category": "dessert",
+      "calories": 116,
+      "protein_g": 2.05,
+      "carbs_g": 18.69,
+      "fat_g": 3.7,
+      "fiber_g": null,
+      "sugar_g": null,
+      "sodium_mg": null,
+      "serving_g": 87,
+      "custom_order_tip": "",
+      "source": {
+        "name": "FatSecret India",
+        "url": "https://www.fatsecret.co.in/calories-nutrition/mcdonalds",
+        "checked": "2026-09-25"
+      }
+    },
+    {
+      "name": "McFlurry Oreo (Medium)",
+      "category": "dessert",
+      "calories": 209,
+      "protein_g": 3.58,
+      "carbs_g": 33.42,
+      "fat_g": 6.81,
+      "fiber_g": null,
+      "sugar_g": null,
+      "sodium_mg": null,
+      "serving_g": 147,
+      "custom_order_tip": "",
+      "source": {
+        "name": "FatSecret India",
+        "url": "https://www.fatsecret.co.in/calories-nutrition/mcdonalds",
+        "checked": "2026-09-25"
+      }
+    },
+    {
+      "name": "Soft Serve Cone",
+      "category": "dessert",
+      "calories": 86,
+      "protein_g": 1.99,
+      "carbs_g": 15.23,
+      "fat_g": 1.82,
+      "fiber_g": null,
+      "sugar_g": null,
+      "sodium_mg": null,
+      "serving_g": 81,
+      "custom_order_tip": "",
+      "source": {
+        "name": "FatSecret India",
+        "url": "https://www.fatsecret.co.in/calories-nutrition/mcdonalds",
+        "checked": "2026-09-25"
+      }
     }
   ]
 }

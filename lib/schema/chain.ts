@@ -24,6 +24,12 @@ export type ChainCategory = (typeof CHAIN_CATEGORIES)[number];
 
 const nutrient = z.number().nonnegative().nullable();
 
+function isoDateString() {
+  return z.string().refine((s) => /^\d{4}-\d{2}-\d{2}$/.test(s) && !Number.isNaN(Date.parse(`${s}T00:00:00Z`)), {
+    message: "Must be a real date in YYYY-MM-DD format",
+  });
+}
+
 export const ChainItemSchema = z
   .object({
     name: z.string().trim().min(1),
@@ -37,13 +43,25 @@ export const ChainItemSchema = z
     sodium_mg: nutrient,
     // Optional. Local currency: GBP for UK-only chains, INR for India-only chains, USD otherwise.
     price: z.number().positive().nullable().optional(),
+    /** Optional serving weight in grams, as the source lists it. */
+    serving_g: z.number().positive().nullable().optional(),
+    /**
+     * Optional. Set only when THIS item's numbers come from somewhere other than the chain's own source
+     * (e.g. the chain's official data doesn't list it). Shown next to the item on the site.
+     */
+    source: z
+      .object({
+        name: z.string().trim().min(1),
+        url: z.url({ protocol: /^https$/ }),
+        checked: isoDateString(),
+      })
+      .strict()
+      .optional(),
     custom_order_tip: z.string(),
   })
   .strict();
 
-const isoDate = z.string().refine((s) => /^\d{4}-\d{2}-\d{2}$/.test(s) && !Number.isNaN(Date.parse(`${s}T00:00:00Z`)), {
-  message: "Must be a real date in YYYY-MM-DD format",
-});
+const isoDate = isoDateString();
 
 export const ChainSchema = z
   .object({

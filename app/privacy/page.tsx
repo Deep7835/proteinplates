@@ -2,10 +2,11 @@ import Link from "next/link";
 import { ProsePage } from "@/components/layout/Prose";
 import { site } from "@/lib/config/site";
 import { buildMetadata } from "@/lib/seo/metadata";
+import { UMAMI_WEBSITE_ID } from "@/components/layout/SiteAnalytics";
 
 export const metadata = buildMetadata({
   title: "Privacy Policy",
-  description: `How ${site.name} handles your information. Our calculators run in your browser and we don’t store the numbers you enter.`,
+  description: `How ${site.name} handles your information. Our calculators run in your browser, we don’t store the numbers you enter, and our analytics use no cookies.`,
   path: "/privacy",
 });
 
@@ -22,10 +23,27 @@ export default function PrivacyPage() {
       </p>
       <h2>Accounts and forms</h2>
       <p>We don’t offer accounts right now, and our meal plan page doesn’t collect any information yet.</p>
-      <h2>Cookies, analytics, and ads</h2>
+      <h2>Cookies</h2>
       <p>
-        We don’t currently use analytics, advertising, or tracking cookies. If we add them in the future, we will
-        update this page first and ask for your consent where the law requires it.
+        We don’t use tracking or advertising cookies. If you pick light or dark mode, your browser remembers that
+        choice on your own device; it isn’t sent to us.
+      </p>
+      <h2>Analytics</h2>
+      <p>
+        We use Cloudflare Web Analytics, which hosts this site, to count visits and see which pages are popular and how
+        fast they load. It doesn’t use cookies and doesn’t identify you. It records things like the page you viewed,
+        the site that sent you, your country, and your device type.
+      </p>
+      {UMAMI_WEBSITE_ID && (
+        <p>
+          We also use Umami, a cookie-free analytics service, to see which pages and campaigns (such as links tagged with
+          “utm” codes) bring visitors. It doesn’t use cookies or collect personal information.
+        </p>
+      )}
+      <h2>Ads</h2>
+      <p>
+        We don’t show ads right now. If we add them, or anything else that uses cookies, we will update this page first
+        and ask for your consent where the law requires it.
       </p>
       <h2>Hosting</h2>
       <p>

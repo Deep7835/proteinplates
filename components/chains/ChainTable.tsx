@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useMemo, useState } from "react";
 import { ArrowDown, ArrowUp, ArrowUpDown } from "lucide-react";
 
@@ -12,6 +13,10 @@ export type TableRow = {
   fiber: number | null;
   /** False when protein or calories is missing. These rows always sort to the bottom. */
   rankable: boolean;
+  /** Link to the item's own page, when it has one. */
+  href?: string | null;
+  /** Name of a third-party source, when this item's numbers don't come from the chain's own data. */
+  thirdParty?: string | null;
 };
 
 type SortKey = "name" | "protein" | "calories" | "per100" | "fiber";
@@ -105,7 +110,12 @@ export function ChainTable({ rows, caption }: { rows: TableRow[]; caption: strin
             {visible.map((r) => (
               <tr key={r.name} className="border-t border-line">
                 <th scope="row" className="sticky left-0 bg-page px-3 py-2 text-left font-medium">
-                  {r.name}
+                  {r.href ? <Link href={r.href}>{r.name}</Link> : r.name}
+                  {r.thirdParty && (
+                    <span className="ml-1 text-accent-800" title={`From ${r.thirdParty}`}>
+                      †<span className="sr-only"> (from {r.thirdParty})</span>
+                    </span>
+                  )}
                   <span className="block text-xs font-normal text-muted">
                     {r.category}
                     {!r.rankable && " · not ranked"}
@@ -121,7 +131,11 @@ export function ChainTable({ rows, caption }: { rows: TableRow[]; caption: strin
         </table>
       </div>
       <p className="mt-2 text-xs text-muted">
-        “—” means the chain doesn’t list that number. Items without protein or calories are never ranked.
+        “—” means the source doesn’t list that number. Items without protein or calories are never ranked.
+        {rows.some((r) => r.thirdParty) && (
+          <> † Not in the chain’s official data we checked; numbers from {[...new Set(rows.map((r) => r.thirdParty).filter(Boolean))].join(", ")}, a third-party site.</>
+        )}
+        {rows.some((r) => r.href) && <> Tap an item for its full nutrition page.</>}
       </p>
     </div>
   );

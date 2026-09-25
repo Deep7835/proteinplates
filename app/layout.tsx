@@ -3,6 +3,7 @@ import { Fraunces, Inter } from "next/font/google";
 import { Header } from "@/components/layout/Header";
 import { BackToTop } from "@/components/layout/BackToTop";
 import { Footer } from "@/components/layout/Footer";
+import { SiteAnalytics } from "@/components/layout/SiteAnalytics";
 import { site } from "@/lib/config/site";
 import "./globals.css";
 
@@ -40,6 +41,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         </main>
         <Footer />
         <BackToTop />
+        <SiteAnalytics />
       </body>
     </html>
   );

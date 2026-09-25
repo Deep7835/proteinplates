@@ -7,7 +7,7 @@ type BuildMetadataInput = {
   /** Path starting with "/", used for the canonical URL and og:url. */
   path: string;
   type?: "website" | "article";
-  /** Share image path. Defaults to the site-wide /opengraph-image (1200×630). */
+  /** Share image path. Defaults to the site-wide /og.png (1200×630). */
   image?: string;
   /** Pixel size of `image`, when it isn't 1200×630 (e.g. guide cover photos are 1600×900). */
   imageSize?: { width: number; height: number };
@@ -15,7 +15,7 @@ type BuildMetadataInput = {
 };
 
 /** One place to build page metadata so every page gets a canonical URL and matching OG tags. */
-export function buildMetadata({ title, description, path, type = "website", image = "/opengraph-image", imageSize = { width: 1200, height: 630 }, noindex }: BuildMetadataInput): Metadata {
+export function buildMetadata({ title, description, path, type = "website", image = "/og.png", imageSize = { width: 1200, height: 630 }, noindex }: BuildMetadataInput): Metadata {
   return {
     title,
     description,

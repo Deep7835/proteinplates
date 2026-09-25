@@ -1,11 +1,17 @@
 import type { NextConfig } from "next";
+import { IMAGE_WIDTHS } from "./lib/images/variants";
 
+// Static export: `npm run build` writes plain HTML, CSS, JS, and images to out/, which any static host
+// (Cloudflare Workers/Pages, Vercel, Netlify) can serve with no server code.
+// Security headers live in public/_headers (Cloudflare and Netlify read that file).
 const nextConfig: NextConfig = {
+  output: "export",
   images: {
-    // Photos live in public/images and are served resized as WebP by the Next.js image optimizer.
-    // WebP only: AVIF is slightly smaller but much slower to encode, so first views waited on blank cards.
-    formats: ["image/webp"],
-    qualities: [75],
+    // No on-the-fly optimizer in a static export: photos are pre-resized at build time (npm run images).
+    loader: "custom",
+    loaderFile: "./lib/images/loader.ts",
+    imageSizes: [IMAGE_WIDTHS[0]],
+    deviceSizes: IMAGE_WIDTHS.slice(1),
   },
 };
 

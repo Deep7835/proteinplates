@@ -240,6 +240,132 @@
       "sugar_g": 8,
       "sodium_mg": 1063,
       "custom_order_tip": ""
+    },
+    {
+      "name": "Stuffed Garlic Bread",
+      "category": "side",
+      "calories": 540,
+      "protein_g": 20.2,
+      "carbs_g": 82.4,
+      "fat_g": 14.4,
+      "fiber_g": null,
+      "sugar_g": null,
+      "sodium_mg": null,
+      "serving_g": 190,
+      "custom_order_tip": "",
+      "source": {
+        "name": "FatSecret India",
+        "url": "https://www.fatsecret.co.in/calories-nutrition/dominos-pizza",
+        "checked": "2026-09-25"
+      }
+    },
+    {
+      "name": "Paneer Tikka Stuffed Garlic Bread",
+      "category": "side",
+      "calories": 429,
+      "protein_g": 10,
+      "carbs_g": 44,
+      "fat_g": 23,
+      "fiber_g": null,
+      "sugar_g": null,
+      "sodium_mg": null,
+      "serving_g": 200,
+      "custom_order_tip": "",
+      "source": {
+        "name": "FatSecret India",
+        "url": "https://www.fatsecret.co.in/calories-nutrition/dominos-pizza",
+        "checked": "2026-09-25"
+      }
+    },
+    {
+      "name": "Garlic Bread",
+      "category": "side",
+      "calories": 340,
+      "protein_g": 11.9,
+      "carbs_g": 57.6,
+      "fat_g": 6.9,
+      "fiber_g": null,
+      "sugar_g": null,
+      "sodium_mg": null,
+      "serving_g": 122,
+      "custom_order_tip": "",
+      "source": {
+        "name": "FatSecret India",
+        "url": "https://www.fatsecret.co.in/calories-nutrition/dominos-pizza",
+        "checked": "2026-09-25"
+      }
+    },
+    {
+      "name": "Zingy Parcel - Veg",
+      "category": "side",
+      "calories": 620,
+      "protein_g": 16.9,
+      "carbs_g": 69.5,
+      "fat_g": 30.5,
+      "fiber_g": null,
+      "sugar_g": null,
+      "sodium_mg": null,
+      "serving_g": 180,
+      "custom_order_tip": "",
+      "source": {
+        "name": "FatSecret India",
+        "url": "https://www.fatsecret.co.in/calories-nutrition/dominos-pizza",
+        "checked": "2026-09-25"
+      }
+    },
+    {
+      "name": "Taco Mexicana - Chicken",
+      "category": "taco",
+      "calories": 322,
+      "protein_g": 9.3,
+      "carbs_g": 34.2,
+      "fat_g": 16.5,
+      "fiber_g": null,
+      "sugar_g": null,
+      "sodium_mg": null,
+      "serving_g": 97,
+      "custom_order_tip": "",
+      "source": {
+        "name": "FatSecret India",
+        "url": "https://www.fatsecret.co.in/calories-nutrition/dominos-pizza",
+        "checked": "2026-09-25"
+      }
+    },
+    {
+      "name": "Taco Mexicana - Veg",
+      "category": "taco",
+      "calories": 327,
+      "protein_g": 6.8,
+      "carbs_g": 40.3,
+      "fat_g": 15.4,
+      "fiber_g": null,
+      "sugar_g": null,
+      "sodium_mg": null,
+      "serving_g": 91,
+      "custom_order_tip": "",
+      "source": {
+        "name": "FatSecret India",
+        "url": "https://www.fatsecret.co.in/calories-nutrition/dominos-pizza",
+        "checked": "2026-09-25"
+      }
+    },
+    {
+      "name": "Choco Lava Cake",
+      "category": "dessert",
+      "calories": 350,
+      "protein_g": 4,
+      "carbs_g": 46,
+      "fat_g": 19,
+      "fiber_g": null,
+      "sugar_g": null,
+      "sodium_mg": null,
+      "serving_g": null,
+      "custom_order_tip": "",
+      "source": {
+        "name": "FatSecret India",
+        "url": "https://www.fatsecret.co.in/calories-nutrition/dominos-pizza",
+        "checked": "2026-09-25"
+      }
     }
   ]
 }

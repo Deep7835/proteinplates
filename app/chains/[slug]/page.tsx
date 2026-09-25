@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { BuildAMeal } from "@/components/chains/BuildAMeal";
 import { ChainCard } from "@/components/chains/ChainCard";
 import { ChainTable, type TableRow } from "@/components/chains/ChainTable";
+import { itemHref } from "@/lib/chains/items";
 import { GoalPicks } from "@/components/chains/GoalPicks";
 import { ProteinPerPrice } from "@/components/chains/ProteinPerPrice";
 import { SummaryCards } from "@/components/chains/SummaryCards";
@@ -44,7 +45,7 @@ export async function generateMetadata({ params }: PageProps<"/chains/[slug]">):
     description,
     path: `/chains/${chain.slug}`,
     type: "article",
-    image: `/chains/${chain.slug}/opengraph-image`,
+    image: `/chains/${chain.slug}/og.png`,
   });
 }
 
@@ -74,6 +75,8 @@ export default async function ChainPage({ params }: PageProps<"/chains/[slug]">)
     per100: proteinPer100Cal(i),
     fiber: i.fiber_g,
     rankable: isRankable(i),
+    href: itemHref(chain, i),
+    thirdParty: i.source?.name ?? null,
   }));
 
   return (
@@ -87,7 +90,7 @@ export default async function ChainPage({ params }: PageProps<"/chains/[slug]">)
             datePublished: chain.data_checked_date,
             dateModified: chain.data_checked_date,
             reviewedBy: chain.reviewed_by,
-            image: `${path}/opengraph-image`,
+            image: `${path}/og.png`,
           }),
           faqLd(faqs),
           breadcrumbLd(crumbs),

@@ -1,3 +1,4 @@
+import { itemPagesFor } from "@/lib/chains/items";
 import { getAllChains } from "@/lib/chains/load";
 import { getCalculatorPages } from "@/lib/calculators/pages";
 import { AUDIENCE_HUBS } from "@/lib/config/audiences";
@@ -13,7 +14,7 @@ export type SearchDoc = {
   /** short description */
   d: string;
   /** type label shown in results */
-  k: "Calculator" | "Guide" | "Chain" | "Page";
+  k: "Calculator" | "Guide" | "Chain" | "Menu item" | "Page";
   /** extra words to match (menu items, tags), not shown */
   x: string;
 };
@@ -41,6 +42,15 @@ export function buildSearchIndex(): SearchDoc[] {
       k: "Chain",
       x: [c.chain, c.category, c.glp1_menu_name ?? "", ...c.items.map((i) => i.name)].join(" "),
     });
+    for (const p of itemPagesFor(c)) {
+      docs.push({
+        u: `/chains/${c.slug}/${p.slug}`,
+        t: `${c.chain} ${p.item.name} calories`,
+        d: `${p.item.calories} calories${p.item.protein_g !== null ? ` · ${p.item.protein_g} g protein` : ""}`,
+        k: "Menu item",
+        x: `${c.chain} ${p.item.category} calories protein nutrition`,
+      });
+    }
   }
   for (const a of audiences) {
     const hub = AUDIENCE_HUBS[a.slug];

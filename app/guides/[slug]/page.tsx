@@ -8,6 +8,7 @@ import remarkGfm from "remark-gfm";
 import { ChainCard } from "@/components/chains/ChainCard";
 import { KeyTakeaways } from "@/components/guides/KeyTakeaways";
 import { mdxComponents } from "@/components/guides/mdx-components";
+import { ReadingProgress } from "@/components/guides/ReadingProgress";
 import { Sources } from "@/components/guides/Sources";
 import { Toc } from "@/components/guides/Toc";
 import { AdSlot } from "@/components/monetization/AdSlot";
@@ -27,7 +28,7 @@ import { getAllGuides, getGuide } from "@/lib/guides/load";
 import { extractToc } from "@/lib/guides/toc";
 import { articleLd, breadcrumbLd, faqLd } from "@/lib/seo/jsonld";
 import { buildMetadata } from "@/lib/seo/metadata";
-import { blurFor } from "@/lib/images/placeholder";
+import { blurFor, placeholderStyle } from "@/lib/images/placeholder";
 
 export const dynamicParams = false;
 
@@ -88,6 +89,7 @@ export default async function GuidePage({ params }: PageProps<"/guides/[slug]">)
           breadcrumbLd(crumbs),
         ]}
       />
+      <ReadingProgress targetId="guide-article" />
       <Container className="py-8 sm:py-10">
         <Breadcrumbs crumbs={crumbs} />
         <div className="mx-auto mt-4 max-w-3xl">
@@ -112,8 +114,8 @@ export default async function GuidePage({ params }: PageProps<"/guides/[slug]">)
 
         {/* Cover photo: the largest element on the page, so it loads first. */}
         <figure className="mx-auto mt-8 max-w-4xl">
-          <div className="relative aspect-video overflow-hidden rounded-card bg-surface shadow-card">
-            <Image src={guide.image.src} alt={guide.image.alt} fill preload placeholder={blurFor(guide.image.src) ? "blur" : "empty"} blurDataURL={blurFor(guide.image.src)} sizes="(min-width: 960px) 896px, 100vw" className="object-cover" />
+          <div className="relative aspect-video overflow-hidden rounded-card bg-surface shadow-card" style={placeholderStyle(blurFor(guide.image.src))}>
+            <Image src={guide.image.src} alt={guide.image.alt} fill preload sizes="(min-width: 960px) 896px, 100vw" className="object-cover" />
           </div>
           <figcaption className="mt-2 text-right text-xs text-muted">
             Photo by{" "}
@@ -134,7 +136,7 @@ export default async function GuidePage({ params }: PageProps<"/guides/[slug]">)
           </div>
           <AdSlot position="after-intro" />
 
-          <article className="prose prose-slate dark:prose-invert prose-h1:font-semibold prose-h2:font-semibold mt-10 max-w-none prose-headings:scroll-mt-24 prose-headings:tracking-tight prose-a:text-brand-700">
+          <article id="guide-article" className="prose prose-slate dark:prose-invert prose-h1:font-semibold prose-h2:font-semibold mt-10 max-w-none prose-headings:scroll-mt-24 prose-headings:tracking-tight prose-a:text-brand-700">
             {content}
           </article>
 

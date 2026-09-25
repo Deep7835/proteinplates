@@ -4,15 +4,18 @@ import { getAllChains, getChain } from "@/lib/chains/load";
 import { summaryPicks } from "@/lib/chains/rank";
 import { site } from "@/lib/config/site";
 
-export const alt = "Highest protein items at this restaurant chain";
-export const size = { width: 1200, height: 630 };
-export const contentType = "image/png";
+// Share image for each chain (1200×630 PNG) at /chains/{slug}/og.png, built once at build time.
+// Also used by the chain's item pages.
+export const dynamic = "force-static";
+export const dynamicParams = false;
+
+const size = { width: 1200, height: 630 };
 
 export function generateStaticParams() {
   return getAllChains().map((c) => ({ slug: c.slug }));
 }
 
-export default async function Image({ params }: { params: Promise<{ slug: string }> }) {
+export async function GET(_request: Request, { params }: RouteContext<"/chains/[slug]/og.png">) {
   const chain = getChain((await params).slug);
   const top = chain ? summaryPicks(chain).bestOverall : null;
   return new ImageResponse(

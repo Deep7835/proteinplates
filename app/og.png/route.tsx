@@ -1,12 +1,13 @@
 import { ImageResponse } from "next/og";
 import { site } from "@/lib/config/site";
 
-// Default share image for pages that don't have their own.
-export const alt = `${site.name}: ${site.tagline}`;
-export const size = { width: 1200, height: 630 };
-export const contentType = "image/png";
+// Default share image (1200×630 PNG) at /og.png, built once at build time. A real .png URL, so static hosts
+// send it with the right content type.
+export const dynamic = "force-static";
 
-export default function Image() {
+const size = { width: 1200, height: 630 };
+
+export function GET() {
   return new ImageResponse(
     (
       <div style={{ width: "100%", height: "100%", display: "flex", flexDirection: "column", justifyContent: "center", padding: 80, background: "#115c48", color: "#ffffff", fontFamily: "sans-serif" }}>
