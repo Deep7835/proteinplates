@@ -6,6 +6,9 @@ import { audiences, footerLinks, site } from "@/lib/config/site";
 import { getAllGuides } from "@/lib/guides/load";
 import { getCalculatorPages } from "@/lib/calculators/pages";
 
+// Built once at build time (static export).
+export const dynamic = "force-static";
+
 // Every public page. lastModified comes from the data: data_checked_date for chains,
 // the newest chain check for chain listings, and site.staticPagesUpdated for fixed pages.
 

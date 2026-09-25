@@ -1,0 +1,15 @@
+// Cloudflare Workers: serve the static export in out/ (no Worker script; nothing runs on the server).
+// Build: `npm run build`   Deploy: `npx wrangler deploy`
+// "name" must match your Worker's name in the Cloudflare dashboard.
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "proteinplates",
+  "compatibility_date": "2026-09-25",
+  "assets": {
+    "directory": "./out",
+    // Serve our custom 404 page (out/404.html) for unknown URLs, with a real 404 status.
+    "not_found_handling": "404-page",
+    // /about serves out/about.html
+    "html_handling": "auto-trailing-slash"
+  }
+}

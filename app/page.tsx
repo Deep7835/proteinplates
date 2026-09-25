@@ -1,6 +1,5 @@
 import Image from "next/image";
-import heroPhoto from "@/public/images/home-hero.jpg";
-import { placeholderStyle } from "@/lib/images/placeholder";
+import { blurFor, placeholderStyle } from "@/lib/images/placeholder";
 import Link from "next/link";
 import { ArrowRight, BadgeCheck, Calculator, Dumbbell, Heart, Leaf, Store, Sunrise, Trophy, UtensilsCrossed, Zap, type LucideIcon } from "lucide-react";
 import { ProteinCalculator } from "@/components/calculators/ProteinCalculator";
@@ -27,9 +26,9 @@ export const metadata = buildMetadata({
   path: "/",
 });
 
-// Hero photo (free Unsplash license), saved in public/images. Static import gives a blur placeholder while it loads.
+// Hero photo (free Unsplash license), saved in public/images.
 const HERO_IMAGE = {
-  src: heroPhoto,
+  src: "/images/home-hero.jpg",
   alt: "A bowl of sliced grilled meat with rice and vegetables",
   credit: "stefan cruceru",
   creditUrl: "https://unsplash.com/@stefan_cruceru",
@@ -100,7 +99,7 @@ export default function HomePage() {
           </div>
 
           <div className="relative hidden sm:block">
-            <div className="relative aspect-video overflow-hidden rounded-[1.75rem] bg-surface shadow-lift" style={placeholderStyle(heroPhoto.blurDataURL)}>
+            <div className="relative aspect-video overflow-hidden rounded-[1.75rem] bg-surface shadow-lift" style={placeholderStyle(blurFor(HERO_IMAGE.src))}>
               {/* Lazy on purpose: the photo is hidden on phones, and a lazy image there is never downloaded. */}
               <Image src={HERO_IMAGE.src} alt={HERO_IMAGE.alt} fill sizes="(min-width: 1024px) 560px, 90vw" className="object-cover" />
             </div>

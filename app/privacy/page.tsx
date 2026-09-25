@@ -30,10 +30,9 @@ export default function PrivacyPage() {
       </p>
       <h2>Analytics</h2>
       <p>
-        We use Vercel Web Analytics to count visits and see which pages are popular. It doesn’t use cookies and
-        doesn’t identify you. It records things like the page you viewed, the site that sent you, your country, and
-        your device type. Visitors are counted with a short-lived code made from the request, which resets every day,
-        so you can’t be tracked across days or other websites.
+        We use Cloudflare Web Analytics, which hosts this site, to count visits and see which pages are popular and how
+        fast they load. It doesn’t use cookies and doesn’t identify you. It records things like the page you viewed,
+        the site that sent you, your country, and your device type.
       </p>
       {UMAMI_WEBSITE_ID && (
         <p>

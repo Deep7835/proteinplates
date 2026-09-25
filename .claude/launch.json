@@ -1,13 +1,38 @@
 {
   "version": "0.0.1",
   "configurations": [
-    { "name": "dev", "runtimeExecutable": "npm", "runtimeArgs": ["run", "dev"], "port": 3100, "autoPort": true },
-    { "name": "prod", "runtimeExecutable": "npm", "runtimeArgs": ["run", "start"], "port": 3101, "autoPort": true },
+    {
+      "name": "dev",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "run",
+        "dev"
+      ],
+      "port": 3100,
+      "autoPort": true
+    },
+    {
+      "name": "prod",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": [
+        "wrangler",
+        "dev",
+        "--port",
+        "3101"
+      ],
+      "port": 3101,
+      "autoPort": false
+    },
     {
       "name": "dev-fixtures",
       "runtimeExecutable": "npm",
-      "runtimeArgs": ["run", "dev"],
-      "env": { "CHAIN_DATA_DIR": "lib/chains/__fixtures__" },
+      "runtimeArgs": [
+        "run",
+        "dev"
+      ],
+      "env": {
+        "CHAIN_DATA_DIR": "lib/chains/__fixtures__"
+      },
       "port": 3102,
       "autoPort": true
     }

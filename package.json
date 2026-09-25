@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "wrangler dev",
     "lint": "eslint",
     "test": "vitest run",
     "validate-data": "tsx scripts/validate-data.ts",
@@ -13,10 +13,10 @@
     "prebuild": "npm run images && npm run validate-data && npm run check-content",
     "typecheck": "tsc --noEmit",
     "check-content": "tsx scripts/check-content.mts",
-    "images": "tsx scripts/image-placeholders.mts"
+    "images": "tsx scripts/image-placeholders.mts",
+    "deploy": "npm run build && wrangler deploy"
   },
   "dependencies": {
-    "@vercel/analytics": "^2.0.1",
     "github-slugger": "^2.0.0",
     "gray-matter": "^4.0.3",
     "lucide-react": "^1.47.0",
@@ -41,6 +41,7 @@
     "tailwindcss": "^4",
     "tsx": "^4.23.15",
     "typescript": "^5",
-    "vitest": "^5.0.1"
+    "vitest": "^5.0.1",
+    "wrangler": "^4.140.0"
   }
 }

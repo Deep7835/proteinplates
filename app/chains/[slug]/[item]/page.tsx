@@ -115,7 +115,7 @@ export async function generateMetadata({ params }: PageProps<"/chains/[slug]/[it
     description,
     path: `/chains/${chain.slug}/${itemSlug}`,
     type: "article",
-    image: `/chains/${chain.slug}/opengraph-image`,
+    image: `/chains/${chain.slug}/og.png`,
   });
 }
 

@@ -45,7 +45,7 @@ export async function generateMetadata({ params }: PageProps<"/chains/[slug]">):
     description,
     path: `/chains/${chain.slug}`,
     type: "article",
-    image: `/chains/${chain.slug}/opengraph-image`,
+    image: `/chains/${chain.slug}/og.png`,
   });
 }
 
@@ -90,7 +90,7 @@ export default async function ChainPage({ params }: PageProps<"/chains/[slug]">)
             datePublished: chain.data_checked_date,
             dateModified: chain.data_checked_date,
             reviewedBy: chain.reviewed_by,
-            image: `${path}/opengraph-image`,
+            image: `${path}/og.png`,
           }),
           faqLd(faqs),
           breadcrumbLd(crumbs),
