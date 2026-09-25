@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { itemPagesFor } from "@/lib/chains/items";
 import { getAllChains } from "@/lib/chains/load";
 import { latestCheckDate } from "@/lib/chains/rank";
 import { audiences, footerLinks, site } from "@/lib/config/site";
@@ -27,6 +28,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: url("/chains/top-protein-fast-food"), lastModified: chainsUpdated, priority: 0.8 },
     { url: url("/chains/glp1-friendly"), lastModified: chainsUpdated, priority: 0.8 },
     ...chains.map((c) => ({ url: url(`/chains/${c.slug}`), lastModified: c.data_checked_date, priority: 0.8 })),
+    ...chains.flatMap((c) =>
+      itemPagesFor(c).map((p) => ({
+        url: url(`/chains/${c.slug}/${p.slug}`),
+        lastModified: p.item.source?.checked ?? c.data_checked_date,
+        priority: 0.6,
+      })),
+    ),
     { url: url("/guides"), lastModified: guidesUpdated, priority: 0.8 },
     ...guides.map((g) => ({ url: url(`/guides/${g.slug}`), lastModified: g.updated, priority: 0.7 })),
     ...footerLinks.map((l) => ({ url: url(l.href), lastModified: site.staticPagesUpdated, priority: 0.3 })),

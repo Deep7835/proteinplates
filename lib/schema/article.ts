@@ -3,6 +3,10 @@ import { audiences } from "@/lib/config/site";
 
 // Frontmatter for /content/articles/{slug}.mdx. The build fails if any guide doesn't match.
 
+/** Topics shown as labels and filters on /guides. Every guide picks exactly one. */
+export const GUIDE_TOPICS = ["Protein", "Eating out", "Calories & weight loss", "Carbs & fat", "Nutrients", "Body measurements"] as const;
+export type GuideTopic = (typeof GUIDE_TOPICS)[number];
+
 const AUDIENCE_SLUGS = audiences.map((a) => a.slug) as [string, ...string[]];
 const isoDate = z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "Use YYYY-MM-DD");
 
@@ -15,6 +19,7 @@ export const ArticleSchema = z
     author: z.string().min(1),
     reviewedBy: z.string().min(1).nullable(),
     tags: z.array(z.string()).default([]),
+    topic: z.enum(GUIDE_TOPICS),
     // One audience or a list, e.g. audience: glp1  or  audience: [gym, men]
     audience: z.union([z.enum(AUDIENCE_SLUGS), z.array(z.enum(AUDIENCE_SLUGS)).min(1)]).transform((a) => (Array.isArray(a) ? a : [a])),
     keyTakeaways: z.array(z.string()).min(2).max(6),

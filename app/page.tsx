@@ -1,5 +1,6 @@
 import Image from "next/image";
 import heroPhoto from "@/public/images/home-hero.jpg";
+import { placeholderStyle } from "@/lib/images/placeholder";
 import Link from "next/link";
 import { ArrowRight, BadgeCheck, Calculator, Dumbbell, Heart, Leaf, Store, Sunrise, Trophy, UtensilsCrossed, Zap, type LucideIcon } from "lucide-react";
 import { ProteinCalculator } from "@/components/calculators/ProteinCalculator";
@@ -16,7 +17,7 @@ import { featuredChainLinks, getAllChains, getChain, getChainsByPriority } from 
 import { mainCalculatorPages } from "@/lib/calculators/pages";
 import { AUDIENCE_HUBS } from "@/lib/config/audiences";
 import { audiences, site } from "@/lib/config/site";
-import { getAllGuides } from "@/lib/guides/load";
+import { getAllGuides, getGuide } from "@/lib/guides/load";
 import { organizationLd, websiteLd } from "@/lib/seo/jsonld";
 import { buildMetadata } from "@/lib/seo/metadata";
 
@@ -34,6 +35,9 @@ const HERO_IMAGE = {
   creditUrl: "https://unsplash.com/@stefan_cruceru",
   sourceUrl: "https://unsplash.com/photos/LndA2Thz58c",
 };
+// Guides featured on the home page, in order (the first one gets the big card).
+const HOME_GUIDES = ["how-to-eat-100g-protein-a-day", "how-much-protein-per-meal", "protein-on-ozempic", "protein-after-50"];
+
 // The floating card on the hero shows this chain's top protein pick, straight from its data file.
 const HERO_PICK_CHAIN = "chipotle";
 
@@ -56,7 +60,7 @@ function AudienceIcon({ slug }: { slug: string }) {
 
 export default function HomePage() {
   const chains = getChainsByPriority().slice(0, 8);
-  const guides = getAllGuides().slice(0, 3);
+  const guides = HOME_GUIDES.map(getGuide).filter((g) => g !== undefined);
   const heroChain = getChain(HERO_PICK_CHAIN);
   const heroCard = heroChain ? toCardData(heroChain) : null;
   const topPick = heroCard?.topPick ? { ...heroCard.topPick, chain: heroCard.name, slug: heroCard.slug } : null;
@@ -96,9 +100,9 @@ export default function HomePage() {
           </div>
 
           <div className="relative hidden sm:block">
-            <div className="relative aspect-video overflow-hidden rounded-[1.75rem] bg-surface shadow-lift">
+            <div className="relative aspect-video overflow-hidden rounded-[1.75rem] bg-surface shadow-lift" style={placeholderStyle(heroPhoto.blurDataURL)}>
               {/* Lazy on purpose: the photo is hidden on phones, and a lazy image there is never downloaded. */}
-              <Image src={HERO_IMAGE.src} alt={HERO_IMAGE.alt} fill placeholder="blur" sizes="(min-width: 1024px) 560px, 90vw" className="object-cover" />
+              <Image src={HERO_IMAGE.src} alt={HERO_IMAGE.alt} fill sizes="(min-width: 1024px) 560px, 90vw" className="object-cover" />
             </div>
             {topPick && (
               <Link
@@ -154,7 +158,13 @@ export default function HomePage() {
       </Section>
 
       {chains.length > 0 && (
-        <Section tone="muted" eyebrow="Eat out" title="High-protein orders at chains you know" intro="The highest-protein orders at popular chains in the US, UK, and India, from sourced nutrition data.">
+        <Section
+          tone="muted"
+          eyebrow="Eat out"
+          title="High-protein orders at chains you know"
+          intro="The highest-protein orders at popular chains in the US, UK, and India, from sourced nutrition data."
+          action={{ href: "/chains", label: `All ${getAllChains().length} chains` }}
+        >
           <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {chains.map((c) => (
               <li key={c.slug}>
@@ -163,11 +173,12 @@ export default function HomePage() {
             ))}
           </ul>
           <div className="mt-8 flex flex-wrap gap-3">
-            <LinkButton href="/chains">
-              All restaurant chains <ArrowRight aria-hidden className="size-4" />
+            <LinkButton href="/chains/top-protein-fast-food" variant="secondary">
+              <Trophy aria-hidden className="size-4 text-accent-800" /> Top 25 highest-protein items
             </LinkButton>
-            <LinkButton href="/chains/top-protein-fast-food" variant="secondary">Top 25 highest-protein items</LinkButton>
-            <LinkButton href="/chains/glp1-friendly" variant="secondary">GLP-1-friendly menus</LinkButton>
+            <LinkButton href="/chains/glp1-friendly" variant="secondary">
+              <Leaf aria-hidden className="size-4 text-brand-700" /> GLP-1-friendly menus
+            </LinkButton>
           </div>
         </Section>
       )}
@@ -191,18 +202,25 @@ export default function HomePage() {
       </Section>
 
       {guides.length > 0 && (
-        <Section tone="muted" eyebrow="Learn" title="Latest guides" intro="Short, sourced answers to the questions people ask most.">
-          <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {guides.map((g) => (
-              <li key={g.slug}>
-                <GuideCard guide={g} />
-              </li>
-            ))}
-          </ul>
-          <div className="mt-8">
-            <LinkButton href="/guides" variant="secondary">
-              All guides <ArrowRight aria-hidden className="size-4" />
-            </LinkButton>
+        <Section
+          tone="muted"
+          eyebrow="Learn"
+          title="Popular guides"
+          intro="Short, sourced answers to the questions people ask most."
+          action={{ href: "/guides", label: "View all guides" }}
+        >
+          {/* One featured guide, with smaller cards beside it on wide screens. */}
+          <div className="grid gap-6 lg:grid-cols-5">
+            <div className="lg:col-span-3">
+              <GuideCard guide={guides[0]} variant="featured" />
+            </div>
+            <ul className="grid content-start gap-4 lg:col-span-2">
+              {guides.slice(1).map((g) => (
+                <li key={g.slug}>
+                  <GuideCard guide={g} variant="compact" />
+                </li>
+              ))}
+            </ul>
           </div>
         </Section>
       )}

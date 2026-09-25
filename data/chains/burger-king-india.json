@@ -252,6 +252,438 @@
       "sugar_g": 0,
       "sodium_mg": 325,
       "custom_order_tip": ""
+    },
+    {
+      "name": "Flame Grilled Mutton Whopper",
+      "category": "burger",
+      "calories": 663,
+      "protein_g": 25.6,
+      "carbs_g": 52.2,
+      "fat_g": 39.1,
+      "fiber_g": null,
+      "sugar_g": null,
+      "sodium_mg": null,
+      "serving_g": 292,
+      "custom_order_tip": "",
+      "source": {
+        "name": "FatSecret India",
+        "url": "https://www.fatsecret.co.in/calories-nutrition/burger-king",
+        "checked": "2026-09-25"
+      }
+    },
+    {
+      "name": "Korean Kimchi Chicken Whopper",
+      "category": "burger",
+      "calories": 643,
+      "protein_g": 23.3,
+      "carbs_g": 66.3,
+      "fat_g": 31.7,
+      "fiber_g": null,
+      "sugar_g": null,
+      "sodium_mg": null,
+      "serving_g": 358,
+      "custom_order_tip": "",
+      "source": {
+        "name": "FatSecret India",
+        "url": "https://www.fatsecret.co.in/calories-nutrition/burger-king",
+        "checked": "2026-09-25"
+      }
+    },
+    {
+      "name": "Spicy Korean Chicken Burger",
+      "category": "burger",
+      "calories": 607,
+      "protein_g": 16.9,
+      "carbs_g": 55.1,
+      "fat_g": 31.6,
+      "fiber_g": null,
+      "sugar_g": null,
+      "sodium_mg": null,
+      "serving_g": 234,
+      "custom_order_tip": "",
+      "source": {
+        "name": "FatSecret India",
+        "url": "https://www.fatsecret.co.in/calories-nutrition/burger-king",
+        "checked": "2026-09-25"
+      }
+    },
+    {
+      "name": "Spicy Korean Boneless Bites (4 pc)",
+      "category": "chicken",
+      "calories": 350,
+      "protein_g": 18.6,
+      "carbs_g": 28,
+      "fat_g": 16,
+      "fiber_g": null,
+      "sugar_g": null,
+      "sodium_mg": null,
+      "serving_g": 124,
+      "custom_order_tip": "",
+      "source": {
+        "name": "FatSecret India",
+        "url": "https://www.fatsecret.co.in/calories-nutrition/burger-king",
+        "checked": "2026-09-25"
+      }
+    },
+    {
+      "name": "Hot N Cheesy Burger",
+      "category": "burger",
+      "calories": 643,
+      "protein_g": 17.4,
+      "carbs_g": 62.1,
+      "fat_g": 36.6,
+      "fiber_g": null,
+      "sugar_g": null,
+      "sodium_mg": null,
+      "serving_g": 257,
+      "custom_order_tip": "",
+      "source": {
+        "name": "FatSecret India",
+        "url": "https://www.fatsecret.co.in/calories-nutrition/burger-king",
+        "checked": "2026-09-25"
+      }
+    },
+    {
+      "name": "Smokey Crunchy Chicken Whopper",
+      "category": "burger",
+      "calories": 344,
+      "protein_g": 14.2,
+      "carbs_g": 36.4,
+      "fat_g": 16.1,
+      "fiber_g": null,
+      "sugar_g": null,
+      "sodium_mg": null,
+      "serving_g": 197,
+      "custom_order_tip": "",
+      "source": {
+        "name": "FatSecret India",
+        "url": "https://www.fatsecret.co.in/calories-nutrition/burger-king",
+        "checked": "2026-09-25"
+      }
+    },
+    {
+      "name": "BK Chicken Burger",
+      "category": "burger",
+      "calories": 333,
+      "protein_g": 13.7,
+      "carbs_g": 40.7,
+      "fat_g": 13.3,
+      "fiber_g": null,
+      "sugar_g": null,
+      "sodium_mg": null,
+      "serving_g": 163,
+      "custom_order_tip": "",
+      "source": {
+        "name": "FatSecret India",
+        "url": "https://www.fatsecret.co.in/calories-nutrition/burger-king",
+        "checked": "2026-09-25"
+      }
+    },
+    {
+      "name": "Chicken Nuggets (4 pc)",
+      "category": "chicken",
+      "calories": 146,
+      "protein_g": 9.1,
+      "carbs_g": 11.3,
+      "fat_g": 7.5,
+      "fiber_g": null,
+      "sugar_g": null,
+      "sodium_mg": null,
+      "serving_g": 72,
+      "custom_order_tip": "",
+      "source": {
+        "name": "FatSecret India",
+        "url": "https://www.fatsecret.co.in/calories-nutrition/burger-king",
+        "checked": "2026-09-25"
+      }
+    },
+    {
+      "name": "Crunchy Soft Paneer Whopper Deluxe",
+      "category": "burger",
+      "calories": 472,
+      "protein_g": 16.4,
+      "carbs_g": 42.7,
+      "fat_g": 26.7,
+      "fiber_g": null,
+      "sugar_g": null,
+      "sodium_mg": null,
+      "serving_g": 197,
+      "custom_order_tip": "",
+      "source": {
+        "name": "FatSecret India",
+        "url": "https://www.fatsecret.co.in/calories-nutrition/burger-king",
+        "checked": "2026-09-25"
+      }
+    },
+    {
+      "name": "Molten Cheese Lava Whopper Deluxe",
+      "category": "burger",
+      "calories": 516,
+      "protein_g": 15.3,
+      "carbs_g": 46.7,
+      "fat_g": 30,
+      "fiber_g": null,
+      "sugar_g": null,
+      "sodium_mg": null,
+      "serving_g": 201,
+      "custom_order_tip": "",
+      "source": {
+        "name": "FatSecret India",
+        "url": "https://www.fatsecret.co.in/calories-nutrition/burger-king",
+        "checked": "2026-09-25"
+      }
+    },
+    {
+      "name": "BK Veggie Double Patty",
+      "category": "burger",
+      "calories": 520,
+      "protein_g": 16.6,
+      "carbs_g": 84,
+      "fat_g": 19.3,
+      "fiber_g": null,
+      "sugar_g": null,
+      "sodium_mg": null,
+      "serving_g": 209,
+      "custom_order_tip": "",
+      "source": {
+        "name": "FatSecret India",
+        "url": "https://www.fatsecret.co.in/calories-nutrition/burger-king",
+        "checked": "2026-09-25"
+      }
+    },
+    {
+      "name": "BK Veggie Burger",
+      "category": "burger",
+      "calories": 288,
+      "protein_g": 6.1,
+      "carbs_g": 38.2,
+      "fat_g": 12.4,
+      "fiber_g": null,
+      "sugar_g": null,
+      "sodium_mg": null,
+      "serving_g": 150,
+      "custom_order_tip": "",
+      "source": {
+        "name": "FatSecret India",
+        "url": "https://www.fatsecret.co.in/calories-nutrition/burger-king",
+        "checked": "2026-09-25"
+      }
+    },
+    {
+      "name": "Crispy Veg Double Patty",
+      "category": "burger",
+      "calories": 454,
+      "protein_g": 9.8,
+      "carbs_g": 67.6,
+      "fat_g": 16.2,
+      "fiber_g": null,
+      "sugar_g": null,
+      "sodium_mg": null,
+      "serving_g": 195,
+      "custom_order_tip": "",
+      "source": {
+        "name": "FatSecret India",
+        "url": "https://www.fatsecret.co.in/calories-nutrition/burger-king",
+        "checked": "2026-09-25"
+      }
+    },
+    {
+      "name": "Makhani Burst Veg Burger",
+      "category": "burger",
+      "calories": 389,
+      "protein_g": 7.5,
+      "carbs_g": 47.3,
+      "fat_g": 19,
+      "fiber_g": null,
+      "sugar_g": null,
+      "sodium_mg": null,
+      "serving_g": 131,
+      "custom_order_tip": "",
+      "source": {
+        "name": "FatSecret India",
+        "url": "https://www.fatsecret.co.in/calories-nutrition/burger-king",
+        "checked": "2026-09-25"
+      }
+    },
+    {
+      "name": "BK Egg Taco",
+      "category": "taco",
+      "calories": 322,
+      "protein_g": 7.2,
+      "carbs_g": 22.4,
+      "fat_g": 23.7,
+      "fiber_g": null,
+      "sugar_g": null,
+      "sodium_mg": null,
+      "serving_g": 120,
+      "custom_order_tip": "",
+      "source": {
+        "name": "FatSecret India",
+        "url": "https://www.fatsecret.co.in/calories-nutrition/burger-king",
+        "checked": "2026-09-25"
+      }
+    },
+    {
+      "name": "Veg Crunchy Taco",
+      "category": "taco",
+      "calories": 331,
+      "protein_g": 1.5,
+      "carbs_g": 38.9,
+      "fat_g": 17.7,
+      "fiber_g": null,
+      "sugar_g": null,
+      "sodium_mg": null,
+      "serving_g": 111,
+      "custom_order_tip": "",
+      "source": {
+        "name": "FatSecret India",
+        "url": "https://www.fatsecret.co.in/calories-nutrition/burger-king",
+        "checked": "2026-09-25"
+      }
+    },
+    {
+      "name": "Veg Strips (5 pc)",
+      "category": "side",
+      "calories": 247,
+      "protein_g": 5,
+      "carbs_g": 30.1,
+      "fat_g": 11.9,
+      "fiber_g": null,
+      "sugar_g": null,
+      "sodium_mg": null,
+      "serving_g": 81,
+      "custom_order_tip": "",
+      "source": {
+        "name": "FatSecret India",
+        "url": "https://www.fatsecret.co.in/calories-nutrition/burger-king",
+        "checked": "2026-09-25"
+      }
+    },
+    {
+      "name": "Veg Pizza Puff",
+      "category": "side",
+      "calories": 208,
+      "protein_g": 6.3,
+      "carbs_g": 27.56,
+      "fat_g": 8,
+      "fiber_g": null,
+      "sugar_g": null,
+      "sodium_mg": null,
+      "serving_g": 72,
+      "custom_order_tip": "",
+      "source": {
+        "name": "FatSecret India",
+        "url": "https://www.fatsecret.co.in/calories-nutrition/burger-king",
+        "checked": "2026-09-25"
+      }
+    },
+    {
+      "name": "Hash Brown",
+      "category": "side",
+      "calories": 158,
+      "protein_g": 1.6,
+      "carbs_g": 19.7,
+      "fat_g": 8.1,
+      "fiber_g": null,
+      "sugar_g": null,
+      "sodium_mg": null,
+      "serving_g": 54,
+      "custom_order_tip": "",
+      "source": {
+        "name": "FatSecret India",
+        "url": "https://www.fatsecret.co.in/calories-nutrition/burger-king",
+        "checked": "2026-09-25"
+      }
+    },
+    {
+      "name": "Peri Peri Fries (Regular)",
+      "category": "side",
+      "calories": 220,
+      "protein_g": 3.6,
+      "carbs_g": 29.3,
+      "fat_g": 9.8,
+      "fiber_g": null,
+      "sugar_g": null,
+      "sodium_mg": null,
+      "serving_g": 79,
+      "custom_order_tip": "",
+      "source": {
+        "name": "FatSecret India",
+        "url": "https://www.fatsecret.co.in/calories-nutrition/burger-king",
+        "checked": "2026-09-25"
+      }
+    },
+    {
+      "name": "Fries (Medium)",
+      "category": "side",
+      "calories": 333,
+      "protein_g": 5.9,
+      "carbs_g": 43.3,
+      "fat_g": 14.4,
+      "fiber_g": null,
+      "sugar_g": null,
+      "sodium_mg": null,
+      "serving_g": 114,
+      "custom_order_tip": "",
+      "source": {
+        "name": "FatSecret India",
+        "url": "https://www.fatsecret.co.in/calories-nutrition/burger-king",
+        "checked": "2026-09-25"
+      }
+    },
+    {
+      "name": "King Fries",
+      "category": "side",
+      "calories": 455,
+      "protein_g": 8,
+      "carbs_g": 59.3,
+      "fat_g": 19.7,
+      "fiber_g": null,
+      "sugar_g": null,
+      "sodium_mg": null,
+      "serving_g": 156,
+      "custom_order_tip": "",
+      "source": {
+        "name": "FatSecret India",
+        "url": "https://www.fatsecret.co.in/calories-nutrition/burger-king",
+        "checked": "2026-09-25"
+      }
+    },
+    {
+      "name": "KitKat Fusion Sundae",
+      "category": "dessert",
+      "calories": 175,
+      "protein_g": 2.9,
+      "carbs_g": 26.1,
+      "fat_g": 6.6,
+      "fiber_g": null,
+      "sugar_g": null,
+      "sodium_mg": null,
+      "serving_g": 102,
+      "custom_order_tip": "",
+      "source": {
+        "name": "FatSecret India",
+        "url": "https://www.fatsecret.co.in/calories-nutrition/burger-king",
+        "checked": "2026-09-25"
+      }
+    },
+    {
+      "name": "Vanilla Softie",
+      "category": "dessert",
+      "calories": 77,
+      "protein_g": 1.8,
+      "carbs_g": 10.7,
+      "fat_g": 3.3,
+      "fiber_g": null,
+      "sugar_g": null,
+      "sodium_mg": null,
+      "serving_g": 80,
+      "custom_order_tip": "",
+      "source": {
+        "name": "FatSecret India",
+        "url": "https://www.fatsecret.co.in/calories-nutrition/burger-king",
+        "checked": "2026-09-25"
+      }
     }
   ]
 }

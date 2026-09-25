@@ -8,6 +8,8 @@ import { compile } from "@mdx-js/mdx";
 import remarkGfm from "remark-gfm";
 import { getAllGuides } from "@/lib/guides/load";
 import { getCalculatorPages } from "@/lib/calculators/pages";
+import { getChain } from "@/lib/chains/load";
+import { itemPagesFor } from "@/lib/chains/items";
 
 const BANNED = [/—/, /In conclusion/i, /\bFurthermore\b/, /\bMoreover\b/, /fast-paced world/i];
 
@@ -20,8 +22,13 @@ const calcPaths = new Set(calcPages.map((p) => (p.variant ? `/${p.slug}/${p.vari
 function routeExists(href: string): boolean {
   const clean = href.split(/[?#]/)[0];
   if (clean === "/" || calcPaths.has(clean)) return true;
-  const [, first, second] = clean.split("/");
-  if (first === "chains" && second && !["top-protein-fast-food", "glp1-friendly"].includes(second)) return chainSlugs.has(second);
+  const [, first, second, third] = clean.split("/");
+  if (first === "chains" && second && !["top-protein-fast-food", "glp1-friendly"].includes(second)) {
+    if (!chainSlugs.has(second)) return false;
+    if (!third) return true;
+    const chain = getChain(second);
+    return chain ? itemPagesFor(chain).some((p) => p.slug === third) : false;
+  }
   if (first === "guides" && second) return guideSlugs.has(second);
   if (first === "for" && second) return ["glp1", "gym", "women", "men", "seniors"].includes(second);
   return existsSync(path.join(appDir, ...clean.split("/").filter(Boolean), "page.tsx"));

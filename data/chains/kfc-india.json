@@ -300,6 +300,294 @@
       "sugar_g": 0,
       "sodium_mg": 150,
       "custom_order_tip": ""
+    },
+    {
+      "name": "Boneless Chicken Strips (3 pc)",
+      "category": "chicken",
+      "calories": 351,
+      "protein_g": 27,
+      "carbs_g": 23,
+      "fat_g": 22,
+      "fiber_g": null,
+      "sugar_g": null,
+      "sodium_mg": null,
+      "serving_g": 135,
+      "custom_order_tip": "",
+      "source": {
+        "name": "FatSecret India",
+        "url": "https://www.fatsecret.co.in/calories-nutrition/kfc",
+        "checked": "2026-09-25"
+      }
+    },
+    {
+      "name": "Popcorn Chicken (Large)",
+      "category": "chicken",
+      "calories": 646,
+      "protein_g": 36,
+      "carbs_g": 44,
+      "fat_g": 38,
+      "fiber_g": null,
+      "sugar_g": null,
+      "sodium_mg": null,
+      "serving_g": 190,
+      "custom_order_tip": "",
+      "source": {
+        "name": "FatSecret India",
+        "url": "https://www.fatsecret.co.in/calories-nutrition/kfc",
+        "checked": "2026-09-25"
+      }
+    },
+    {
+      "name": "Popcorn Chicken Rice Bowl",
+      "category": "bowl",
+      "calories": 615,
+      "protein_g": 24,
+      "carbs_g": 88,
+      "fat_g": 19,
+      "fiber_g": null,
+      "sugar_g": null,
+      "sodium_mg": null,
+      "serving_g": 340,
+      "custom_order_tip": "",
+      "source": {
+        "name": "FatSecret India",
+        "url": "https://www.fatsecret.co.in/calories-nutrition/kfc",
+        "checked": "2026-09-25"
+      }
+    },
+    {
+      "name": "Classic Chicken Roll",
+      "category": "wrap",
+      "calories": 461,
+      "protein_g": 14,
+      "carbs_g": 57,
+      "fat_g": 20,
+      "fiber_g": null,
+      "sugar_g": null,
+      "sodium_mg": null,
+      "serving_g": 150,
+      "custom_order_tip": "",
+      "source": {
+        "name": "FatSecret India",
+        "url": "https://www.fatsecret.co.in/calories-nutrition/kfc",
+        "checked": "2026-09-25"
+      }
+    },
+    {
+      "name": "Spicy Chicken Krisper",
+      "category": "burger",
+      "calories": 342,
+      "protein_g": 17,
+      "carbs_g": 49,
+      "fat_g": 8,
+      "fiber_g": null,
+      "sugar_g": null,
+      "sodium_mg": null,
+      "serving_g": 145,
+      "custom_order_tip": "",
+      "source": {
+        "name": "FatSecret India",
+        "url": "https://www.fatsecret.co.in/calories-nutrition/kfc",
+        "checked": "2026-09-25"
+      }
+    },
+    {
+      "name": "Chicken Longer",
+      "category": "burger",
+      "calories": 356,
+      "protein_g": 12,
+      "carbs_g": 37,
+      "fat_g": 18,
+      "fiber_g": null,
+      "sugar_g": null,
+      "sodium_mg": null,
+      "serving_g": 120,
+      "custom_order_tip": "",
+      "source": {
+        "name": "FatSecret India",
+        "url": "https://www.fatsecret.co.in/calories-nutrition/kfc",
+        "checked": "2026-09-25"
+      }
+    },
+    {
+      "name": "Egg Burger",
+      "category": "burger",
+      "calories": 281,
+      "protein_g": 13,
+      "carbs_g": 31,
+      "fat_g": 12,
+      "fiber_g": null,
+      "sugar_g": null,
+      "sodium_mg": null,
+      "serving_g": 130,
+      "custom_order_tip": "",
+      "source": {
+        "name": "FatSecret India",
+        "url": "https://www.fatsecret.co.in/calories-nutrition/kfc",
+        "checked": "2026-09-25"
+      }
+    },
+    {
+      "name": "Veg Zinger Burger",
+      "category": "burger",
+      "calories": 619,
+      "protein_g": 14,
+      "carbs_g": 83,
+      "fat_g": 25,
+      "fiber_g": null,
+      "sugar_g": null,
+      "sodium_mg": null,
+      "serving_g": 230,
+      "custom_order_tip": "",
+      "source": {
+        "name": "FatSecret India",
+        "url": "https://www.fatsecret.co.in/calories-nutrition/kfc",
+        "checked": "2026-09-25"
+      }
+    },
+    {
+      "name": "Classic Veg Krisper",
+      "category": "burger",
+      "calories": 496,
+      "protein_g": 9,
+      "carbs_g": 54,
+      "fat_g": 28,
+      "fiber_g": null,
+      "sugar_g": null,
+      "sodium_mg": null,
+      "serving_g": 145,
+      "custom_order_tip": "",
+      "source": {
+        "name": "FatSecret India",
+        "url": "https://www.fatsecret.co.in/calories-nutrition/kfc",
+        "checked": "2026-09-25"
+      }
+    },
+    {
+      "name": "Spicy Veg Krisper",
+      "category": "burger",
+      "calories": 436,
+      "protein_g": 9,
+      "carbs_g": 58,
+      "fat_g": 19,
+      "fiber_g": null,
+      "sugar_g": null,
+      "sodium_mg": null,
+      "serving_g": 145,
+      "custom_order_tip": "",
+      "source": {
+        "name": "FatSecret India",
+        "url": "https://www.fatsecret.co.in/calories-nutrition/kfc",
+        "checked": "2026-09-25"
+      }
+    },
+    {
+      "name": "Chatpata Channa Burger",
+      "category": "burger",
+      "calories": 366,
+      "protein_g": 9,
+      "carbs_g": 51,
+      "fat_g": 14,
+      "fiber_g": null,
+      "sugar_g": null,
+      "sodium_mg": null,
+      "serving_g": 130,
+      "custom_order_tip": "",
+      "source": {
+        "name": "FatSecret India",
+        "url": "https://www.fatsecret.co.in/calories-nutrition/kfc",
+        "checked": "2026-09-25"
+      }
+    },
+    {
+      "name": "Veg Roll",
+      "category": "wrap",
+      "calories": 447,
+      "protein_g": 8,
+      "carbs_g": 55,
+      "fat_g": 22,
+      "fiber_g": null,
+      "sugar_g": null,
+      "sodium_mg": null,
+      "serving_g": 145,
+      "custom_order_tip": "",
+      "source": {
+        "name": "FatSecret India",
+        "url": "https://www.fatsecret.co.in/calories-nutrition/kfc",
+        "checked": "2026-09-25"
+      }
+    },
+    {
+      "name": "Veg Rice Bowl",
+      "category": "bowl",
+      "calories": 418,
+      "protein_g": 9,
+      "carbs_g": 76,
+      "fat_g": 9,
+      "fiber_g": null,
+      "sugar_g": null,
+      "sodium_mg": null,
+      "serving_g": 305,
+      "custom_order_tip": "",
+      "source": {
+        "name": "FatSecret India",
+        "url": "https://www.fatsecret.co.in/calories-nutrition/kfc",
+        "checked": "2026-09-25"
+      }
+    },
+    {
+      "name": "Fries (Medium)",
+      "category": "side",
+      "calories": 299,
+      "protein_g": 7,
+      "carbs_g": 37,
+      "fat_g": 14,
+      "fiber_g": null,
+      "sugar_g": null,
+      "sodium_mg": null,
+      "serving_g": 100,
+      "custom_order_tip": "",
+      "source": {
+        "name": "FatSecret India",
+        "url": "https://www.fatsecret.co.in/calories-nutrition/kfc",
+        "checked": "2026-09-25"
+      }
+    },
+    {
+      "name": "Fries (Large)",
+      "category": "side",
+      "calories": 404,
+      "protein_g": 9,
+      "carbs_g": 50,
+      "fat_g": 19,
+      "fiber_g": null,
+      "sugar_g": null,
+      "sodium_mg": null,
+      "serving_g": 135,
+      "custom_order_tip": "",
+      "source": {
+        "name": "FatSecret India",
+        "url": "https://www.fatsecret.co.in/calories-nutrition/kfc",
+        "checked": "2026-09-25"
+      }
+    },
+    {
+      "name": "Choco Lava Cake",
+      "category": "dessert",
+      "calories": 343,
+      "protein_g": 6,
+      "carbs_g": 34,
+      "fat_g": 21,
+      "fiber_g": null,
+      "sugar_g": null,
+      "sodium_mg": null,
+      "serving_g": 60,
+      "custom_order_tip": "",
+      "source": {
+        "name": "FatSecret India",
+        "url": "https://www.fatsecret.co.in/calories-nutrition/kfc",
+        "checked": "2026-09-25"
+      }
     }
   ]
 }

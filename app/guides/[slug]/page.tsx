@@ -27,7 +27,7 @@ import { getAllGuides, getGuide } from "@/lib/guides/load";
 import { extractToc } from "@/lib/guides/toc";
 import { articleLd, breadcrumbLd, faqLd } from "@/lib/seo/jsonld";
 import { buildMetadata } from "@/lib/seo/metadata";
-import { blurFor } from "@/lib/images/placeholder";
+import { blurFor, placeholderStyle } from "@/lib/images/placeholder";
 
 export const dynamicParams = false;
 
@@ -112,8 +112,8 @@ export default async function GuidePage({ params }: PageProps<"/guides/[slug]">)
 
         {/* Cover photo: the largest element on the page, so it loads first. */}
         <figure className="mx-auto mt-8 max-w-4xl">
-          <div className="relative aspect-video overflow-hidden rounded-card bg-surface shadow-card">
-            <Image src={guide.image.src} alt={guide.image.alt} fill preload placeholder={blurFor(guide.image.src) ? "blur" : "empty"} blurDataURL={blurFor(guide.image.src)} sizes="(min-width: 960px) 896px, 100vw" className="object-cover" />
+          <div className="relative aspect-video overflow-hidden rounded-card bg-surface shadow-card" style={placeholderStyle(blurFor(guide.image.src))}>
+            <Image src={guide.image.src} alt={guide.image.alt} fill preload sizes="(min-width: 960px) 896px, 100vw" className="object-cover" />
           </div>
           <figcaption className="mt-2 text-right text-xs text-muted">
             Photo by{" "}
