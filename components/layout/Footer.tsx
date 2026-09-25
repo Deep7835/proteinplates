@@ -40,7 +40,15 @@ export function Footer() {
           The info on this site is for education only. It is not medical advice. Talk to your doctor or a registered
           dietitian before you change your diet.
         </p>
-        <p className="mt-2">© {new Date().getFullYear()} {site.name}</p>
+        <p className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1">
+          <span>© {new Date().getFullYear()} {site.name}</span>
+          <Link href="/privacy" className="inline-flex min-h-11 items-center text-muted underline-offset-2 hover:text-brand-700 hover:underline">
+            Privacy
+          </Link>
+          <Link href="/terms" className="inline-flex min-h-11 items-center text-muted underline-offset-2 hover:text-brand-700 hover:underline">
+            Terms of use
+          </Link>
+        </p>
       </Container>
     </footer>
   );

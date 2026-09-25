@@ -39,6 +39,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...guides.map((g) => ({ url: url(`/guides/${g.slug}`), lastModified: g.updated, priority: 0.7 })),
     ...footerLinks.map((l) => ({ url: url(l.href), lastModified: site.staticPagesUpdated, priority: 0.3 })),
     { url: url("/meal-plan"), lastModified: site.staticPagesUpdated, priority: 0.5 },
+    { url: url("/terms"), lastModified: site.staticPagesUpdated, priority: 0.3 },
     ...audiences.map((a) => ({ url: url(`/for/${a.slug}`), lastModified: chainsUpdated > guidesUpdated ? chainsUpdated : guidesUpdated, priority: 0.8 })),
   ];
 }

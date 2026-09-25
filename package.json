@@ -16,6 +16,7 @@
     "images": "tsx scripts/image-placeholders.mts"
   },
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
     "github-slugger": "^2.0.0",
     "gray-matter": "^4.0.3",
     "lucide-react": "^1.47.0",

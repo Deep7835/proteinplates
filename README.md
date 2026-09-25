@@ -28,6 +28,8 @@ npm run dev                   # http://localhost:3000
 |---|---|
 | `NEXT_PUBLIC_SITE_URL` | Your live domain, with no trailing slash (e.g. `https://proteinplates.com`). Used for canonical URLs, the sitemap, share images, and JSON-LD. |
 | `NEXT_PUBLIC_ADS_ENABLED` | Set to `true` to show the reserved ad slots. Leave it unset or `false` to hide them. |
+| `NEXT_PUBLIC_UMAMI_WEBSITE_ID` | Optional. Your Umami Cloud website ID. Turns on Umami analytics (cookie-free, with UTM/campaign reports). |
+| `NEXT_PUBLIC_UMAMI_SCRIPT_URL` | Optional. Only if you self-host Umami; defaults to `https://cloud.umami.is/script.js`. |
 
 The site name, tagline, contact email, and navigation are all set in [`lib/config/site.ts`](lib/config/site.ts).
 
@@ -188,6 +190,12 @@ scripts/              validate-data.ts, new-chain.ts
 - **Search** (`/search`): the index is built at build time from calculator pages, guides, chains (including item names), and hubs, and served as a static `/search-index.json`. Matching runs in the browser. Every word must match; titles weigh most. The page is `noindex`. New content shows up automatically on the next build.
 - **Dark mode**: the header button switches themes and saves the choice in `localStorage`. With no saved choice, the site follows the device setting. Colors are the same token names in `app/globals.css`, with dark values under `[data-theme="dark"]`. Use the `dark:` variant only when a token can't do the job.
 - **Print**: printouts are always light and hide the footer, ads, share buttons, back-to-top, and related links (`print:hidden`). FAQs open before printing.
+
+### Analytics, security headers, and legal pages
+
+- **Analytics (no cookies, so no cookie banner):** Vercel Web Analytics is built in. Turn it on in the Vercel dashboard under Project → Analytics. The free plan shows page views, referrers, countries, and devices (50,000 events a month). For UTM/campaign reports for free, create a site on [Umami Cloud](https://umami.is) and set `NEXT_PUBLIC_UMAMI_WEBSITE_ID`. Links copied with a calculator's "Copy link" button carry `utm_source=share&utm_medium=copied-link`. Tag your own campaign links the same way, e.g. `?utm_source=instagram&utm_medium=social&utm_campaign=launch`.
+- **Security headers** (HSTS, no framing, nosniff, referrer and permissions policies) are set in `next.config.ts`.
+- **Legal pages:** `/privacy` and `/terms` are templates. Have them reviewed before launch, and update them before you add ads, accounts, payments, or anything that uses cookies (that is also when you'd need a cookie banner).
 
 ### Monetization placeholders
 

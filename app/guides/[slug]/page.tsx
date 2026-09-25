@@ -8,6 +8,7 @@ import remarkGfm from "remark-gfm";
 import { ChainCard } from "@/components/chains/ChainCard";
 import { KeyTakeaways } from "@/components/guides/KeyTakeaways";
 import { mdxComponents } from "@/components/guides/mdx-components";
+import { ReadingProgress } from "@/components/guides/ReadingProgress";
 import { Sources } from "@/components/guides/Sources";
 import { Toc } from "@/components/guides/Toc";
 import { AdSlot } from "@/components/monetization/AdSlot";
@@ -88,6 +89,7 @@ export default async function GuidePage({ params }: PageProps<"/guides/[slug]">)
           breadcrumbLd(crumbs),
         ]}
       />
+      <ReadingProgress targetId="guide-article" />
       <Container className="py-8 sm:py-10">
         <Breadcrumbs crumbs={crumbs} />
         <div className="mx-auto mt-4 max-w-3xl">
@@ -134,7 +136,7 @@ export default async function GuidePage({ params }: PageProps<"/guides/[slug]">)
           </div>
           <AdSlot position="after-intro" />
 
-          <article className="prose prose-slate dark:prose-invert prose-h1:font-semibold prose-h2:font-semibold mt-10 max-w-none prose-headings:scroll-mt-24 prose-headings:tracking-tight prose-a:text-brand-700">
+          <article id="guide-article" className="prose prose-slate dark:prose-invert prose-h1:font-semibold prose-h2:font-semibold mt-10 max-w-none prose-headings:scroll-mt-24 prose-headings:tracking-tight prose-a:text-brand-700">
             {content}
           </article>
 

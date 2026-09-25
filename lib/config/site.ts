@@ -9,7 +9,7 @@ export const site = {
   locale: "en_US",
   contactEmail: "hello@example.com",
   // Used as lastModified in the sitemap for static pages (about, policies, etc.).
-  staticPagesUpdated: "2026-09-24",
+  staticPagesUpdated: "2026-09-25",
 } as const;
 
 export type NavLink = { href: string; label: string };
