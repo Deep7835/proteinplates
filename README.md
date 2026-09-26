@@ -26,7 +26,7 @@ npm run dev                   # http://localhost:3000
 
 | Variable | What it does |
 |---|---|
-| `NEXT_PUBLIC_SITE_URL` | Your live domain, with no trailing slash (e.g. `https://proteinpermeal.com`). Used for canonical URLs, the sitemap, share images, and JSON-LD. |
+| `NEXT_PUBLIC_SITE_URL` | Optional. Overrides the live domain (default `https://proteinpermeal.com`, set in `lib/config/site.ts`), with no trailing slash. Used for canonical URLs, the sitemap, share images, and JSON-LD. |
 | `NEXT_PUBLIC_ADS_ENABLED` | Set to `true` to show the reserved ad slots. Leave it unset or `false` to hide them. |
 | `NEXT_PUBLIC_CF_BEACON_TOKEN` | Optional. Cloudflare Web Analytics token (cookie-free). Skip it if you turn on Cloudflare's automatic setup. |
 | `NEXT_PUBLIC_UMAMI_WEBSITE_ID` | Optional. Your Umami Cloud website ID. Turns on Umami analytics (cookie-free, with UTM/campaign reports). |
@@ -55,10 +55,10 @@ The site is a **static export**: `npm run build` writes plain HTML, CSS, JS, and
 **Cloudflare Workers (recommended), connected to GitHub:**
 1. In the Cloudflare dashboard: **Workers & Pages → Create → Import a repository**, and pick this repo.
 2. Set **Build command** `npm run build` and **Deploy command** `npx wrangler deploy`. The Worker name must match `"name"` in `wrangler.jsonc` (`proteinplates`); change one of them if they differ.
-3. Under **Settings → Variables and secrets (build)**, add `NEXT_PUBLIC_SITE_URL` (your real domain, no trailing slash).
+3. The live domain (`https://proteinpermeal.com`) is set in `lib/config/site.ts`. Only add a `NEXT_PUBLIC_SITE_URL` build variable if you deploy a copy on a different domain.
 4. Deploy, then add your domain under **Settings → Domains & Routes**.
 
-**Cloudflare Pages instead:** Framework preset **None**, build command `npm run build`, output directory `out`, and the same `NEXT_PUBLIC_SITE_URL` variable.
+**Cloudflare Pages instead:** Framework preset **None**, build command `npm run build`, output directory `out`.
 
 Don't use the "Next.js" preset or the OpenNext/next-on-pages adapters: they run pages on a server, and our pages read their data files at build time only.
 

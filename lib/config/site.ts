@@ -5,7 +5,9 @@ export const site = {
   tagline: "Hit your protein target, even when eating out.",
   description:
     "Free protein calculator and high-protein picks at popular US, UK, and Indian restaurant chains. Simple, sourced nutrition info for gym-goers, GLP-1 users, and adults 50+.",
-  url: (process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.com").replace(/\/$/, ""),
+  // Live domain, used for canonical URLs, the sitemap, robots.txt, share images, and JSON-LD.
+  // NEXT_PUBLIC_SITE_URL can override it (e.g. for a staging copy); an empty value falls back to the default.
+  url: (process.env.NEXT_PUBLIC_SITE_URL || "https://proteinpermeal.com").replace(/\/$/, ""),
   locale: "en_US",
   contactEmail: "hello@example.com",
   /** Google Analytics 4 measurement ID. Loads only with consent for cookies (see components/layout/CookieConsent.tsx). */
