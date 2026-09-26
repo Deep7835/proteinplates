@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Fraunces, Inter } from "next/font/google";
+import localFont from "next/font/local";
 import { Header } from "@/components/layout/Header";
 import { BackToTop } from "@/components/layout/BackToTop";
 import { Footer } from "@/components/layout/Footer";
@@ -10,9 +10,10 @@ import { gaBootScript } from "@/lib/analytics/consent";
 import { site } from "@/lib/config/site";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
-// Only weight 600 is used (headings, logo, hero stats), so load that one weight instead of the full variable font.
-const fraunces = Fraunces({ subsets: ["latin"], weight: "600", variable: "--font-fraunces", display: "swap" });
+// Fonts are bundled in app/fonts (Latin subset), so the build never has to download them from Google Fonts.
+const inter = localFont({ src: "./fonts/inter-latin-variable.woff2", weight: "100 900", variable: "--font-inter", display: "swap" });
+// Only weight 600 is used (headings, logo, hero stats).
+const fraunces = localFont({ src: "./fonts/fraunces-latin-600.woff2", weight: "600", variable: "--font-fraunces", display: "swap" });
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
