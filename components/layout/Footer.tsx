@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { audiences, calculatorLinks, footerLinks, site } from "@/lib/config/site";
 import { Container } from "./Container";
+import { CookieSettingsButton } from "./CookieConsent";
 import { Logo } from "./Logo";
 
 function LinkList({ title, links }: { title: string; links: { href: string; label: string }[] }) {
@@ -48,6 +49,9 @@ export function Footer() {
           <Link href="/terms" className="inline-flex min-h-11 items-center text-muted underline-offset-2 hover:text-brand-700 hover:underline">
             Terms of use
           </Link>
+          {site.googleAnalyticsId && (
+            <CookieSettingsButton className="inline-flex min-h-11 cursor-pointer items-center text-muted underline-offset-2 hover:text-brand-700 hover:underline" />
+          )}
         </p>
       </Container>
     </footer>

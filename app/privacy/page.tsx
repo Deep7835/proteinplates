@@ -2,11 +2,11 @@ import Link from "next/link";
 import { ProsePage } from "@/components/layout/Prose";
 import { site } from "@/lib/config/site";
 import { buildMetadata } from "@/lib/seo/metadata";
-import { UMAMI_WEBSITE_ID } from "@/components/layout/SiteAnalytics";
+import { CF_BEACON_TOKEN, UMAMI_WEBSITE_ID } from "@/components/layout/SiteAnalytics";
 
 export const metadata = buildMetadata({
   title: "Privacy Policy",
-  description: `How ${site.name} handles your information. Our calculators run in your browser, we don’t store the numbers you enter, and our analytics use no cookies.`,
+  description: `How ${site.name} handles your information. Our calculators run in your browser, we don’t store the numbers you enter, and analytics cookies are used only if you accept them.`,
   path: "/privacy",
 });
 
@@ -25,19 +25,37 @@ export default function PrivacyPage() {
       <p>We don’t offer accounts right now, and our meal plan page doesn’t collect any information yet.</p>
       <h2>Cookies</h2>
       <p>
-        We don’t use tracking or advertising cookies. If you pick light or dark mode, your browser remembers that
-        choice on your own device; it isn’t sent to us.
+        We use cookies only for Google Analytics, and only if you choose <strong>Accept</strong> in our cookie banner.
+        These cookies are named <code>_ga</code> and <code>_ga_…</code> and last up to 2 years. If you choose{" "}
+        <strong>Reject</strong>, Google Analytics runs without cookies and sends only limited, cookie-free signals that
+        help us estimate how many people visit. You can change your choice at any time with <strong>Cookie settings</strong>{" "}
+        at the bottom of every page.
+      </p>
+      <p>
+        Your light or dark mode choice and your cookie choice are saved in your own browser (not as cookies) and aren’t
+        sent to us.
       </p>
       <h2>Analytics</h2>
       <p>
-        We use Cloudflare Web Analytics, which hosts this site, to count visits and see which pages are popular and how
-        fast they load. It doesn’t use cookies and doesn’t identify you. It records things like the page you viewed,
-        the site that sent you, your country, and your device type.
+        We use Google Analytics 4, a service from Google, to see which pages help people most. It records things like
+        the pages you view, how you arrived (for example from a search, another site, or a link with campaign “utm”
+        tags), your approximate location (country and city), and your device and browser. It doesn’t tell us who you
+        are, and Google says Google Analytics 4 doesn’t log or store IP addresses. Google processes this data under its
+        own policies; see{" "}
+        <a href="https://policies.google.com/technologies/partner-sites" rel="noopener nofollow">
+          how Google uses information from sites that use its services
+        </a>
+        .
       </p>
+      {CF_BEACON_TOKEN && (
+        <p>
+          We also use Cloudflare Web Analytics, which doesn’t use cookies, to count visits and see how fast pages load.
+        </p>
+      )}
       {UMAMI_WEBSITE_ID && (
         <p>
-          We also use Umami, a cookie-free analytics service, to see which pages and campaigns (such as links tagged with
-          “utm” codes) bring visitors. It doesn’t use cookies or collect personal information.
+          We also use Umami, a cookie-free analytics service, to see which pages and campaigns bring visitors. It doesn’t
+          use cookies or collect personal information.
         </p>
       )}
       <h2>Ads</h2>

@@ -202,9 +202,10 @@ scripts/              validate-data.ts, new-chain.ts
 
 ### Analytics, security headers, and legal pages
 
-- **Analytics (no cookies, so no cookie banner):** Cloudflare Web Analytics is free. If your domain is on Cloudflare, turn on its automatic setup (Analytics & Logs → Web Analytics); otherwise set `NEXT_PUBLIC_CF_BEACON_TOKEN`. For free UTM/campaign reports, create a site on [Umami Cloud](https://umami.is) and set `NEXT_PUBLIC_UMAMI_WEBSITE_ID`. Links copied with a calculator's "Copy link" button carry `utm_source=share&utm_medium=copied-link`. Tag your own campaign links the same way, e.g. `?utm_source=instagram&utm_medium=social&utm_campaign=launch`.
+- **Google Analytics 4** (`googleAnalyticsId` in `lib/config/site.ts`, or `NEXT_PUBLIC_GA_ID`) uses Google Consent Mode v2: until a visitor clicks **Accept** in the cookie banner, GA runs without cookies; ads consent is always denied. "Cookie settings" in the footer reopens the banner. GA4 reads UTM tags automatically, e.g. `?utm_source=instagram&utm_medium=social&utm_campaign=launch`; links copied with a calculator's "Copy link" button carry `utm_source=share&utm_medium=copied-link`. Optional cookie-free extras: Cloudflare Web Analytics (`NEXT_PUBLIC_CF_BEACON_TOKEN`) and Umami (`NEXT_PUBLIC_UMAMI_WEBSITE_ID`).
+- **Google Search Console:** the verification tag is set by `googleSiteVerification` in `lib/config/site.ts`. After deploying, click **Verify** in Search Console, then submit `/sitemap.xml`.
 - **Security headers** (HSTS, no framing, nosniff, referrer and permissions policies) and cache rules are in `public/_headers`, which Cloudflare reads.
-- **Legal pages:** `/privacy` and `/terms` are templates. Have them reviewed before launch, and update them before you add ads, accounts, payments, or anything that uses cookies (that is also when you'd need a cookie banner).
+- **Legal pages:** `/privacy` and `/terms` are templates. Have them reviewed before launch, and update them before you add ads, accounts, or payments.
 
 ### Brand assets
 

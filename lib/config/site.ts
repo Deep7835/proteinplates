@@ -8,8 +8,12 @@ export const site = {
   url: (process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.com").replace(/\/$/, ""),
   locale: "en_US",
   contactEmail: "hello@example.com",
+  /** Google Analytics 4 measurement ID. Loads only with consent for cookies (see components/layout/CookieConsent.tsx). */
+  googleAnalyticsId: process.env.NEXT_PUBLIC_GA_ID ?? "G-NBCW8B047C",
+  /** Google Search Console site verification (rendered as <meta name="google-site-verification">). */
+  googleSiteVerification: "CTEDtpoIq53RLdSJ4Fj9kT4LDsfeBthauJawqbRIKiY",
   // Used as lastModified in the sitemap for static pages (about, policies, etc.).
-  staticPagesUpdated: "2026-09-25",
+  staticPagesUpdated: "2026-09-26",
 } as const;
 
 export type NavLink = { href: string; label: string };

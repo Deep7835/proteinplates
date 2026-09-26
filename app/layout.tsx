@@ -3,7 +3,10 @@ import { Fraunces, Inter } from "next/font/google";
 import { Header } from "@/components/layout/Header";
 import { BackToTop } from "@/components/layout/BackToTop";
 import { Footer } from "@/components/layout/Footer";
+import Script from "next/script";
+import { CookieConsent } from "@/components/layout/CookieConsent";
 import { SiteAnalytics } from "@/components/layout/SiteAnalytics";
+import { gaBootScript } from "@/lib/analytics/consent";
 import { site } from "@/lib/config/site";
 import "./globals.css";
 
@@ -16,6 +19,7 @@ export const metadata: Metadata = {
   title: { default: `${site.name}: ${site.tagline}`, template: `%s | ${site.name}` },
   description: site.description,
   applicationName: site.name,
+  verification: { google: site.googleSiteVerification },
 };
 
 export const viewport: Viewport = {
@@ -33,6 +37,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html lang="en-US" className={`${inter.variable} ${fraunces.variable}`} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+        {site.googleAnalyticsId && <script dangerouslySetInnerHTML={{ __html: gaBootScript(site.googleAnalyticsId) }} />}
       </head>
       <body className="flex min-h-dvh flex-col">
         <Header />
@@ -42,6 +47,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <Footer />
         <BackToTop />
         <SiteAnalytics />
+        {site.googleAnalyticsId && (
+          <>
+            {/* Loaded after the page is idle so it doesn't slow the first view. Consent defaults are set in <head>. */}
+            <Script src={`https://www.googletagmanager.com/gtag/js?id=${site.googleAnalyticsId}`} strategy="lazyOnload" />
+            <CookieConsent />
+          </>
+        )}
       </body>
     </html>
   );
