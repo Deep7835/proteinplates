@@ -1,22 +1,30 @@
 import Link from "next/link";
 import { site } from "@/lib/config/site";
 
-/** Plate mark: a green plate with a "P" in the middle. Same drawing as app/icon.svg. */
+/**
+ * Plate mark: a plate seen from above with one wedge highlighted, i.e. your protein portion per meal.
+ * Same drawing as app/icon.svg, app/apple-icon.png, and public/logo*.svg; change them together.
+ */
 export function LogoMark({ className = "size-8" }: { className?: string }) {
   return (
     <svg viewBox="0 0 32 32" className={className} aria-hidden>
-      <circle cx="16" cy="16" r="15" fill="var(--color-brand-600)" />
-      <circle cx="16" cy="16" r="10.5" fill="none" stroke="#fff" strokeOpacity="0.55" strokeWidth="1.5" />
-      <path d="M13 21.5V10.5h4.2a3.6 3.6 0 0 1 0 7.2H13" fill="none" stroke="#fff" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" />
+      <circle cx="16" cy="16" r="15.5" fill="var(--color-brand-600)" />
+      <circle cx="16" cy="16" r="11" fill="none" stroke="#fff" strokeWidth="1.7" strokeOpacity="0.92" />
+      <circle cx="16" cy="16" r="7.4" fill="#fff" fillOpacity="0.2" />
+      <path d="M16 16V8.6A7.4 7.4 0 0 1 23.4 16Z" fill="var(--color-accent-400)" />
     </svg>
   );
 }
 
 export function Logo() {
   return (
-    <Link href="/" className="flex items-center gap-2 font-bold text-ink no-underline" aria-label={`${site.name} home`}>
+    <Link href="/" className="flex shrink-0 items-center gap-2 text-ink no-underline" aria-label={`${site.name} home`}>
       <LogoMark />
-      <span className="font-display text-xl font-semibold tracking-tight">{site.name}</span>
+      {/* On very narrow phones (under 360px) the name stacks on two lines so the header buttons keep their 44px size. */}
+      <span className="whitespace-nowrap font-display text-lg font-semibold tracking-tight max-[359px]:flex max-[359px]:flex-col max-[359px]:text-[15px] max-[359px]:leading-[1.05] sm:text-xl">
+        <span>Protein </span>
+        <span className="text-brand-700">Per Meal</span>
+      </span>
     </Link>
   );
 }

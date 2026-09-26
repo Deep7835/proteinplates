@@ -12,7 +12,7 @@ export function organizationLd(): Thing {
     "@id": `${site.url}/#organization`,
     name: site.name,
     url: site.url,
-    logo: absoluteUrl("/logo.svg"),
+    logo: absoluteUrl("/logo.png"),
     email: site.contactEmail,
   };
 }

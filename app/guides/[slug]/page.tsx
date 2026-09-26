@@ -119,11 +119,11 @@ export default async function GuidePage({ params }: PageProps<"/guides/[slug]">)
           </div>
           <figcaption className="mt-2 text-right text-xs text-muted">
             Photo by{" "}
-            <a href={`${guide.image.creditUrl}?utm_source=proteinplates&utm_medium=referral`} rel="noopener nofollow">
+            <a href={`${guide.image.creditUrl}?utm_source=proteinpermeal&utm_medium=referral`} rel="noopener nofollow">
               {guide.image.credit}
             </a>{" "}
             on{" "}
-            <a href={`${guide.image.sourceUrl}?utm_source=proteinplates&utm_medium=referral`} rel="noopener nofollow">
+            <a href={`${guide.image.sourceUrl}?utm_source=proteinpermeal&utm_medium=referral`} rel="noopener nofollow">
               Unsplash
             </a>
           </figcaption>

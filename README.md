@@ -1,4 +1,4 @@
-# ProteinPlates
+# Protein Per Meal
 
 **Hit your protein target, even when eating out.**
 
@@ -26,7 +26,7 @@ npm run dev                   # http://localhost:3000
 
 | Variable | What it does |
 |---|---|
-| `NEXT_PUBLIC_SITE_URL` | Your live domain, with no trailing slash (e.g. `https://proteinplates.com`). Used for canonical URLs, the sitemap, share images, and JSON-LD. |
+| `NEXT_PUBLIC_SITE_URL` | Your live domain, with no trailing slash (e.g. `https://proteinpermeal.com`). Used for canonical URLs, the sitemap, share images, and JSON-LD. |
 | `NEXT_PUBLIC_ADS_ENABLED` | Set to `true` to show the reserved ad slots. Leave it unset or `false` to hide them. |
 | `NEXT_PUBLIC_CF_BEACON_TOKEN` | Optional. Cloudflare Web Analytics token (cookie-free). Skip it if you turn on Cloudflare's automatic setup. |
 | `NEXT_PUBLIC_UMAMI_WEBSITE_ID` | Optional. Your Umami Cloud website ID. Turns on Umami analytics (cookie-free, with UTM/campaign reports). |
@@ -205,6 +205,13 @@ scripts/              validate-data.ts, new-chain.ts
 - **Analytics (no cookies, so no cookie banner):** Cloudflare Web Analytics is free. If your domain is on Cloudflare, turn on its automatic setup (Analytics & Logs → Web Analytics); otherwise set `NEXT_PUBLIC_CF_BEACON_TOKEN`. For free UTM/campaign reports, create a site on [Umami Cloud](https://umami.is) and set `NEXT_PUBLIC_UMAMI_WEBSITE_ID`. Links copied with a calculator's "Copy link" button carry `utm_source=share&utm_medium=copied-link`. Tag your own campaign links the same way, e.g. `?utm_source=instagram&utm_medium=social&utm_campaign=launch`.
 - **Security headers** (HSTS, no framing, nosniff, referrer and permissions policies) and cache rules are in `public/_headers`, which Cloudflare reads.
 - **Legal pages:** `/privacy` and `/terms` are templates. Have them reviewed before launch, and update them before you add ads, accounts, payments, or anything that uses cookies (that is also when you'd need a cookie banner).
+
+### Brand assets
+
+- `public/logo.svg` (for light backgrounds) and `public/logo-dark.svg` (for dark backgrounds): the full logo, with the wordmark drawn as shapes (Fraunces SemiBold), so it looks the same anywhere.
+- `public/logo-mark.svg`: the plate mark on its own (social avatars, stickers). `public/logo.png` (512 px) is the logo Google reads from the site's structured data.
+- `app/icon.svg` is the favicon and `app/apple-icon.png` the iPhone home-screen icon. The header logo is drawn in `components/layout/Logo.tsx`.
+- Brand colors: green `#16735a`, dark green `#115c48`, orange `#f59a55`, ink `#16201d`.
 
 ### Monetization placeholders
 

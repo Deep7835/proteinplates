@@ -120,11 +120,11 @@ export default function HomePage() {
             )}
             <p className="mt-9 text-right text-xs text-muted">
               Photo by{" "}
-              <a href={`${HERO_IMAGE.creditUrl}?utm_source=proteinplates&utm_medium=referral`} rel="noopener nofollow">
+              <a href={`${HERO_IMAGE.creditUrl}?utm_source=proteinpermeal&utm_medium=referral`} rel="noopener nofollow">
                 {HERO_IMAGE.credit}
               </a>{" "}
               on{" "}
-              <a href={`${HERO_IMAGE.sourceUrl}?utm_source=proteinplates&utm_medium=referral`} rel="noopener nofollow">
+              <a href={`${HERO_IMAGE.sourceUrl}?utm_source=proteinpermeal&utm_medium=referral`} rel="noopener nofollow">
                 Unsplash
               </a>
             </p>
