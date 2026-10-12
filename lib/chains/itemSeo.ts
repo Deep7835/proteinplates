@@ -9,6 +9,10 @@ import { isRankable, type RankableItem } from "./rank";
  */
 export const ITEM_ALIASES: Record<string, string[]> = {
   "mcdonalds-india/pizza-mcpuff": ["McPuff", "Mc Puff", "McDonald's pizza puff"],
+  "mcdonalds-india/chicken-mcpuff": ["Chicken Puff", "Chicken Mc Puff"],
+  "mcdonalds-india/mango-mcswirl-waffle-cone-regular": ["Mango McSwirl"],
+  "mcdonalds-india/soft-serve-waffle-cone-regular": ["Soft serve waffle cone", "McDonald's waffle cone"],
+  "mcdonalds-india/chocolate-brownie-sundae-regular": ["Brownie sundae", "Chocolate brownie sundae"],
   "mcdonalds-india/soft-serve-cone": ["Softy", "Soft serve"],
   "mcdonalds-india/aloo-tikki-burger": ["McAloo Tikki"],
   "mcdonalds-india/chicken-mcgrill-burger": ["Chicken McGrill", "McGrill"],

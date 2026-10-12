@@ -38,7 +38,7 @@ const g = (v: number | null) => (v === null ? "—" : `${v} g`);
 
 /** Where this item's numbers come from: its own third-party source, or the chain's source. */
 function sourceOf(chain: Chain, item: ChainItem) {
-  if (item.source) return { official: false, name: item.source.name, url: item.source.url, checked: item.source.checked };
+  if (item.source) return { official: item.source.kind === "official", name: item.source.name, url: item.source.url, checked: item.source.checked };
   const official = chain.source_type === "official";
   return {
     official,
@@ -265,7 +265,7 @@ export default async function ItemPage({ params }: PageProps<"/chains/[slug]/[it
             </table>
           </div>
           <p className="mt-2 text-xs text-muted">
-            “Not listed” means {src.official ? `${chain.chain}’s nutrition information` : src.name} doesn’t give that number.
+            “Not listed” means {src.official && !item.source ? `${chain.chain}’s nutrition information` : src.name} doesn’t give that number.
             {item.serving_g && " Per-100 g values are worked out from the serving weight."}
           </p>
         </section>

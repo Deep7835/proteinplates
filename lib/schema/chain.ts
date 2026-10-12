@@ -46,11 +46,13 @@ export const ChainItemSchema = z
     /** Optional serving weight in grams, as the source lists it. */
     serving_g: z.number().positive().nullable().optional(),
     /**
-     * Optional. Set only when THIS item's numbers come from somewhere other than the chain's own source
+     * Optional. Set only when THIS item's numbers come from somewhere other than the chain's nutrition source
      * (e.g. the chain's official data doesn't list it). Shown next to the item on the site.
+     * kind "official": still the chain's own information (e.g. calories printed on its in-store menu board).
      */
     source: z
       .object({
+        kind: z.enum(["official", "third_party"]).default("third_party"),
         name: z.string().trim().min(1),
         url: z.url({ protocol: /^https$/ }),
         checked: isoDateString(),

@@ -76,7 +76,7 @@ export default async function ChainPage({ params }: PageProps<"/chains/[slug]">)
     fiber: i.fiber_g,
     rankable: isRankable(i),
     href: itemHref(chain, i),
-    thirdParty: i.source?.name ?? null,
+    thirdParty: i.source && i.source.kind !== "official" ? i.source.name : null,
   }));
 
   return (
