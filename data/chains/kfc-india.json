@@ -6,7 +6,7 @@
   ],
   "category": "chicken",
   "official_nutrition_url": "https://about.kfc.co.in/assets/files/nutrition-booklet.pdf",
-  "data_checked_date": "2026-09-24",
+  "data_checked_date": "2026-10-12",
   "intro_notes": "KFC India's booklet lists values per serve. Smoky Red Chicken is the lean standout: two pieces give 42 g of protein for 342 calories. Grilled and smoky chicken beat fried chicken for protein per calorie, and the booklet does not list fiber.",
   "glp1_menu_name": null,
   "reviewed_by": null,
@@ -23,6 +23,7 @@
       "fiber_g": null,
       "sugar_g": 0,
       "sodium_mg": 470,
+      "serving_g": 180,
       "custom_order_tip": "One of the leanest picks: 42 g of protein for 342 calories."
     },
     {
@@ -35,6 +36,7 @@
       "fiber_g": null,
       "sugar_g": 0,
       "sodium_mg": 705,
+      "serving_g": 270,
       "custom_order_tip": ""
     },
     {
@@ -47,6 +49,7 @@
       "fiber_g": null,
       "sugar_g": 0,
       "sodium_mg": 1125,
+      "serving_g": 170,
       "custom_order_tip": ""
     },
     {
@@ -59,6 +62,7 @@
       "fiber_g": null,
       "sugar_g": 0,
       "sodium_mg": 530,
+      "serving_g": 220,
       "custom_order_tip": ""
     },
     {
@@ -71,6 +75,7 @@
       "fiber_g": null,
       "sugar_g": 0,
       "sodium_mg": 265,
+      "serving_g": 110,
       "custom_order_tip": ""
     },
     {
@@ -83,6 +88,7 @@
       "fiber_g": null,
       "sugar_g": 0,
       "sodium_mg": 432,
+      "serving_g": 200,
       "custom_order_tip": ""
     },
     {
@@ -95,6 +101,7 @@
       "fiber_g": null,
       "sugar_g": 1,
       "sodium_mg": 595,
+      "serving_g": 100,
       "custom_order_tip": ""
     },
     {
@@ -107,6 +114,7 @@
       "fiber_g": null,
       "sugar_g": 0,
       "sodium_mg": 368,
+      "serving_g": 105,
       "custom_order_tip": ""
     },
     {
@@ -119,6 +127,7 @@
       "fiber_g": null,
       "sugar_g": 0,
       "sodium_mg": 617,
+      "serving_g": 90,
       "custom_order_tip": ""
     },
     {
@@ -131,6 +140,7 @@
       "fiber_g": null,
       "sugar_g": 0,
       "sodium_mg": 959,
+      "serving_g": 140,
       "custom_order_tip": ""
     },
     {
@@ -143,6 +153,7 @@
       "fiber_g": null,
       "sugar_g": 0,
       "sodium_mg": 728,
+      "serving_g": 135,
       "custom_order_tip": ""
     },
     {
@@ -155,6 +166,7 @@
       "fiber_g": null,
       "sugar_g": 3,
       "sodium_mg": 900,
+      "serving_g": 225,
       "custom_order_tip": ""
     },
     {
@@ -167,6 +179,7 @@
       "fiber_g": null,
       "sugar_g": 5,
       "sodium_mg": 1215,
+      "serving_g": 225,
       "custom_order_tip": ""
     },
     {
@@ -179,6 +192,7 @@
       "fiber_g": null,
       "sugar_g": 10,
       "sodium_mg": 1325,
+      "serving_g": 250,
       "custom_order_tip": ""
     },
     {
@@ -191,6 +205,7 @@
       "fiber_g": null,
       "sugar_g": 5,
       "sodium_mg": 1710,
+      "serving_g": 360,
       "custom_order_tip": ""
     },
     {
@@ -203,6 +218,7 @@
       "fiber_g": null,
       "sugar_g": 7,
       "sodium_mg": 1397,
+      "serving_g": 340,
       "custom_order_tip": ""
     },
     {
@@ -215,6 +231,7 @@
       "fiber_g": null,
       "sugar_g": 13,
       "sodium_mg": 956,
+      "serving_g": 225,
       "custom_order_tip": ""
     },
     {
@@ -227,6 +244,7 @@
       "fiber_g": null,
       "sugar_g": 7,
       "sodium_mg": 1075,
+      "serving_g": 215,
       "custom_order_tip": ""
     },
     {
@@ -239,6 +257,7 @@
       "fiber_g": null,
       "sugar_g": 14,
       "sodium_mg": 752,
+      "serving_g": 225,
       "custom_order_tip": ""
     },
     {
@@ -251,6 +270,7 @@
       "fiber_g": null,
       "sugar_g": 0,
       "sodium_mg": 720,
+      "serving_g": 150,
       "custom_order_tip": ""
     },
     {
@@ -263,6 +283,7 @@
       "fiber_g": null,
       "sugar_g": 17,
       "sodium_mg": 1946,
+      "serving_g": 215,
       "custom_order_tip": ""
     },
     {
@@ -275,6 +296,7 @@
       "fiber_g": null,
       "sugar_g": 8,
       "sodium_mg": 1212,
+      "serving_g": 230,
       "custom_order_tip": ""
     },
     {
@@ -287,6 +309,7 @@
       "fiber_g": null,
       "sugar_g": 10,
       "sodium_mg": 950,
+      "serving_g": 190,
       "custom_order_tip": ""
     },
     {
@@ -299,6 +322,7 @@
       "fiber_g": null,
       "sugar_g": 0,
       "sodium_mg": 150,
+      "serving_g": 75,
       "custom_order_tip": ""
     },
     {
@@ -309,15 +333,10 @@
       "carbs_g": 23,
       "fat_g": 22,
       "fiber_g": null,
-      "sugar_g": null,
-      "sodium_mg": null,
+      "sugar_g": 3,
+      "sodium_mg": 628,
       "serving_g": 135,
-      "custom_order_tip": "",
-      "source": {
-        "name": "FatSecret India",
-        "url": "https://www.fatsecret.co.in/calories-nutrition/kfc",
-        "checked": "2026-09-25"
-      }
+      "custom_order_tip": ""
     },
     {
       "name": "Popcorn Chicken (Large)",
@@ -327,15 +346,10 @@
       "carbs_g": 44,
       "fat_g": 38,
       "fiber_g": null,
-      "sugar_g": null,
-      "sodium_mg": null,
+      "sugar_g": 0,
+      "sodium_mg": 1302,
       "serving_g": 190,
-      "custom_order_tip": "",
-      "source": {
-        "name": "FatSecret India",
-        "url": "https://www.fatsecret.co.in/calories-nutrition/kfc",
-        "checked": "2026-09-25"
-      }
+      "custom_order_tip": ""
     },
     {
       "name": "Popcorn Chicken Rice Bowl",
@@ -345,15 +359,10 @@
       "carbs_g": 88,
       "fat_g": 19,
       "fiber_g": null,
-      "sugar_g": null,
-      "sodium_mg": null,
+      "sugar_g": 6,
+      "sodium_mg": 1812,
       "serving_g": 340,
-      "custom_order_tip": "",
-      "source": {
-        "name": "FatSecret India",
-        "url": "https://www.fatsecret.co.in/calories-nutrition/kfc",
-        "checked": "2026-09-25"
-      }
+      "custom_order_tip": ""
     },
     {
       "name": "Classic Chicken Roll",
@@ -363,15 +372,10 @@
       "carbs_g": 57,
       "fat_g": 20,
       "fiber_g": null,
-      "sugar_g": null,
-      "sodium_mg": null,
+      "sugar_g": 8,
+      "sodium_mg": 825,
       "serving_g": 150,
-      "custom_order_tip": "",
-      "source": {
-        "name": "FatSecret India",
-        "url": "https://www.fatsecret.co.in/calories-nutrition/kfc",
-        "checked": "2026-09-25"
-      }
+      "custom_order_tip": ""
     },
     {
       "name": "Spicy Chicken Krisper",
@@ -381,15 +385,10 @@
       "carbs_g": 49,
       "fat_g": 8,
       "fiber_g": null,
-      "sugar_g": null,
-      "sodium_mg": null,
+      "sugar_g": 3,
+      "sodium_mg": 751,
       "serving_g": 145,
-      "custom_order_tip": "",
-      "source": {
-        "name": "FatSecret India",
-        "url": "https://www.fatsecret.co.in/calories-nutrition/kfc",
-        "checked": "2026-09-25"
-      }
+      "custom_order_tip": ""
     },
     {
       "name": "Chicken Longer",
@@ -399,15 +398,10 @@
       "carbs_g": 37,
       "fat_g": 18,
       "fiber_g": null,
-      "sugar_g": null,
-      "sodium_mg": null,
+      "sugar_g": 8,
+      "sodium_mg": 894,
       "serving_g": 120,
-      "custom_order_tip": "",
-      "source": {
-        "name": "FatSecret India",
-        "url": "https://www.fatsecret.co.in/calories-nutrition/kfc",
-        "checked": "2026-09-25"
-      }
+      "custom_order_tip": ""
     },
     {
       "name": "Egg Burger",
@@ -417,15 +411,10 @@
       "carbs_g": 31,
       "fat_g": 12,
       "fiber_g": null,
-      "sugar_g": null,
-      "sodium_mg": null,
+      "sugar_g": 4,
+      "sodium_mg": 685,
       "serving_g": 130,
-      "custom_order_tip": "",
-      "source": {
-        "name": "FatSecret India",
-        "url": "https://www.fatsecret.co.in/calories-nutrition/kfc",
-        "checked": "2026-09-25"
-      }
+      "custom_order_tip": ""
     },
     {
       "name": "Veg Zinger Burger",
@@ -435,15 +424,10 @@
       "carbs_g": 83,
       "fat_g": 25,
       "fiber_g": null,
-      "sugar_g": null,
-      "sodium_mg": null,
+      "sugar_g": 14,
+      "sodium_mg": 978,
       "serving_g": 230,
-      "custom_order_tip": "",
-      "source": {
-        "name": "FatSecret India",
-        "url": "https://www.fatsecret.co.in/calories-nutrition/kfc",
-        "checked": "2026-09-25"
-      }
+      "custom_order_tip": ""
     },
     {
       "name": "Classic Veg Krisper",
@@ -453,15 +437,10 @@
       "carbs_g": 54,
       "fat_g": 28,
       "fiber_g": null,
-      "sugar_g": null,
-      "sodium_mg": null,
+      "sugar_g": 6,
+      "sodium_mg": 625,
       "serving_g": 145,
-      "custom_order_tip": "",
-      "source": {
-        "name": "FatSecret India",
-        "url": "https://www.fatsecret.co.in/calories-nutrition/kfc",
-        "checked": "2026-09-25"
-      }
+      "custom_order_tip": ""
     },
     {
       "name": "Spicy Veg Krisper",
@@ -471,15 +450,10 @@
       "carbs_g": 58,
       "fat_g": 19,
       "fiber_g": null,
-      "sugar_g": null,
-      "sodium_mg": null,
+      "sugar_g": 8,
+      "sodium_mg": 725,
       "serving_g": 145,
-      "custom_order_tip": "",
-      "source": {
-        "name": "FatSecret India",
-        "url": "https://www.fatsecret.co.in/calories-nutrition/kfc",
-        "checked": "2026-09-25"
-      }
+      "custom_order_tip": ""
     },
     {
       "name": "Chatpata Channa Burger",
@@ -489,15 +463,10 @@
       "carbs_g": 51,
       "fat_g": 14,
       "fiber_g": null,
-      "sugar_g": null,
-      "sodium_mg": null,
+      "sugar_g": 5,
+      "sodium_mg": 691,
       "serving_g": 130,
-      "custom_order_tip": "",
-      "source": {
-        "name": "FatSecret India",
-        "url": "https://www.fatsecret.co.in/calories-nutrition/kfc",
-        "checked": "2026-09-25"
-      }
+      "custom_order_tip": ""
     },
     {
       "name": "Veg Roll",
@@ -507,15 +476,10 @@
       "carbs_g": 55,
       "fat_g": 22,
       "fiber_g": null,
-      "sugar_g": null,
-      "sodium_mg": null,
+      "sugar_g": 9,
+      "sodium_mg": 838,
       "serving_g": 145,
-      "custom_order_tip": "",
-      "source": {
-        "name": "FatSecret India",
-        "url": "https://www.fatsecret.co.in/calories-nutrition/kfc",
-        "checked": "2026-09-25"
-      }
+      "custom_order_tip": ""
     },
     {
       "name": "Veg Rice Bowl",
@@ -525,15 +489,10 @@
       "carbs_g": 76,
       "fat_g": 9,
       "fiber_g": null,
-      "sugar_g": null,
-      "sodium_mg": null,
+      "sugar_g": 8,
+      "sodium_mg": 1488,
       "serving_g": 305,
-      "custom_order_tip": "",
-      "source": {
-        "name": "FatSecret India",
-        "url": "https://www.fatsecret.co.in/calories-nutrition/kfc",
-        "checked": "2026-09-25"
-      }
+      "custom_order_tip": ""
     },
     {
       "name": "Fries (Medium)",
@@ -543,15 +502,10 @@
       "carbs_g": 37,
       "fat_g": 14,
       "fiber_g": null,
-      "sugar_g": null,
-      "sodium_mg": null,
+      "sugar_g": 0,
+      "sodium_mg": 200,
       "serving_g": 100,
-      "custom_order_tip": "",
-      "source": {
-        "name": "FatSecret India",
-        "url": "https://www.fatsecret.co.in/calories-nutrition/kfc",
-        "checked": "2026-09-25"
-      }
+      "custom_order_tip": ""
     },
     {
       "name": "Fries (Large)",
@@ -561,15 +515,10 @@
       "carbs_g": 50,
       "fat_g": 19,
       "fiber_g": null,
-      "sugar_g": null,
-      "sodium_mg": null,
+      "sugar_g": 0,
+      "sodium_mg": 270,
       "serving_g": 135,
-      "custom_order_tip": "",
-      "source": {
-        "name": "FatSecret India",
-        "url": "https://www.fatsecret.co.in/calories-nutrition/kfc",
-        "checked": "2026-09-25"
-      }
+      "custom_order_tip": ""
     },
     {
       "name": "Choco Lava Cake",
@@ -579,15 +528,166 @@
       "carbs_g": 34,
       "fat_g": 21,
       "fiber_g": null,
-      "sugar_g": null,
-      "sodium_mg": null,
+      "sugar_g": 18,
+      "sodium_mg": 180,
       "serving_g": 60,
-      "custom_order_tip": "",
-      "source": {
-        "name": "FatSecret India",
-        "url": "https://www.fatsecret.co.in/calories-nutrition/kfc",
-        "checked": "2026-09-25"
-      }
+      "custom_order_tip": ""
+    },
+    {
+      "name": "Hot & Crispy Leg Piece (1 pc)",
+      "category": "chicken",
+      "calories": 288,
+      "protein_g": 18,
+      "carbs_g": 17,
+      "fat_g": 17,
+      "fiber_g": null,
+      "sugar_g": 0,
+      "sodium_mg": 216,
+      "serving_g": 100,
+      "custom_order_tip": ""
+    },
+    {
+      "name": "Peri Peri Chicken Strips (3 pc)",
+      "category": "chicken",
+      "calories": 404,
+      "protein_g": 27,
+      "carbs_g": 28,
+      "fat_g": 26,
+      "fiber_g": null,
+      "sugar_g": 4,
+      "sodium_mg": 803,
+      "serving_g": 135,
+      "custom_order_tip": ""
+    },
+    {
+      "name": "Dunked Wings",
+      "category": "chicken",
+      "calories": 402,
+      "protein_g": 19,
+      "carbs_g": 28,
+      "fat_g": 24,
+      "fiber_g": null,
+      "sugar_g": 0,
+      "sodium_mg": 1106,
+      "serving_g": 135,
+      "custom_order_tip": ""
+    },
+    {
+      "name": "Dunked Boneless Wings",
+      "category": "chicken",
+      "calories": 339,
+      "protein_g": 18,
+      "carbs_g": 27,
+      "fat_g": 18,
+      "fiber_g": null,
+      "sugar_g": 0,
+      "sodium_mg": 700,
+      "serving_g": 135,
+      "custom_order_tip": ""
+    },
+    {
+      "name": "Dunked Strips",
+      "category": "chicken",
+      "calories": 325,
+      "protein_g": 22,
+      "carbs_g": 24,
+      "fat_g": 16,
+      "fiber_g": null,
+      "sugar_g": 0,
+      "sodium_mg": 840,
+      "serving_g": 135,
+      "custom_order_tip": ""
+    },
+    {
+      "name": "Dunked Drums",
+      "category": "chicken",
+      "calories": 550,
+      "protein_g": 34,
+      "carbs_g": 40,
+      "fat_g": 28,
+      "fiber_g": null,
+      "sugar_g": 0,
+      "sodium_mg": 1034,
+      "serving_g": 200,
+      "custom_order_tip": ""
+    },
+    {
+      "name": "Shawarma",
+      "category": "wrap",
+      "calories": 452,
+      "protein_g": 17,
+      "carbs_g": 51,
+      "fat_g": 25,
+      "fiber_g": null,
+      "sugar_g": 7,
+      "sodium_mg": 1143,
+      "serving_g": 165,
+      "custom_order_tip": ""
+    },
+    {
+      "name": "Plain Rice Bowl",
+      "category": "bowl",
+      "calories": 418,
+      "protein_g": 10,
+      "carbs_g": 65,
+      "fat_g": 13,
+      "fiber_g": null,
+      "sugar_g": 0,
+      "sodium_mg": 880,
+      "serving_g": 250,
+      "custom_order_tip": ""
+    },
+    {
+      "name": "Andhra Rice",
+      "category": "bowl",
+      "calories": 334,
+      "protein_g": 5,
+      "carbs_g": 56,
+      "fat_g": 11,
+      "fiber_g": null,
+      "sugar_g": 5,
+      "sodium_mg": 1976,
+      "serving_g": 230,
+      "custom_order_tip": ""
+    },
+    {
+      "name": "Choco Mud Pie",
+      "category": "dessert",
+      "calories": 241,
+      "protein_g": 3,
+      "carbs_g": 37,
+      "fat_g": 9,
+      "fiber_g": null,
+      "sugar_g": 31,
+      "sodium_mg": 65,
+      "serving_g": 93,
+      "custom_order_tip": ""
+    },
+    {
+      "name": "Mousse Cake (Coffee)",
+      "category": "dessert",
+      "calories": 135,
+      "protein_g": 2,
+      "carbs_g": 17,
+      "fat_g": 7,
+      "fiber_g": null,
+      "sugar_g": 10,
+      "sodium_mg": 43,
+      "serving_g": 70,
+      "custom_order_tip": ""
+    },
+    {
+      "name": "Mini Dessert Bucket",
+      "category": "dessert",
+      "calories": 250,
+      "protein_g": 4,
+      "carbs_g": 34,
+      "fat_g": 11,
+      "fiber_g": null,
+      "sugar_g": 28,
+      "sodium_mg": 94,
+      "serving_g": 85,
+      "custom_order_tip": ""
     }
   ]
 }

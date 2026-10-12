@@ -26,6 +26,10 @@ export const ITEM_ALIASES: Record<string, string[]> = {
   "kfc-india/hot-and-crispy-chicken-2-pc": ["KFC fried chicken", "Hot and Crispy Chicken"],
   "kfc-india/smoky-red-chicken-2-pc": ["Smoky Red Grilled Chicken", "KFC grilled chicken"],
   "kfc-india/smoky-red-chicken-3-pc": ["Smoky Red Grilled Chicken", "KFC grilled chicken"],
+  "kfc-india/hot-and-crispy-leg-piece-1-pc": ["KFC leg piece"],
+  "kfc-india/peri-peri-chicken-strips-3-pc": ["KFC peri peri strips", "Peri peri boneless chicken"],
+  "kfc-india/double-chicken-roll": ["Chicken Roll Double"],
+  "kfc-india/classic-chicken-roll": ["Chicken Roll Single"],
 };
 
 export function aliasesFor(chain: Pick<Chain, "slug">, item: Pick<ChainItem, "name">): string[] {
