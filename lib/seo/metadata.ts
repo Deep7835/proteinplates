@@ -12,12 +12,14 @@ type BuildMetadataInput = {
   /** Pixel size of `image`, when it isn't 1200×630 (e.g. guide cover photos are 1600×900). */
   imageSize?: { width: number; height: number };
   noindex?: boolean;
+  /** Use the title exactly as given, without the "| Protein Per Meal" suffix (for titles that already name a brand). */
+  absoluteTitle?: boolean;
 };
 
 /** One place to build page metadata so every page gets a canonical URL and matching OG tags. */
-export function buildMetadata({ title, description, path, type = "website", image = "/og.png", imageSize = { width: 1200, height: 630 }, noindex }: BuildMetadataInput): Metadata {
+export function buildMetadata({ title, description, path, type = "website", image = "/og.png", imageSize = { width: 1200, height: 630 }, noindex, absoluteTitle }: BuildMetadataInput): Metadata {
   return {
-    title,
+    title: absoluteTitle ? { absolute: title } : title,
     description,
     alternates: { canonical: path },
     openGraph: {

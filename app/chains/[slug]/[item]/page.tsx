@@ -14,6 +14,7 @@ import { Disclaimer } from "@/components/ui/Disclaimer";
 import { FaqList } from "@/components/ui/FaqList";
 import { longDate } from "@/lib/chains/format";
 import { itemHref, itemPagesFor, pieceCount, portionTable } from "@/lib/chains/items";
+import { aliasesFor, itemDescription, itemTitle, per100g, similarItemsElsewhere } from "@/lib/chains/itemSeo";
 import { BURN_ACTIVITIES, burnTable, dailyShare, goalFits, higherProteinSwaps, macroShare, proteinRank } from "@/lib/chains/itemFacts";
 import { getAllChains, getChain } from "@/lib/chains/load";
 import { proteinPer100Cal } from "@/lib/chains/rank";
@@ -55,7 +56,7 @@ function lead(chain: Chain, item: ChainItem) {
   return `${chain.chain}’s ${item.name} has ${parts.join(" and ")}${rest.length ? `, with ${rest.join(" and ")}` : ""}${serving}.`;
 }
 
-function buildFaqs(chain: Chain, item: ChainItem): Faq[] {
+function buildFaqs(chain: Chain, item: ChainItem, aliases: string[]): Faq[] {
   const src = sourceOf(chain, item);
   const per100 = proteinPer100Cal(item);
   const rank = proteinRank(chain, item);
@@ -66,6 +67,13 @@ function buildFaqs(chain: Chain, item: ChainItem): Faq[] {
       answer: `${lead(chain, item)} That is about ${dailyShare(item.calories!)}% of a 2,000-calorie day. Source: ${src.name}, checked ${longDate(src.checked)}.`,
     },
   ];
+  // People also search by a shorter name (e.g. "McPuff"); answer that wording too.
+  if (aliases.length > 0) {
+    faqs.push({
+      question: `How many calories are in a ${aliases[0]}?`,
+      answer: `${chain.chain}’s ${item.name}, often called ${aliases.map((a) => `“${a}”`).join(" or ")}, has ${item.calories} calories${item.protein_g !== null ? ` and ${item.protein_g} g of protein` : ""} per serving.`,
+    });
+  }
   if (item.protein_g !== null && per100 !== null) {
     faqs.push({
       question: `How much protein is in ${chain.chain} ${item.name}?`,
@@ -104,15 +112,10 @@ export async function generateMetadata({ params }: PageProps<"/chains/[slug]/[it
   const page = findPage(slug, itemSlug);
   if (!page) return {};
   const { chain, item } = page;
-  const pc = pieceCount(item.name);
-  const perPiece = pc ? Math.round(item.calories! / pc.pieces) : null;
-  let description = `${chain.chain} ${item.name} has ${item.calories} calories${item.protein_g !== null ? ` and ${item.protein_g} g protein` : ""}${
-    perPiece ? ` (about ${perPiece} per piece)` : ""
-  }. See carbs, fat, higher-protein swaps, and how long it takes to walk off.`;
-  if (description.length > 165) description = `${chain.chain} ${item.name}: ${item.calories} calories${item.protein_g !== null ? `, ${item.protein_g} g protein` : ""}. Full nutrition and higher-protein swaps.`;
   return buildMetadata({
-    title: `${chain.chain} ${item.name} Calories & Protein`,
-    description,
+    title: itemTitle(chain, item),
+    absoluteTitle: true,
+    description: itemDescription(chain, item, aliasesFor(chain, item)),
     path: `/chains/${chain.slug}/${itemSlug}`,
     type: "article",
     image: `/chains/${chain.slug}/og.png`,
@@ -135,7 +138,9 @@ export default async function ItemPage({ params }: PageProps<"/chains/[slug]/[it
   const swaps = higherProteinSwaps(chain, item);
   const fits = goalFits(item);
   const burn = burnTable(kcal);
-  const faqs = buildFaqs(chain, item);
+  const aliases = aliasesFor(chain, item);
+  const faqs = buildFaqs(chain, item, aliases);
+  const similar = similarItemsElsewhere(chain, item, getAllChains());
   const guide = getAllGuides().find((gd) => gd.relatedChains.includes(chain.slug) && gd.topic === "Eating out");
   const extras = [
     { label: "Fiber", value: item.fiber_g, unit: "g" },
@@ -161,7 +166,14 @@ export default async function ItemPage({ params }: PageProps<"/chains/[slug]/[it
     <>
       <JsonLd
         data={[
-          { "@context": "https://schema.org", "@type": "MenuItem", name: `${chain.chain} ${item.name}`, url: absoluteUrl(path), nutrition },
+          {
+            "@context": "https://schema.org",
+            "@type": "MenuItem",
+            name: `${chain.chain} ${item.name}`,
+            ...(aliases.length > 0 ? { alternateName: aliases } : {}),
+            url: absoluteUrl(path),
+            nutrition,
+          },
           faqLd(faqs),
           breadcrumbLd(crumbs),
         ]}
@@ -175,9 +187,11 @@ export default async function ItemPage({ params }: PageProps<"/chains/[slug]/[it
             {!src.official && <Badge tone="accent">Third-party data</Badge>}
           </div>
           <h1 className="mt-4 text-4xl leading-tight sm:text-5xl">
-            {chain.chain} {item.name}: Calories &amp; Nutrition
+            {item.name} Calories &amp; Nutrition
+            <span className="mt-2 block font-sans text-lg font-semibold tracking-normal text-muted">{chain.chain}</span>
           </h1>
           <p className="mt-4 text-lg">{lead(chain, item)}</p>
+          {aliases.length > 0 && <p className="mt-2 text-sm text-muted">Also called: {aliases.join(", ")}</p>}
           <p className="mt-2 text-sm text-muted">
             Source: {src.name} · checked {longDate(src.checked)}
           </p>
@@ -215,11 +229,46 @@ export default async function ItemPage({ params }: PageProps<"/chains/[slug]/[it
           </div>
         </div>
 
-        <p className="mt-3 max-w-3xl text-sm text-muted">
-          {extras.some((e) => e.value !== null)
-            ? extras.map((e) => `${e.label}: ${e.value === null ? "not listed" : `${e.value} ${e.unit}`}`).join(" · ")
-            : `${src.official ? `${chain.chain}’s listing` : src.name} doesn’t include fiber, sugar, or sodium for this item.`}
-        </p>
+        <section aria-labelledby="facts" className="mt-10 max-w-3xl">
+          <h2 id="facts" className="text-2xl sm:text-3xl">
+            {item.name} nutrition facts
+          </h2>
+          <div className="mt-4 overflow-x-auto rounded-card border border-line" tabIndex={0} role="region" aria-label={`${item.name} nutrition facts`}>
+            <table className="w-full min-w-[360px] text-sm tabular-nums">
+              <thead className="bg-surface text-left">
+                <tr>
+                  <th scope="col" className="px-3 py-2 font-semibold">Nutrient</th>
+                  <th scope="col" className="px-3 py-2 text-right font-semibold">
+                    Per serving{item.serving_g ? ` (${item.serving_g} g)` : ""}
+                  </th>
+                  {item.serving_g && <th scope="col" className="px-3 py-2 text-right font-semibold">Per 100 g</th>}
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  { label: "Calories", value: kcal, unit: "kcal" },
+                  { label: "Protein", value: item.protein_g, unit: "g" },
+                  { label: "Carbohydrates", value: item.carbs_g, unit: "g" },
+                  { label: "Fat", value: item.fat_g, unit: "g" },
+                  ...extras.map((e) => ({ label: e.label, value: e.value, unit: e.unit })),
+                ].map((row) => {
+                  const per100 = per100g(row.value, item.serving_g);
+                  return (
+                    <tr key={row.label} className="border-t border-line">
+                      <th scope="row" className="px-3 py-2 text-left font-medium">{row.label}</th>
+                      <td className="px-3 py-2 text-right">{row.value === null ? "not listed" : `${row.value} ${row.unit}`}</td>
+                      {item.serving_g && <td className="px-3 py-2 text-right text-muted">{per100 === null ? "—" : `${per100} ${row.unit}`}</td>}
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-2 text-xs text-muted">
+            “Not listed” means {src.official ? `${chain.chain}’s nutrition information` : src.name} doesn’t give that number.
+            {item.serving_g && " Per-100 g values are worked out from the serving weight."}
+          </p>
+        </section>
 
         <AdSlot position="after-intro" />
 
@@ -333,6 +382,49 @@ export default async function ItemPage({ params }: PageProps<"/chains/[slug]/[it
                   );
                 })}
               </ul>
+            </section>
+          )}
+
+          {similar.length > 0 && (
+            <section aria-labelledby="similar">
+              <h2 id="similar" className="text-2xl sm:text-3xl">Compare with similar items at other chains</h2>
+              <p className="mt-2 text-muted">How {item.name} stacks up against the closest match at other chains.</p>
+              <div className="mt-4 overflow-x-auto rounded-card border border-line" tabIndex={0} role="region" aria-label="Similar items at other chains">
+                <table className="w-full min-w-[460px] text-sm tabular-nums">
+                  <thead className="bg-surface text-left">
+                    <tr>
+                      <th scope="col" className="px-3 py-2 font-semibold">Item</th>
+                      <th scope="col" className="px-3 py-2 text-right font-semibold">Calories</th>
+                      <th scope="col" className="px-3 py-2 text-right font-semibold">Protein</th>
+                      <th scope="col" className="px-3 py-2 text-right font-semibold">Protein per 100 cal</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-t border-line bg-brand-50">
+                      <th scope="row" className="px-3 py-2 text-left font-medium">
+                        {item.name} <span className="block text-xs font-normal text-muted">{chain.chain} (this page)</span>
+                      </th>
+                      <td className="px-3 py-2 text-right font-semibold">{kcal}</td>
+                      <td className="px-3 py-2 text-right">{g(item.protein_g)}</td>
+                      <td className="px-3 py-2 text-right">{per100 ?? "—"}</td>
+                    </tr>
+                    {similar.map((s) => {
+                      const href = itemHref(s.chain, s);
+                      return (
+                        <tr key={`${s.chain.slug}-${s.name}`} className="border-t border-line">
+                          <th scope="row" className="px-3 py-2 text-left font-medium">
+                            {href ? <Link href={href}>{s.name}</Link> : s.name}
+                            <span className="block text-xs font-normal text-muted">{s.chain.chain}</span>
+                          </th>
+                          <td className="px-3 py-2 text-right font-semibold">{s.calories}</td>
+                          <td className="px-3 py-2 text-right">{g(s.protein_g)}</td>
+                          <td className="px-3 py-2 text-right">{proteinPer100Cal(s) ?? "—"}</td>
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </table>
+              </div>
             </section>
           )}
 
