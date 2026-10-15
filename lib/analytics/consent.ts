@@ -1,6 +1,6 @@
 // Cookie consent for Google Analytics, using Google Consent Mode v2.
 // Until a visitor accepts, GA runs without cookies (analytics_storage "denied"). Ads storage is always denied
-// (the site shows no ads). The visitor's choice is kept in localStorage under CONSENT_KEY.
+// (no personalized ads from AdSense). The visitor's choice is kept in localStorage under CONSENT_KEY.
 
 export const CONSENT_KEY = "cookie-consent";
 export type ConsentChoice = "granted" | "denied";

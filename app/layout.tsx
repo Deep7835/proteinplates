@@ -39,6 +39,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
         {site.googleAnalyticsId && <script dangerouslySetInnerHTML={{ __html: gaBootScript(site.googleAnalyticsId) }} />}
+        {/* Plain <script>, not next/script: AdSense rejects the data-nscript attribute next/script adds. */}
+        <script async src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${site.adsenseClientId}`} crossOrigin="anonymous" />
       </head>
       <body className="flex min-h-dvh flex-col">
         <Header />

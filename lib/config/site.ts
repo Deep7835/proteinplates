@@ -12,6 +12,8 @@ export const site = {
   contactEmail: "hello@example.com",
   /** Google Analytics 4 measurement ID. Loads only with consent for cookies (see components/layout/CookieConsent.tsx). */
   googleAnalyticsId: process.env.NEXT_PUBLIC_GA_ID ?? "G-NBCW8B047C",
+  /** Google AdSense publisher ID. Loads the AdSense script on every page; public/ads.txt must list the same ID. */
+  adsenseClientId: "ca-pub-1357544406485300",
   /** Google Search Console site verification (rendered as <meta name="google-site-verification">). */
   googleSiteVerification: "CTEDtpoIq53RLdSJ4Fj9kT4LDsfeBthauJawqbRIKiY",
   // Used as lastModified in the sitemap for static pages (about, policies, etc.).
