@@ -95,7 +95,7 @@ function buildFaqs(chain: Chain, item: ChainItem, aliases: string[]): Faq[] {
       question: `Is ${chain.chain} ${item.name} good for weight loss?`,
       answer: fatLoss.fits
         ? `It fits our fat-loss rule: 600 calories or less with at least 6 g of protein per 100 calories. Weight loss depends on your whole day, so check your target with our calorie calculator.`
-        : `It doesn’t meet our fat-loss rule (600 calories or less with at least 6 g of protein per 100 calories). It can still fit your day; the swaps on this page give more protein for the calories.`,
+        : `It doesn’t meet our fat-loss rule (600 calories or less with at least 6 g of protein per 100 calories). It can still fit your day if your other meals leave room for it.`,
     });
   }
   faqs.push({
@@ -353,9 +353,11 @@ export default async function ItemPage({ params }: PageProps<"/chains/[slug]/[it
                 {swaps.fallback ? `Top protein picks at ${chain.chain}` : `Higher-protein swaps at ${chain.chain}`}
               </h2>
               <p className="mt-2 text-muted">
-                {swaps.fallback
-                  ? "Nothing on the menu we list beats this for protein at similar calories. These are the chain’s best protein-per-calorie items."
-                  : "At least as much protein, for about the same calories or fewer."}
+                {swaps.noData
+                  ? `${chain.chain} hasn’t published this item’s protein yet, so we can’t compare it. These are the chain’s best protein-per-calorie items.`
+                  : swaps.fallback
+                    ? "Nothing on the menu we list beats this for protein at similar calories. These are the chain’s best protein-per-calorie items."
+                    : "At least as much protein, for about the same calories or fewer."}
               </p>
               <ul className="mt-4 grid gap-3 sm:grid-cols-3">
                 {swaps.items.map((s) => {

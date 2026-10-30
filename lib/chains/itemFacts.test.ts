@@ -35,6 +35,15 @@ describe("proteinRank and swaps", () => {
   it("falls back to the chain's best when nothing beats the item", () => {
     expect(higherProteinSwaps(chain, chain.items[3]).fallback).toBe(true);
   });
+  it("compares desserts only with desserts, and flags items with no protein figure", () => {
+    const cone = { ...it_("Cone", 300, 6), category: "dessert" };
+    const sundae = { ...it_("Sundae", 250, 7), category: "dessert" };
+    const mixed = { slug: "x", items: [...chain.items, cone, sundae] } as unknown as Chain;
+    expect(higherProteinSwaps(mixed, cone).items.map((i) => i.name)).toEqual(["Sundae"]);
+    expect(higherProteinSwaps(mixed, chain.items[2]).items.map((i) => i.name)).not.toContain("Sundae");
+    const noProtein = { ...it_("Delite", 323, 0), protein_g: null };
+    expect(higherProteinSwaps(mixed, noProtein)).toMatchObject({ fallback: true, noData: true });
+  });
 });
 
 describe("dailyShare", () => {

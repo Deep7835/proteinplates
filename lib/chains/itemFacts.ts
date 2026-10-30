@@ -58,12 +58,21 @@ export function proteinRank(chain: Chain, item: ChainItem): { rank: number; of: 
   return rank > 0 ? { rank, of: list.length } : null;
 }
 
+// Sweets and drinks are compared only with each other: a waffle cone is not a protein swap for a burger, or vice versa.
+const TREAT_CATEGORIES = new Set(["dessert", "drink", "smoothie", "sauce"]);
+const isTreat = (i: Pick<ChainItem, "category">) => TREAT_CATEGORIES.has(i.category.toLowerCase());
+
 /**
  * Better protein-per-calorie options at the same chain: at least as much protein, no more than 10% more
- * calories, and a higher protein-per-100-calorie score. Falls back to the chain's top items if none qualify.
+ * calories, and a higher protein-per-100-calorie score. Falls back to the chain's top items if none qualify
+ * (noData: the item has no protein figure, so it can't be compared at all).
  */
-export function higherProteinSwaps(chain: Chain, item: ChainItem, limit = 3): { items: RankableItem[]; fallback: boolean } {
-  const others = rankableItems(chain).filter((i) => i.name !== item.name);
+export function higherProteinSwaps(
+  chain: Chain,
+  item: ChainItem,
+  limit = 3,
+): { items: RankableItem[]; fallback: boolean; noData: boolean } {
+  const others = rankableItems(chain).filter((i) => i.name !== item.name && isTreat(i) === isTreat(item));
   const byPer100 = (a: RankableItem, b: RankableItem) => b.protein_g / b.calories - a.protein_g / a.calories;
   const mine = proteinPer100Cal(item);
   if (isRankable(item) && mine !== null) {
@@ -71,9 +80,9 @@ export function higherProteinSwaps(chain: Chain, item: ChainItem, limit = 3): { 
       .filter((i) => i.protein_g >= item.protein_g && i.calories <= item.calories * 1.1 && (proteinPer100Cal(i) ?? 0) > mine)
       .sort(byPer100)
       .slice(0, limit);
-    if (better.length > 0) return { items: better, fallback: false };
+    if (better.length > 0) return { items: better, fallback: false, noData: false };
   }
-  return { items: others.sort(byPer100).slice(0, limit), fallback: true };
+  return { items: others.sort(byPer100).slice(0, limit), fallback: true, noData: mine === null };
 }
 
 /** Which of the site's goal rules this item meets (same rules as the chain page's "Best orders by goal"). */

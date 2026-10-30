@@ -25,11 +25,15 @@ export function chainFaqs(chain: Chain): Faq[] {
       answer: `${i.name} gives you ${i.protein_g} g of protein for ${i.calories} calories. That’s ${proteinPer100Cal(i)} g of protein per 100 calories.`,
     });
   }
+  // Point to our GLP-1 pick only when this chain has one; some menus have nothing small and high-protein enough.
+  const glp1Pick = picks.bestGlp1
+    ? ` Our GLP-1-friendly pick here is ${picks.bestGlp1.name} (${picks.bestGlp1.protein_g} g protein, ${picks.bestGlp1.calories} calories).`
+    : " None of the items we list here is small and high-protein enough to be our GLP-1-friendly pick.";
   faqs.push({
     question: `Does ${name} have a high-protein or GLP-1 menu?`,
     answer: chain.glp1_menu_name
-      ? `Yes. ${name} offers the “${chain.glp1_menu_name}.” You can also use our GLP-1-friendly picks on this page, which favor smaller portions with more protein and less sugar.`
-      : `${name} doesn’t have a labeled GLP-1 or high-protein menu that we know of. Our GLP-1-friendly picks on this page show smaller orders with more protein and less sugar.`,
+      ? `Yes. ${name} offers the “${chain.glp1_menu_name}.”${glp1Pick}`
+      : `${name} doesn’t have a labeled GLP-1 or high-protein menu that we know of.${glp1Pick}`,
   });
   const builder = mealBuilderItems(chain);
   if (builder.length > 0) {

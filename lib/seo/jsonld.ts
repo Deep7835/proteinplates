@@ -12,9 +12,18 @@ export function organizationLd(): Thing {
     "@id": `${site.url}/#organization`,
     name: site.name,
     url: site.url,
-    logo: absoluteUrl("/logo.png"),
+    logo: { "@type": "ImageObject", url: absoluteUrl("/logo.png") },
     email: site.contactEmail,
+    founder: authorLd(site.author.name),
+    publishingPrinciples: absoluteUrl("/editorial-policy"),
   };
+}
+
+/** Person markup; the site's own author also gets the About page as their profile. */
+export function authorLd(name: string): Thing {
+  return name === site.author.name
+    ? { "@type": "Person", "@id": absoluteUrl(site.author.path), name, url: absoluteUrl(site.author.path) }
+    : { "@type": "Person", name };
 }
 
 export function websiteLd(): Thing {
@@ -78,10 +87,10 @@ export function articleLd(input: {
     datePublished: input.datePublished,
     dateModified: input.dateModified,
     author: input.author
-      ? { "@type": "Person", name: input.author }
+      ? authorLd(input.author)
       : { "@type": "Organization", name: site.name, url: site.url },
     ...(input.reviewedBy ? { reviewedBy: { "@type": "Person", name: input.reviewedBy } } : {}),
-    publisher: { "@id": `${site.url}/#organization` },
+    publisher: { "@type": "Organization", "@id": `${site.url}/#organization`, name: site.name, url: site.url, logo: { "@type": "ImageObject", url: absoluteUrl("/logo.png") } },
     ...(input.image ? { image: /^https?:\/\//.test(input.image) ? input.image : absoluteUrl(input.image) } : {}),
   };
 }

@@ -36,6 +36,25 @@ export default function AboutPage() {
           <Link href="/for/gym">gym-goers</Link>, and <Link href="/for/seniors">adults 50+</Link>.
         </li>
       </ul>
+      <h2 id="author">Who runs this site</h2>
+      <p>
+        {site.name} is built and run by <strong>{site.author.name}</strong>, who writes the guides and checks every
+        restaurant number before it goes live.
+      </p>
+      <ul>
+        <li>
+          Restaurant numbers come from the chain’s own nutrition booklet or website, such as the KFC India and
+          McDonald’s India nutrition booklets. Each item page names its source and the date it was checked.
+        </li>
+        <li>
+          When the official source leaves a value out, the page says “not listed” instead of guessing. When the only
+          source is a third-party database, the page is labeled “Third-party data”.
+        </li>
+        <li>
+          Guides summarize published research and official health guidance (for example the NHS, CDC, and peer-reviewed
+          studies), and each one lists its sources at the end.
+        </li>
+      </ul>
       <h2>How we work</h2>
       <p>
         We use each chain’s official nutrition information whenever it exists, and we never make up numbers. Read
@@ -47,7 +66,8 @@ export default function AboutPage() {
       </p>
       <h2>Get in touch</h2>
       <p>
-        Found a mistake or have an idea? <Link href="/contact">Contact us</Link>. We read every message.
+        Found a mistake or have an idea? Email <a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a> or
+        use the <Link href="/contact">contact page</Link>. We read every message and fix confirmed errors.
       </p>
     </ProsePage>
   );

@@ -9,7 +9,9 @@ export const site = {
   // NEXT_PUBLIC_SITE_URL can override it (e.g. for a staging copy); an empty value falls back to the default.
   url: (process.env.NEXT_PUBLIC_SITE_URL || "https://proteinpermeal.com").replace(/\/$/, ""),
   locale: "en_US",
-  contactEmail: "hello@example.com",
+  contactEmail: "support@proteinpermeal.com",
+  /** The person who writes the guides and checks the data. Shown in bylines and Article structured data. */
+  author: { name: "Deepam Mishra", path: "/about#author" },
   /** Google Analytics 4 measurement ID. Loads only with consent for cookies (see components/layout/CookieConsent.tsx). */
   googleAnalyticsId: process.env.NEXT_PUBLIC_GA_ID ?? "G-NBCW8B047C",
   /** Google AdSense publisher ID. Loads the AdSense script on every page; public/ads.txt must list the same ID. */

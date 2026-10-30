@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { Clock } from "lucide-react";
 import { notFound } from "next/navigation";
+import Link from "next/link";
 import { compileMDX } from "next-mdx-remote/rsc";
 import rehypeSlug from "rehype-slug";
 import remarkGfm from "remark-gfm";
@@ -23,7 +24,7 @@ import { FaqList } from "@/components/ui/FaqList";
 import { toCardData } from "@/lib/chains/cards";
 import { longDate } from "@/lib/chains/format";
 import { getChain } from "@/lib/chains/load";
-import { audiences } from "@/lib/config/site";
+import { audiences, site } from "@/lib/config/site";
 import { getAllGuides, getGuide } from "@/lib/guides/load";
 import { extractToc } from "@/lib/guides/toc";
 import { articleLd, breadcrumbLd, faqLd } from "@/lib/seo/jsonld";
@@ -101,7 +102,10 @@ export default async function GuidePage({ params }: PageProps<"/guides/[slug]">)
           <h1 className="mt-4 text-4xl leading-tight sm:text-5xl">{guide.title}</h1>
           <p className="mt-4 text-lg text-muted">{guide.description}</p>
           <p className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-muted">
-            <span>By {guide.author}</span>
+            <span>
+              By{" "}
+              {guide.author === site.author.name ? <Link href={site.author.path}>{guide.author}</Link> : guide.author}
+            </span>
             {guide.reviewedBy && <span>Reviewed by {guide.reviewedBy}</span>}
             <span aria-hidden>·</span>
             <span>Updated {longDate(guide.updated)}</span>
